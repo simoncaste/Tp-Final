@@ -1,0 +1,71 @@
+/*MIXIN*/
+@mixin medidasFotos($ancho, $alto){
+    height: $alto;
+    width: $ancho;
+}
+
+/*Variables*/
+$colorTitulo: red;
+$borderTitulo: solid 2px aqua;
+
+
+
+
+footer{
+    #primerafila{
+        @include medidasFotos( 100%, 200px);
+        display: flex;
+        #timemusic__contenedor{
+            padding-top: 1.5%;
+            margin-left: 2.5%;
+        }
+
+        #redessociales{
+            display: flex;
+            padding-top: 0.6%;
+            @include medidasFotos( 30%, 34px);
+            margin-left: -5%;
+
+            .imagenesredes{
+                background-color: none;
+                margin-left: 20%;
+                margin-right: 20%;
+                img{
+                    @include medidasFotos( 38px, 38px)
+                }
+            }
+        }
+        #imagenlogotime{
+            padding-left: 70%;
+            padding-top: 1%;
+            @include medidasFotos( 140px, 140px);
+            img{
+                @include medidasFotos( 140px, 14s0px);
+            }
+        }
+
+
+    }
+    
+    #segundafila{
+        @include medidasFotos( 100%, 80px);
+        padding-left: 10%;
+        display: flex;
+        justify-content: center;
+        .terminosycondiciones{
+            @include medidasFotos( 20%, 30px);
+        }
+    }
+
+    #tercerafila{
+        background-color: black;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        p{
+            margin-top: 1%;
+        }
+    }
+
+}

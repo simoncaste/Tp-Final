@@ -12,3 +12,53 @@ header {
   display: flex; }
   header #cont__cont-img {
     width: 20%; }
+
+/*MIXIN*/
+/*Variables*/
+footer #primerafila {
+  height: 200px;
+  width: 100%;
+  display: flex; }
+  footer #primerafila #timemusic__contenedor {
+    padding-top: 1.5%;
+    margin-left: 2.5%; }
+  footer #primerafila #redessociales {
+    display: flex;
+    padding-top: 0.6%;
+    height: 34px;
+    width: 30%;
+    margin-left: -5%; }
+    footer #primerafila #redessociales .imagenesredes {
+      background-color: none;
+      margin-left: 20%;
+      margin-right: 20%; }
+      footer #primerafila #redessociales .imagenesredes img {
+        height: 38px;
+        width: 38px; }
+  footer #primerafila #imagenlogotime {
+    padding-left: 70%;
+    padding-top: 1%;
+    height: 140px;
+    width: 140px; }
+    footer #primerafila #imagenlogotime img {
+      height: 14s0px;
+      width: 140px; }
+
+footer #segundafila {
+  height: 80px;
+  width: 100%;
+  padding-left: 10%;
+  display: flex;
+  justify-content: center; }
+  footer #segundafila .terminosycondiciones {
+    height: 30px;
+    width: 20%; }
+
+footer #tercerafila {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-self: center; }
+  footer #tercerafila p {
+    margin-top: 1%; }
