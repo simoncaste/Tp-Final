@@ -12,6 +12,8 @@ $borderTitulo: solid 2px aqua;
 
 
 footer{
+    
+    background-color: white;
     #primerafila{
         @include medidasFotos( 100%, 200px);
         display: flex;
