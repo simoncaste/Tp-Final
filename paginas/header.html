@@ -8,14 +8,45 @@
 </head>
 <body>
     <header>
-        <div id="cont__cont-img">
-            <div>
-                <img src="../assets/imagenes/logoCasa.png" alt="">
+        <div id="cont__cont-imgCasa">
+            <div id="cont-imgCasa">
+                <img id="imgCasa" src="../assets/imagenes/logoCasa.png" alt="">
             </div>
         </div>
         
-        <div></div>
-        <div></div>
+        <div id="cont__cont-busqueda">
+            <div id="cont-busqueda">
+                <div id="lupa">
+                    <img src="../assets/imagenes/imgLupa.png" alt="">
+                </div>
+                <div id="cont-buscar">
+                    <input style="background-color: #414141; height: 92%; width: 100%; font-size: 20PX; font-family: Arial, Helvetica, sans-serif; color: white;" type="text" placeholder="  Buscar..." class="search-input" />
+                </div>
+            </div>
+        </div>
+
+
+        <div id="cont__cont-imgPersona">
+            <div id="cont-logoPersona">
+                <div class="menu-container">
+                    <!-- Checkbox oculto para controlar el menú -->
+                    <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+                    
+                    <!-- Imagen que activa el menú -->
+                    <label for="menu-toggle" class="menu-trigger">
+                      <img src="../assets/imagenes/logoPersona.png" style="height: 60px; width: 60px;" alt="Menú" />
+                    </label>
+                    
+                    <!-- Menú desplegable -->
+                    <div class="dropdown-menu">
+                      <ul>
+                        <li><a href="#">Iniciar Sesion</a></li>
+                        <li><a href="#">Registrarse</a></li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 </body>
 </html>

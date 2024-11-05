@@ -7,7 +7,109 @@ header{
     height: 100px;
     background-color: #1C1C1C;
     display: flex;
-    #cont__cont-img{
-        width: 20%;
+    width: 100%;
+    #cont__cont-imgCasa{
+        width: 10%;
+        #cont-imgCasa{
+            width: 70px;
+            height: 70px;
+            border-radius: 100%;
+            background-color: #414141;
+            margin: 8% 0 0 10%;
+            #imgCasa{
+                margin: 20% 0 0  21%;
+            }
+        }
+
+    }
+    #cont__cont-busqueda{
+        width: 80%;
+        display: flex;
+        align-items: center;
+        #cont-busqueda{
+            width: 30%;
+            background-color: #414141;
+            height: 60%;
+            display: flex;
+            #lupa{
+                margin-left: 3.4%;
+                width: 13%;
+                img{
+                    margin-top: 16%;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            #cont-buscar{
+                width: 90%;
+                background-color: #414141   ;
+            }
+            
+        }
+    }
+    #cont__cont-imgPersona {
+        width: 10%;
+    
+        #cont-logoPersona {
+            width: 60px;
+            height: 60%;
+            margin: 10% 0 0 30%;
+    
+            .menu-container {
+                position: relative;
+                display: inline-block;
+                
+                .menu-checkbox {
+                    display: none; // Ocultamos el checkbox
+                }
+              
+                .menu-trigger {
+                    cursor: pointer;
+                    display: inline-block;
+                }
+              
+                .dropdown-menu {
+                    display: none; // Ocultamos el menú inicialmente
+                    position: absolute;
+                    top: 100%; // Posicionamos debajo de la imagen
+                    left: 0;
+                    background-color: #414141;
+                    border: 1px solid #ddd;
+                    border-radius: 8px;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    padding: 10px;
+                    width: 70px;
+                    
+                    ul {
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        
+                        li {
+                            margin: 0;
+                            padding: 0.5rem 0;
+                            
+                            a {
+                                color: white;
+                                text-decoration: none;
+                                font-size: 1rem;
+                                display: block;
+                                
+                                &:hover {
+                                    background-color: black;
+                                    border-radius: 4px;
+                                    
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                // Mostramos el menú cuando el checkbox está seleccionado
+                .menu-checkbox:checked + .menu-trigger + .dropdown-menu {
+                    display: block;
+                }
+            }
+        }
     }
 }
