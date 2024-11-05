@@ -68,9 +68,79 @@
 header {
   height: 100px;
   background-color: #1C1C1C;
-  display: flex; }
-  header #cont__cont-img {
-    width: 20%; }
+  display: flex;
+  width: 100%; }
+  header #cont__cont-imgCasa {
+    width: 10%; }
+    header #cont__cont-imgCasa #cont-imgCasa {
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      background-color: #414141;
+      margin: 8% 0 0 10%; }
+      header #cont__cont-imgCasa #cont-imgCasa #imgCasa {
+        margin: 20% 0 0  21%; }
+  header #cont__cont-busqueda {
+    width: 80%;
+    display: flex;
+    align-items: center; }
+    header #cont__cont-busqueda #cont-busqueda {
+      width: 30%;
+      background-color: #414141;
+      height: 60%;
+      display: flex; }
+      header #cont__cont-busqueda #cont-busqueda #lupa {
+        margin-left: 3.4%;
+        width: 13%; }
+        header #cont__cont-busqueda #cont-busqueda #lupa img {
+          margin-top: 16%;
+          width: 40px;
+          height: 40px; }
+      header #cont__cont-busqueda #cont-busqueda #cont-buscar {
+        width: 90%;
+        background-color: #414141; }
+  header #cont__cont-imgPersona {
+    width: 10%; }
+    header #cont__cont-imgPersona #cont-logoPersona {
+      width: 60px;
+      height: 60%;
+      margin: 10% 0 0 30%; }
+      header #cont__cont-imgPersona #cont-logoPersona .menu-container {
+        position: relative;
+        display: inline-block; }
+        header #cont__cont-imgPersona #cont-logoPersona .menu-container .menu-checkbox {
+          display: none; }
+        header #cont__cont-imgPersona #cont-logoPersona .menu-container .menu-trigger {
+          cursor: pointer;
+          display: inline-block; }
+        header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background-color: #414141;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          padding: 10px;
+          width: 100px; }
+          header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0; }
+            header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu ul li {
+              margin: 0;
+              padding: 0.5rem 0; }
+              header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu ul li a {
+                color: white;
+                text-decoration: none;
+                font-size: 1rem;
+                display: block; }
+                header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu ul li a:hover {
+                  background-color: black;
+                  border-radius: 4px; }
+        header #cont__cont-imgPersona #cont-logoPersona .menu-container .menu-checkbox:checked + .menu-trigger + .dropdown-menu {
+          display: block; }
 
 /*MIXIN*/
 /*Variables*/
