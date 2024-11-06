@@ -224,18 +224,22 @@ footer {
 
 body {
   background-color: #202020; }
-
-.album {
-  padding-left: 10%; }
-
-.album1 {
-  width: 70%;
-  height: 250px; }
-
-.nomAlbum {
-  font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  font-size: 30px; }
+  body .album {
+    padding-top: 5%;
+    padding-left: 5%; }
+    body .album .album1 {
+      width: 90%;
+      height: 200px; }
+    body .album .nomAlbum {
+      font-family: Arial, Helvetica, sans-serif;
+      color: white;
+      font-size: 30px; }
+  body .artistasCont {
+    width: 15%;
+    height: auto; }
+    body .artistasCont .fotosArt {
+      height: 100%;
+      width: 100%; }
 
 /* SASS */
 /* SASS */
