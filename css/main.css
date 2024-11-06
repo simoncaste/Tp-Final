@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* SASS */
 /* SASS */
 /* HEADER */
@@ -6,17 +7,17 @@
   width: 100%;
   background-color: #000000; }
 
-#cont-logo__casa {
+#cont-logo__casa- {
   background-color: #202020;
-  border-radius: 60%;
-  height: 80%;
-  width: 3%;
+  border-radius: 100%;
+  height: 40px;
+  width: 40px;
   margin-left: 2%;
   margin-top: 0.3%; }
 
-#foto-logo__casa {
-  margin-top: 12%;
-  margin-left: 15%; }
+#foto-logo__casa- {
+  margin-top: 10%;
+  margin-left: 10%; }
 
 /* HEADER */
 /* MAIN */
@@ -49,7 +50,13 @@
   margin-left: 0%;
   font-size: 25px;
   margin-top: 1%;
-  border: none; }
+  border: none;
+  transition: transform 0.5s ease;
+  /* Transición suave cuando cambia el tamaño */ }
+
+#boton-continuar:hover {
+  transform: scale(1.05);
+  /* Agranda el contenedor a un 120% de su tamaño original */ }
 
 .col-lg-2 {
   margin-top: 4%;
@@ -71,6 +78,26 @@
   width: 100%;
   padding-left: 8%;
   padding-right: 8%; }
+
+#logo-timeMusic {
+  width: 200px;
+  /* tamaño inicial de la imagen */
+  transition: all 0.3s ease;
+  /* transición suave en caso de cambios */
+  animation: agrandar-achicar 3s infinite alternate;
+  /* animación continua */ }
+
+/* Definición de la animación */
+@keyframes agrandar-achicar {
+  0% {
+    transform: scale(1);
+    /* tamaño original */ }
+  50% {
+    transform: scale(0.5);
+    /* imagen más grande */ }
+  100% {
+    transform: scale(1);
+    /* tamaño original nuevamente */ } }
 
 /* MAIN */
 #footer {
@@ -243,14 +270,14 @@ body {
 #cont-logo__casa {
   background-color: #202020;
   border-radius: 50%;
-  height: 80%;
-  width: 2%;
+  height: 40px;
+  width: 40px;
   margin-left: 2%;
   margin-top: 0.3%; }
 
 #foto-logo__casa {
-  margin-top: 15%;
-  margin-left: 8%; }
+  margin-top: 10%;
+  margin-left: 10%; }
 
 /* HEADER */
 /* MAIN */
