@@ -1,3 +1,4 @@
+
 /* SASS */
 $colorFondo: #202020;
 $colorBlack: #000000;
@@ -20,16 +21,17 @@ $colorBotones: #FFFFFF;
 }
 #cont-logo__casa{
     background-color: $colorFondo;
-    border-radius: 60%;
-    @include medidas(3%, 80%);
+    border-radius: 50%;
+    @include medidas(2%, 80%);
     margin-left: 2%;
     margin-top: 0.3%;
 }
 #foto-logo__casa{
-    margin-top: 12%;
-    margin-left: 15%;
+    margin-top: 15%;
+    margin-left: 8%;
 }
 /* HEADER */
+
 
 /* MAIN */
 #main{
@@ -40,8 +42,8 @@ $colorBotones: #FFFFFF;
     padding: 0;
 }
 #cont-titulo{
-    margin-left: 2%;
-    padding-top: 2%;
+    margin-left: 1%;
+    padding-top: 4%;
 }
 #titulo{
     color: $colorLetra;
@@ -51,7 +53,7 @@ $colorBotones: #FFFFFF;
 #formulario{
     color: $colorLetra;
     margin-left: 2%;
-    margin-top: 1%;
+    margin-top: 2%;
 }
 
 #boton-continuar{
@@ -65,7 +67,6 @@ $colorBotones: #FFFFFF;
 }
 
 
-
 .col-lg-2{
     margin-top: 4%;
     margin-left: 1%;
@@ -75,24 +76,3 @@ $colorBotones: #FFFFFF;
     color: $colorBlack;
     
 }
-
-#boton-link__inicieSesion{
-    color: $colorBotones;
-}
-/* MAIN */
-
-#footer{
-    background-color: $colorBotones;
-    @include medidas(100%, 200px);
-    margin: 0;
-    padding: 0;
-}
-
-
-#cont-gif{
-    @include medidas(85%, 80%);
-    height: 80%;
-    background-color: grey;
-}
-
-
