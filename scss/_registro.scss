@@ -79,6 +79,18 @@ $colorBotones: #FFFFFF;
 #boton-link__inicieSesion{
     color: $colorBotones;
 }
+
+#cont-gif-registro{
+    @include medidas(85%, 61%);
+    
+    background-color: grey;
+}
+
+#logo-timeMusic{
+    @include medidas(100%, 100%);
+    padding-left: 8%;
+    padding-right: 8%;
+}
 /* MAIN */
 
 #footer{
@@ -89,10 +101,6 @@ $colorBotones: #FFFFFF;
 }
 
 
-#cont-gif{
-    @include medidas(85%, 80%);
-    height: 80%;
-    background-color: grey;
-}
+
 
 
