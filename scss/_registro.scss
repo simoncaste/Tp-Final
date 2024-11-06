@@ -62,7 +62,13 @@ $colorBotones: #FFFFFF;
     font-size: 25px;
     margin-top: 1%;
     border: none;
+    transition: transform 0.5s ease; /* Transición suave cuando cambia el tamaño */
 }
+#boton-continuar:hover {
+    transform: scale(1.05); /* Agranda el contenedor a un 120% de su tamaño original */
+  }
+
+
 
 
 
