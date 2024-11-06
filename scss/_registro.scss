@@ -20,14 +20,14 @@ $colorBotones: #FFFFFF;
 }
 #cont-logo__casa{
     background-color: $colorFondo;
-    border-radius: 50%;
-    @include medidas(2%, 80%);
+    border-radius: 60%;
+    @include medidas(3%, 80%);
     margin-left: 2%;
     margin-top: 0.3%;
 }
 #foto-logo__casa{
-    margin-top: 15%;
-    margin-left: 8%;
+    margin-top: 12%;
+    margin-left: 15%;
 }
 /* HEADER */
 
