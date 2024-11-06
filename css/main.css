@@ -35,6 +35,7 @@
 
 #titulo {
   color: white;
+  font-size: 90px;
   font-family: Arial, Helvetica, sans-serif; }
 
 #formulario {
@@ -71,33 +72,13 @@
 #cont-gif-registro {
   height: 61%;
   width: 85%;
-  background-color: grey; }
+  background-color: white; }
 
 #logo-timeMusic {
   height: 100%;
   width: 100%;
   padding-left: 8%;
   padding-right: 8%; }
-
-#logo-timeMusic {
-  width: 200px;
-  /* tamaño inicial de la imagen */
-  transition: all 0.3s ease;
-  /* transición suave en caso de cambios */
-  animation: agrandar-achicar 3s infinite alternate;
-  /* animación continua */ }
-
-/* Definición de la animación */
-@keyframes agrandar-achicar {
-  0% {
-    transform: scale(1);
-    /* tamaño original */ }
-  50% {
-    transform: scale(0.5);
-    /* imagen más grande */ }
-  100% {
-    transform: scale(1);
-    /* tamaño original nuevamente */ } }
 
 /* MAIN */
 #footer {
@@ -193,6 +174,7 @@ header {
 /*MIXIN*/
 /*Variables*/
 footer {
+  margin-top: 5%;
   background-color: white; }
   footer #primerafila {
     height: 200px;
@@ -316,9 +298,9 @@ body {
   color: #000000; }
 
 #cont-gif {
-  height: 85%;
+  height: 98%;
   width: 85%;
-  background-color: grey; }
+  background-color: white; }
 
 #logo-timeMusic {
   height: 100%;
