@@ -1,19 +1,28 @@
 body{
     background-color: #202020;
-}
+    .album{
+        padding-top: 5%;
+        padding-left: 5%;
+        .album1{
+            width: 90%;
+            height: 200px;
+        }
+        .nomAlbum{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            font-size: 30px;
+        }
+    }
 
-.album{
-    padding-left: 10%;
+    .artistasCont{
+        width: 15%;
+        height: auto;
 
-}
+        .fotosArt{
+            height: 100%;
+            width: 100%;
+        }
+    }
 
-.album1{
-    width: 70%;
-    height: 250px;
-}
-
-.nomAlbum{
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 30px;
+    
 }
