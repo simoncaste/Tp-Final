@@ -22,13 +22,13 @@ $colorBotones: #FFFFFF;
 #cont-logo__casa{
     background-color: $colorFondo;
     border-radius: 50%;
-    @include medidas(2%, 80%);
+    @include medidas(40px, 40px);
     margin-left: 2%;
     margin-top: 0.3%;
 }
 #foto-logo__casa{
-    margin-top: 15%;
-    margin-left: 8%;
+    margin-top: 10%;
+    margin-left: 10%;
 }
 /* HEADER */
 
