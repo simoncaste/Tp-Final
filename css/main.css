@@ -92,13 +92,13 @@ header {
   header #cont__cont-imgCasa {
     width: 10%; }
     header #cont__cont-imgCasa #cont-imgCasa {
-      width: 70px;
-      height: 70px;
+      width: 65px;
+      height: 65px;
       border-radius: 100%;
       background-color: #414141;
-      margin: 8% 0 0 10%; }
+      margin: 10% 0 0 10%; }
       header #cont__cont-imgCasa #cont-imgCasa #imgCasa {
-        margin: 20% 0 0  21%; }
+        margin: 18% 0 0  18.5%; }
   header #cont__cont-busqueda {
     width: 80%;
     display: flex;
@@ -106,15 +106,15 @@ header {
     header #cont__cont-busqueda #cont-busqueda {
       width: 30%;
       background-color: #414141;
-      height: 60%;
+      height: 50%;
       display: flex; }
       header #cont__cont-busqueda #cont-busqueda #lupa {
-        margin-left: 3.4%;
+        margin-left: 4.2%;
         width: 16%; }
         header #cont__cont-busqueda #cont-busqueda #lupa img {
-          margin-top: 16%;
-          width: 40px;
-          height: 40px; }
+          margin-top: 15%;
+          width: 35px;
+          height: 35px; }
       header #cont__cont-busqueda #cont-busqueda #cont-buscar {
         width: 84%;
         background-color: #414141; }
