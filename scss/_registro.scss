@@ -17,6 +17,8 @@ $colorBotones: #FFFFFF;
 #cont-header{
     @include medidas(100%, 50px);
     background-color: $colorBlack;  
+    margin: 0;
+    padding: 0;
 }
 #cont-logo__casa-{
     background-color: $colorFondo;
@@ -55,6 +57,16 @@ $colorBotones: #FFFFFF;
     margin-top: 1%;
 }
 
+#cont-inicieSesion{
+    color: $colorBotones;
+}
+
+
+#cont-boton__continuar{
+    margin-left: 32%;
+    margin-top: 2%;
+}
+
 #boton-continuar{
     background-color: $colorBoton-continuar;
     color: black;
@@ -66,7 +78,7 @@ $colorBotones: #FFFFFF;
     transition: transform 0.5s ease; /* Transición suave cuando cambia el tamaño */
 }
 #boton-continuar:hover {
-    transform: scale(1.05); /* Agranda el contenedor a un 120% de su tamaño original */
+    transform: scale(1.2); /* Agranda el contenedor a un 120% de su tamaño original */
   }
 
 
@@ -110,6 +122,26 @@ $colorBotones: #FFFFFF;
     @include medidas(100%, 200px);
     margin: 0;
     padding: 0;
+    margin-top: 15%;
+}
+
+
+
+
+
+
+@media screen and (max-width: 1023px){
+    #cont-gif-registro{
+        margin-top: 7%;
+        margin-left: 26%;
+        @include medidas(40%, 60%);
+    }
+    #footer{
+        margin-top: 50%;
+    }
+    #cont-boton__continuar{
+        margin-left: 39%;
+    }
 }
 
 
