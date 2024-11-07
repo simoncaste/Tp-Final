@@ -1,0 +1,47 @@
+
+@mixin medidasFotos($ancho, $alto){
+    height: $alto;
+    width: $ancho;
+}
+body{
+    background-color: grey !important;
+    color: white!important;
+    #cont-img-principal{
+        @include medidasFotos( 100%, 400px);
+        justify-content: center;
+        display: flex;
+        img{
+            width: 37%;
+            height: 100%;
+            
+        }
+    }
+    #cont-titulo-artista{
+        h1{
+            font-size: 50px;
+            display: flex;
+            justify-content: center;
+        }
+    }
+    #img-descarga-play{
+        margin: 50px 0 0 50px;
+        img{
+            @include medidasFotos(65%, 80px)
+        }
+    }
+    main{
+        margin-top: 100px;
+        .cancion{
+            margin-left: 270px;
+            align-items: center;
+            display: flex;
+            margin-top: 80px;
+            img{
+                @include medidasFotos(150px, 150px)
+            }
+            .cont-nombre-cancion{
+                margin-left: 40px;
+            }
+        }
+    }
+}
