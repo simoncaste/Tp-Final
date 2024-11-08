@@ -72,8 +72,12 @@ $colorBotones: #FFFFFF;
     margin-left: 1%;
 }
 
-#boton-link__continuar{
+#boton-continuar{
     color: $colorBlack;
+    @include medidas(33.8%, 52px);
+    margin-left: 25%;
+    margin-top: 3%
+    
     
 }
 
@@ -87,4 +91,21 @@ $colorBotones: #FFFFFF;
     @include medidas(100%, 100%);
     padding-left: 8%;
     padding-right: 8%;
+}
+
+
+
+
+@media screen and (max-width: 1023px){
+    #cont-gif{
+        margin-top: 7%;
+        margin-left: 25.5%;
+        @include medidas(40%, 60%);
+    }
+    #footer{
+        margin-top: 50%;
+    }
+    #boton-continuar{
+        margin-left: 37%;
+    }
 }

@@ -67,7 +67,7 @@ $colorBotones: #FFFFFF;
     margin-top: 2%;
 }
 
-#boton-continuar{
+#boton--continuar{
     background-color: $colorBoton-continuar;
     color: black;
     @include medidas(60%, 50px);
@@ -75,10 +75,10 @@ $colorBotones: #FFFFFF;
     font-size: 25px;
     margin-top: 1%;
     border: none;
-    transition: transform 0.5s ease; /* Transición suave cuando cambia el tamaño */
+    transition: transform 0.5s ease; 
 }
 #boton-continuar:hover {
-    transform: scale(1.2); /* Agranda el contenedor a un 120% de su tamaño original */
+    transform: scale(1.2); 
   }
 
 
