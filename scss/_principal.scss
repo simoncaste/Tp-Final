@@ -1,28 +1,13 @@
 body{
     background-color: #202020;
-    .album{
-        padding-top: 5%;
-        padding-left: 5%;
-        .album1{
-            width: 90%;
-            height: 200px;
-        }
-        .nomAlbum{
-            font-family: Arial, Helvetica, sans-serif;
-            color: white;
-            font-size: 30px;
-        }
-    }
-
-    .artistasCont{
-        width: 15%;
-        height: auto;
-
-        .fotosArt{
-            height: 100%;
-            width: 100%;
-        }
-    }
+    .seccines{
+        position: fixed;
+        top: 0;         
+        left: 0;        
+        width: 100%;    
+        padding: 10px;  
+        z-index: 1000;  
 
     
+    }
 }
