@@ -1,17 +1,27 @@
 body{
     background-color: #202020;
     .secciones{
-        position: fixed;
-        top: 0;         
-        left: 0;        
-        width: 100%;    
-        padding: 10px;  
-        z-index: 1000;  
+        height: calc(100vh - 60px);
+        position: static;            
+        overflow-y: auto; 
 
     
     }
     .meGustas{
-        top: 50px;
-        justify-content: right;
+        padding-top: 20px;
+        .fotosMeGustas{
+        border: 2px solid white;
+        width: 100%;
+        padding-top: 30px;
+        height: 200px;
+        .fotos{
+            width: 20%;
+            height: 100%;
+        }
+        .audio-circulo {
+            width: 100px;           
+            height: 100px;          
+          }
+        }
     }
 }
