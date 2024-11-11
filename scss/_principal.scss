@@ -1,6 +1,6 @@
 body{
     background-color: #202020;
-    .seccines{
+    .secciones{
         position: fixed;
         top: 0;         
         left: 0;        
@@ -9,5 +9,9 @@ body{
         z-index: 1000;  
 
     
+    }
+    .meGustas{
+        top: 50px;
+        justify-content: right;
     }
 }
