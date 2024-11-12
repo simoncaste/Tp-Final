@@ -3,45 +3,32 @@
     height: $alto;
     width: $ancho;
 }
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 body{
-    background-color: grey !important;
-    color: white!important;
-    #cont-img-principal{
-        @include medidasFotos( 100%, 400px);
-        justify-content: center;
+    background-color: #081925 !important;
+    width: 100%;
+    .banner{
+        height: 400px !important;
         display: flex;
+        justify-content: center;
+        margin-top: 70px !important;
         img{
-            width: 37%;
             height: 100%;
+            width: 30%;
             
         }
     }
-    #cont-titulo-artista{
+    .titulo{
+        margin-top: 70px !important;
+        color: white;
         h1{
-            font-size: 50px;
-            display: flex;
-            justify-content: center;
+            width: 40%;
+            margin-left: 15% !important;
         }
     }
-    #img-descarga-play{
-        margin: 50px 0 0 50px;
-        img{
-            @include medidasFotos(65%, 80px)
-        }
-    }
-    main{
-        margin-top: 100px;
-        .cancion{
-            margin-left: 270px;
-            align-items: center;
-            display: flex;
-            margin-top: 80px;
-            img{
-                @include medidasFotos(150px, 150px)
-            }
-            .cont-nombre-cancion{
-                margin-left: 40px;
-            }
-        }
-    }
+    
 }
