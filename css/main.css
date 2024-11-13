@@ -248,7 +248,6 @@ body {
   background-color: #202020; }
   body .secciones {
     height: calc(100vh - 60px);
-    position: fixed;
     overflow-y: auto;
     background-color: black;
     position: static; }
@@ -280,7 +279,7 @@ body {
     body .ContfotosPopu .lista-imagenes img {
       width: 100%;
       object-fit: cover;
-      margin-right: 10px; }
+      margin-right: 20px; }
 
 /* SASS */
 /* SASS */
@@ -412,17 +411,20 @@ body {
   body main {
     margin-top: 50px !important;
     margin-left: 3% !important; }
-    body main .canciones .rhlm-foto {
-      height: 120px;
-      width: 120px; }
-    body main .canciones .cont-tituloCancion {
-      margin-top: 5px !important;
-      margin-left: 50px !important; }
-      body main .canciones .cont-tituloCancion h2 {
-        color: white; }
-    body main .canciones .cont-tiempo {
-      display: flex;
-      align-items: center;
-      margin-left: 1400px !important; }
-      body main .canciones .cont-tiempo h5 {
-        color: #838383; }
+    body main .canciones {
+      margin-top: 50px !important; }
+      body main .canciones .rhlm-foto {
+        height: 120px;
+        width: 120px; }
+      body main .canciones .cont-tituloCancion {
+        width: 20%;
+        margin-top: 5px !important;
+        margin-left: 50px !important; }
+        body main .canciones .cont-tituloCancion h2 {
+          color: white; }
+      body main .canciones .cont-tiempo {
+        display: flex;
+        align-items: center;
+        margin-left: 1200px !important; }
+        body main .canciones .cont-tiempo h5 {
+          color: #838383; }
