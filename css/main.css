@@ -248,33 +248,39 @@ body {
   background-color: #202020; }
   body .secciones {
     height: calc(100vh - 60px);
-    position: static;
-    overflow-y: auto; }
+    position: fixed;
+    overflow-y: auto;
+    background-color: black;
+    position: static; }
   body .meGustas {
-    padding-top: 20px; }
+    padding-top: 20px;
+    padding-left: 30%;
+    width: 100%; }
     body .meGustas .fotosMeGustas {
-      border: 2px solid white;
+      border: 1px solid white;
       width: 100%;
-      padding-top: 30px;
+      padding: 20px;
       height: 200px; }
       body .meGustas .fotosMeGustas .fotos {
         width: 20%;
         height: 100%; }
-      body .meGustas .fotosMeGustas .audio-circulo {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        background-color: #3498db;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        cursor: pointer;
-        transition: background-color 0.3s ease; }
-        body .meGustas .fotosMeGustas .audio-circulo #audio-icon {
-          font-size: 30px;
-          color: white; }
-        body .meGustas .fotosMeGustas .audio-circulo audio {
-          display: none; }
+    body .meGustas .ContVer .ver-mas {
+      display: inline-block;
+      margin-top: 10px;
+      padding-left: 840px;
+      color: white;
+      text-decoration: underline;
+      font-size: 20px; }
+  body .ContfotosPopu {
+    padding-left: 400px;
+    width: 100%; }
+    body .ContfotosPopu .lista-imagenes {
+      display: flex;
+      overflow: auto; }
+    body .ContfotosPopu .lista-imagenes img {
+      width: 100%;
+      object-fit: cover;
+      margin-right: 10px; }
 
 /* SASS */
 /* SASS */
