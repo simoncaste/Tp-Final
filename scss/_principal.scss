@@ -1,27 +1,54 @@
 body{
     background-color: #202020;
     .secciones{
-        height: calc(100vh - 60px);
-        position: static;            
+        height: calc(100vh - 60px); 
         overflow-y: auto; 
-
+        background-color: black;
+        
+        position: static;
     
     }
     .meGustas{
         padding-top: 20px;
-        .fotosMeGustas{
-        border: 2px solid white;
+        padding-left: 30%;
         width: 100%;
-        padding-top: 30px;
+        
+        .fotosMeGustas{
+        border: 1px solid white ;
+        width: 100%;
+        padding: 20px;
         height: 200px;
+        
         .fotos{
             width: 20%;
             height: 100%;
         }
-        .audio-circulo {
-            width: 100px;           
-            height: 100px;          
-          }
         }
+        .ContVer{
+            .ver-mas {
+                display: inline-block;
+                margin-top: 10px;
+                padding-left: 840px;
+                color: white;
+                text-decoration: underline;
+                font-size: 20px;
+            }
+        } 
+    }
+    .ContfotosPopu{
+        padding-left: 400px;
+        width: 100%;
+        
+        .lista-imagenes{
+            display: flex;
+            overflow: auto;
+            
+        }
+        .lista-imagenes img{
+            width: 100%;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+        
     }
 }
