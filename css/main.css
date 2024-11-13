@@ -411,20 +411,23 @@ body {
   body main {
     margin-top: 50px !important;
     margin-left: 3% !important; }
-    body main .canciones .rhlm-foto {
-      height: 120px;
-      width: 120px; }
-    body main .canciones .cont-tituloCancion {
-      margin-top: 5px !important;
-      margin-left: 50px !important; }
-      body main .canciones .cont-tituloCancion h2 {
-        color: white; }
-    body main .canciones .cont-tiempo {
-      display: flex;
-      align-items: center;
-      margin-left: 1400px !important; }
-      body main .canciones .cont-tiempo h5 {
-        color: #838383; }
+    body main .canciones {
+      margin-top: 50px !important; }
+      body main .canciones .rhlm-foto {
+        height: 120px;
+        width: 120px; }
+      body main .canciones .cont-tituloCancion {
+        width: 20%;
+        margin-top: 5px !important;
+        margin-left: 50px !important; }
+        body main .canciones .cont-tituloCancion h2 {
+          color: white; }
+      body main .canciones .cont-tiempo {
+        display: flex;
+        align-items: center;
+        margin-left: 1200px !important; }
+        body main .canciones .cont-tiempo h5 {
+          color: #838383; }
 
 #cont-titulo__mg {
   color: white;

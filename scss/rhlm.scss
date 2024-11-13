@@ -65,11 +65,12 @@ body{
         
         
         .canciones{
+            margin-top: 50px!important;
             .rhlm-foto{
                 @include medidasFotos(120px, 120px)
             }
             .cont-tituloCancion{
-                
+                width: 20%;
                 margin-top: 5px !important;
                 margin-left: 50px !important;
                 h2{
@@ -80,7 +81,7 @@ body{
             .cont-tiempo{
                 display: flex;
                 align-items: center;
-                margin-left: 1400px!important;
+                margin-left: 1200px!important;
                 h5{
                     color: rgb(131, 131, 131);
                 }
