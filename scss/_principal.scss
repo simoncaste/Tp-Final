@@ -1,8 +1,7 @@
 body{
     background-color: #202020;
     .secciones{
-        height: calc(100vh - 60px);
-        position: fixed;      
+        height: calc(100vh - 60px); 
         overflow-y: auto; 
         background-color: black;
         
@@ -48,7 +47,7 @@ body{
         .lista-imagenes img{
             width: 100%;
             object-fit: cover;
-            margin-right: 10px;
+            margin-right: 20px;
         }
         
     }
