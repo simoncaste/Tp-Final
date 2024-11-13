@@ -368,35 +368,24 @@ body {
   #boton-continuar {
     margin-left: 37%; } }
 
+* {
+  margin: 0 !important;
+  padding: 0 !important; }
+
 body {
-  background-color: grey !important;
-  color: white !important; }
-  body #cont-img-principal {
-    height: 400px;
-    width: 100%;
-    justify-content: center;
-    display: flex; }
-    body #cont-img-principal img {
-      width: 37%;
-      height: 100%; }
-  body #cont-titulo-artista h1 {
-    font-size: 50px;
+  background-color: #081925 !important;
+  width: 100%; }
+  body .banner {
+    height: 400px !important;
     display: flex;
-    justify-content: center; }
-  body #img-descarga-play {
-    margin: 50px 0 0 50px; }
-    body #img-descarga-play img {
-      height: 80px;
-      width: 65%; }
-  body main {
-    margin-top: 100px; }
-    body main .cancion {
-      margin-left: 270px;
-      align-items: center;
-      display: flex;
-      margin-top: 80px; }
-      body main .cancion img {
-        height: 150px;
-        width: 150px; }
-      body main .cancion .cont-nombre-cancion {
-        margin-left: 40px; }
+    justify-content: center;
+    margin-top: 70px !important; }
+    body .banner img {
+      height: 100%;
+      width: 30%; }
+  body .titulo {
+    margin-top: 70px !important;
+    color: white; }
+    body .titulo h1 {
+      width: 40%;
+      margin-left: 15% !important; }
