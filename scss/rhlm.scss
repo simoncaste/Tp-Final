@@ -1,0 +1,91 @@
+
+@mixin medidasFotos($ancho, $alto){
+    height: $alto;
+    width: $ancho;
+}
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body{
+    background-color: #081925 !important;
+    width: 100%;
+    .banner{
+        height: 400px !important;
+        display: flex;
+        justify-content: center;
+        margin-top: 70px !important;
+        img{
+            @include medidasFotos(19.3%, 370px)
+            
+        }
+    }
+    .titulo{
+        margin-top: 70px !important;
+        color: white;
+        h1{
+            width: 40%;
+            margin-left: 3% !important;
+        }
+    }
+    .botones{
+        width: 80%;
+        height: 80px;
+        margin-top: 50px !important;
+        margin-left: 30px !important;
+        .logo-reproducir{
+            display: flex;
+            justify-content: center;
+            border-left: solid 1px white;
+            align-items: center;
+            img{
+                @include medidasFotos(70px, 70px);
+                
+                
+               
+            }
+        }
+        .logo-descargar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                @include medidasFotos(70px, 70px);
+                
+                
+               
+            }
+        }
+        
+    }
+    main{
+        margin-top: 50px !important;
+        margin-left: 3% !important;
+        
+        
+        .canciones{
+            .rhlm-foto{
+                @include medidasFotos(120px, 120px)
+            }
+            .cont-tituloCancion{
+                
+                margin-top: 5px !important;
+                margin-left: 50px !important;
+                h2{
+                    color: white;
+                    
+                }
+            }
+            .cont-tiempo{
+                display: flex;
+                align-items: center;
+                margin-left: 1400px!important;
+                h5{
+                    color: rgb(131, 131, 131);
+                }
+            }
+        }
+    }
+    
+}

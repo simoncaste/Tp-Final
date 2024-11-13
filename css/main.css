@@ -363,11 +363,48 @@ body {
     justify-content: center;
     margin-top: 70px !important; }
     body .banner img {
-      height: 100%;
-      width: 30%; }
+      height: 370px;
+      width: 19.3%; }
   body .titulo {
     margin-top: 70px !important;
     color: white; }
     body .titulo h1 {
       width: 40%;
-      margin-left: 15% !important; }
+      margin-left: 3% !important; }
+  body .botones {
+    width: 80%;
+    height: 80px;
+    margin-top: 50px !important;
+    margin-left: 30px !important; }
+    body .botones .logo-reproducir {
+      display: flex;
+      justify-content: center;
+      border-left: solid 1px white;
+      align-items: center; }
+      body .botones .logo-reproducir img {
+        height: 70px;
+        width: 70px; }
+    body .botones .logo-descargar {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      body .botones .logo-descargar img {
+        height: 70px;
+        width: 70px; }
+  body main {
+    margin-top: 50px !important;
+    margin-left: 3% !important; }
+    body main .canciones .rhlm-foto {
+      height: 120px;
+      width: 120px; }
+    body main .canciones .cont-tituloCancion {
+      margin-top: 5px !important;
+      margin-left: 50px !important; }
+      body main .canciones .cont-tituloCancion h2 {
+        color: white; }
+    body main .canciones .cont-tiempo {
+      display: flex;
+      align-items: center;
+      margin-left: 1400px !important; }
+      body main .canciones .cont-tiempo h5 {
+        color: #838383; }
