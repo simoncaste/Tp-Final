@@ -248,7 +248,6 @@ body {
   background-color: #202020; }
   body .secciones {
     height: calc(100vh - 60px);
-    position: fixed;
     overflow-y: auto;
     background-color: black;
     position: static; }
@@ -280,7 +279,7 @@ body {
     body .ContfotosPopu .lista-imagenes img {
       width: 100%;
       object-fit: cover;
-      margin-right: 10px; }
+      margin-right: 20px; }
 
 /* SASS */
 /* SASS */
@@ -426,3 +425,80 @@ body {
       margin-left: 1400px !important; }
       body main .canciones .cont-tiempo h5 {
         color: #838383; }
+
+#cont-titulo__mg {
+  color: white;
+  height: 50px;
+  width: 100%;
+  display: flex;
+  margin-top: 15% !important;
+  margin-left: 5% !important;
+  font-size: 40px; }
+
+#titulo__mg {
+  font-size: 50px; }
+
+#cont-iconos {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-left: 12% !important;
+  margin-top: 25% !important; }
+
+#cont-icono-play {
+  height: 40px;
+  width: 40px; }
+
+#icono-play {
+  height: 100%;
+  width: 100%; }
+
+#cont-icono-descargar {
+  color: white;
+  height: 60%;
+  width: 10%; }
+
+#icono-descargar {
+  height: 100%;
+  width: 100%; }
+
+#fila-1 {
+  margin-top: 2% !important; }
+
+.cont-cancion {
+  display: flex;
+  color: white;
+  margin-left: -38% !important; }
+
+.cont-img-cancion {
+  width: 80px;
+  height: 80px;
+  margin-left: 5% !important; }
+
+.cont-titulo-cancion {
+  margin-top: 3% !important;
+  margin-left: 8% !important; }
+
+.titulo-cancion {
+  margin-top: -7% !important; }
+
+.artista {
+  margin-top: 9% !important;
+  margin-left: 5% !important; }
+
+#img-quenospaso {
+  height: 100%;
+  width: 100%; }
+
+.cont-linea {
+  margin-top: 5% !important;
+  margin-left: -5% !important;
+  width: 100%; }
+
+.linea {
+  width: 100%; }
+
+.cont-segundos {
+  margin-top: 15% !important;
+  margin-left: 45% !important;
+  color: white; }
