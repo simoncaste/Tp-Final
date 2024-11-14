@@ -12,33 +12,33 @@ $borderTitulo: solid 2px aqua;
 
 
 footer{
-    margin-top: 5%;
+    margin-top: 5% !important;
     background-color: white;
     #primerafila{
         @include medidasFotos( 100%, 200px);
         display: flex;
         #timemusic__contenedor{
-            padding-top: 1.5%;
-            margin-left: 2.5%;
+            padding-top: 1.5% !important;
+            margin-left: 2.5% !important;
         }
 
         #redessociales{
             display: flex;
             padding-top: 0.6%;
             @include medidasFotos( 30%, 34px);
-            margin-left: -5%;
+            margin-left: -5% !important;
 
             .imagenesredes{
                 background-color: none;
-                margin-left: 20%;
-                margin-right: 20%;
+                margin-left: 20% !important;
+                margin-right: 20% !important;
                 img{
                     @include medidasFotos( 38px, 38px)
                 }
             }
         }
         #imagenlogotime{
-            padding-left: 70%;
+            padding-left: 75% !important;
             padding-top: 1%;
             @include medidasFotos( 140px, 140px);
             img{

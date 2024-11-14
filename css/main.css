@@ -196,30 +196,30 @@ header {
 /*MIXIN*/
 /*Variables*/
 footer {
-  margin-top: 5%;
+  margin-top: 5% !important;
   background-color: white; }
   footer #primerafila {
     height: 200px;
     width: 100%;
     display: flex; }
     footer #primerafila #timemusic__contenedor {
-      padding-top: 1.5%;
-      margin-left: 2.5%; }
+      padding-top: 1.5% !important;
+      margin-left: 2.5% !important; }
     footer #primerafila #redessociales {
       display: flex;
       padding-top: 0.6%;
       height: 34px;
       width: 30%;
-      margin-left: -5%; }
+      margin-left: -5% !important; }
       footer #primerafila #redessociales .imagenesredes {
         background-color: none;
-        margin-left: 20%;
-        margin-right: 20%; }
+        margin-left: 20% !important;
+        margin-right: 20% !important; }
         footer #primerafila #redessociales .imagenesredes img {
           height: 38px;
           width: 38px; }
     footer #primerafila #imagenlogotime {
-      padding-left: 70%;
+      padding-left: 75% !important;
       padding-top: 1%;
       height: 140px;
       width: 140px; }
