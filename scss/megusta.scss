@@ -61,14 +61,33 @@
 .cont-img-cancion{
     width: 80px;
     height: 80px;
-    margin-left: 5% !important;
+    margin-left: 0% !important;
+    transition: transform 0.5s ease;
+}
+
+.cont-img-cancion:hover{
     
+    transform: scale(1.3); 
+      
 }
 
 .cont-titulo-cancion{
     margin-top: 3% !important;
     margin-left: 8% !important;
 }
+
+.musica{
+    margin-top: 29% !important;
+    margin-left: -110% !important;
+    height: 29px;
+    width: 109px;
+}
+#seekBar {
+    width: 200px;
+}
+
+
+
 
 .titulo-cancion{
     margin-top: -7% !important;
@@ -80,6 +99,7 @@
 .artista{
     margin-top: 9% !important;
     margin-left: 5% !important;
+    width: 100%;
 }
 
 #img-quenospaso{
@@ -89,7 +109,7 @@
 
 .cont-linea{
     margin-top: 5% !important;
-    margin-left: -15% !important;
+    margin-left: -35% !important;
     width: 1400px;
 }
 
@@ -101,4 +121,48 @@
     margin-top: 15% !important;
     margin-left: 55% !important;
     color: white;
+}
+
+#img-sola{
+    @extend #img-quenospaso;
+}
+
+#img-masricaqueayer{
+    @extend #img-quenospaso;
+}
+
+#img-shedont{
+    @extend #img-quenospaso;
+}
+
+#img-hipocrita{
+    @extend #img-quenospaso;
+}
+
+#img-bandolera{
+    @extend #img-quenospaso;
+}
+
+#img-tunoloamas{
+    @extend #img-quenospaso;
+}
+
+#img-moscowmule{
+    @extend #img-quenospaso;
+}
+
+#img-tarot{
+    @extend #img-quenospaso;
+}
+
+#img-titimepregunto{
+    @extend #img-quenospaso;
+}
+
+#img-efecto{
+    @extend #img-quenospaso;
+}
+
+#img-neverita{
+    @extend #img-quenospaso;
 }
