@@ -12,21 +12,24 @@ body{
     background-color: #081925 !important;
     width: 100%;
     .banner{
-        height: 400px !important;
+        height: 500px !important;
         display: flex;
         justify-content: center;
         margin-top: 70px !important;
         img{
-            @include medidasFotos(19.3%, 370px)
+            @include medidasFotos(500px, 500px)
             
         }
     }
     .titulo{
         margin-top: 70px !important;
         color: white;
+        
         h1{
             width: 40%;
             margin-left: 3% !important;
+            font-size: 50px !important;
+            
         }
     }
     .botones{
@@ -40,11 +43,9 @@ body{
             border-left: solid 1px white;
             align-items: center;
             img{
-                @include medidasFotos(70px, 70px);
-                
-                
-               
+                @include medidasFotos(70px, 70px);  
             }
+            
         }
         .logo-descargar{
             display: flex;
@@ -66,14 +67,15 @@ body{
         
         .canciones{
             margin-top: 50px!important;
+            height: 130px;
             .rhlm-foto{
-                @include medidasFotos(120px, 120px)
+                @include medidasFotos(100%, 40%)
             }
             .cont-tituloCancion{
                 width: 20%;
                 margin-top: 5px !important;
                 margin-left: 50px !important;
-                h2{
+                h4{
                     color: white;
                     
                 }
@@ -81,12 +83,50 @@ body{
             .cont-tiempo{
                 display: flex;
                 align-items: center;
-                margin-left: 1200px!important;
+                margin-left: 62%!important;
                 h5{
                     color: rgb(131, 131, 131);
                 }
             }
         }
     }
+
+    .cont-albumes{
+        margin: 90px 0 0 3%!important;
+        color: white;
+        width: 97%;
+        h2{
+            font-size: 50px;
+        }
+    }
     
+    .cont-foto-albumes{
+        margin-top: 100px!important;
+        .cont-img-abumes{
+            width: 90%;
+            height: 85%;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .cont-titulo-album{
+            margin-top: 20px !important;
+            h3{
+                color: white;
+            }
+    
+        }
+        
+        h4{
+            margin-top: 10px !important;
+            color: rgb(131, 131, 131);
+
+        }
+        
+        
+    }
 }
+
+
+
