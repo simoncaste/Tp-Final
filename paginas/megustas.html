@@ -9,9 +9,69 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="row container-fluid" id="menu">
+        <div class="col-lg-2">
+            <div id="cont-logo">
+                <img id="logo" src="../assets/imagenes/logo.png" alt="">
+            </div>
+        </div>
 
+        <div class="col-lg-3"></div>
+        <div class="col-lg-3" id="pr">
+            <div id="cont-casa">
+                <a href="../index.html"><img id="logo-casa" src="../assets/imagenes/logoCasa.png" alt=""></a>
+            </div>
+            <form id="buscador" onsubmit="buscarCancion(event)">
+                <input type="text" id="searchInput" placeholder="Buscar">
+                <button type="submit">Buscar</button>
+            </form>
+            <script>
+                function buscarCancion(event) {
+                    event.preventDefault(); // Prevenir el envío del formulario
+                    const input = document.getElementById("searchInput").value.toLowerCase();
+                    
+                    // Lista de canciones con sus identificadores
+                    const canciones = {
+                        "qué nos pasó": "que nos paso",
+                        "sola": "sola",
+                        "mas rica que ayer": "mas rica que ayer",
+                        "she dont give fo": "she dont give fo",
+                        "hipocrita": "hipocrita",
+                        "bandolera": "bandolera",
+                        "tu no lo amas": "tu no lo amas",
+                        "moscow mule": "moscow mule",
+                        "tarot": "tarot",
+                        "titi me pregunto": "titi me pregunto",
+                        "efecto": "efecto",
+                        "neverita": "neverita",
+                    };
+                
+                    // Buscar el id de la canción
+                    const idCancion = canciones[input];
+                
+                    if (idCancion) {
+                        // Hacer scroll hacia la canción encontrada
+                        document.getElementById(idCancion).scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        alert("Canción no encontrada");
+                    }
+                }
+            </script>
+        </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-1">
+            <div id="cont-persona">
+                <img id="persona" src="../assets/imagenes/logoPersona.png" alt="">
+            </div>
+        </div>
+        
+        
+        
+        
+        
     </header>
+
+    
 
     <div class="row container-fluid">
         
@@ -36,7 +96,7 @@
                 
                 <div class="col-lg-3">
                     <div id="cont-icono-descargar">
-                        <p>icono descarga</p>
+                        <img id="icono-descargar" src="../assets/imagenes/logodescarga.png" alt="">
                     </div>
                 </div>
             </div>
@@ -48,7 +108,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="que nos paso" itemid="quenospaso">
                 
                 <div class="cont-img-cancion">
                     <img  id="img-quenospaso" src="../assets/imagenes/qnospaso.png" alt="" onclick="document.getElementById('miAudio').play()" >
@@ -98,7 +158,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="sola">
                 
                 <div class="cont-img-cancion">
                     <img id="img-sola" src="../assets/imagenes/sola.png" alt="">
@@ -142,7 +202,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="mas rica que ayer">
                 
                 <div class="cont-img-cancion">
                     <img id="img-masricaqueayer" src="../assets/imagenes/masricaqueayer.png" alt="">
@@ -185,7 +245,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="she dont give fo">
                 
                 <div class="cont-img-cancion">
                     <img id="img-shedont" src="../assets/imagenes/shedont.png" alt="">
@@ -228,7 +288,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="hipocrita">
                 
                 <div class="cont-img-cancion">
                     <img id="img-hipocrita" src="../assets/imagenes/albumAnuel.png" alt="">
@@ -267,7 +327,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="bandolera">
                 
                 <div class="cont-img-cancion">
                     <img id="img-bandolera" src="../assets/imagenes/albumAnuel.png" alt="">
@@ -307,7 +367,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="tu no lo amas">
                 
                 <div class="cont-img-cancion">
                     <img id="img-tunoloamas" src="../assets/imagenes/albumAnuel.png" alt="">
@@ -348,7 +408,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="moscow mule">
                 
                 <div class="cont-img-cancion">
                     <img id="img-moscowmule" src="../assets/imagenes/albumbaddbunny.png" alt="">
@@ -388,7 +448,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="tarot">
                 
                 <div class="cont-img-cancion">
                     <img id="img-tarot" src="../assets/imagenes/albumbaddbunny.png" alt="">
@@ -429,7 +489,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="titi me pregunto">
                 
                 <div class="cont-img-cancion">
                     <img id="img-titimepregunto" src="../assets/imagenes/albumbaddbunny.png" alt="">
@@ -470,7 +530,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="efecto">
                 
                 <div class="cont-img-cancion">
                     <img id="img-efecto" src="../assets/imagenes/albumbaddbunny.png" alt="">
@@ -510,7 +570,7 @@
     <div class="row container-fluid" id="fila-1" >
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion">
+            <div class="cont-cancion" id="neverita">
                 
                 <div class="cont-img-cancion">
                     <img id="img-neverita" src="../assets/imagenes/albumbaddbunny.png" alt="">
@@ -544,6 +604,13 @@
             
         </div>
     </div>
+            
+            
+            
+            
+            
+            
+            
                 
                 
                 
