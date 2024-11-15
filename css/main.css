@@ -499,26 +499,40 @@ body {
 .cont-img-cancion {
   width: 80px;
   height: 80px;
-  margin-left: 5% !important; }
+  margin-left: 0% !important;
+  transition: transform 0.5s ease; }
+
+.cont-img-cancion:hover {
+  transform: scale(1.3); }
 
 .cont-titulo-cancion {
   margin-top: 3% !important;
   margin-left: 8% !important; }
+
+.musica {
+  margin-top: 29% !important;
+  margin-left: -110% !important;
+  height: 29px;
+  width: 109px; }
+
+#seekBar {
+  width: 200px; }
 
 .titulo-cancion {
   margin-top: -7% !important; }
 
 .artista {
   margin-top: 9% !important;
-  margin-left: 5% !important; }
+  margin-left: 5% !important;
+  width: 100%; }
 
-#img-quenospaso {
+#img-quenospaso, #img-sola, #img-masricaqueayer, #img-shedont, #img-hipocrita, #img-bandolera, #img-tunoloamas, #img-moscowmule, #img-tarot, #img-titimepregunto, #img-efecto, #img-neverita {
   height: 100%;
   width: 100%; }
 
 .cont-linea {
   margin-top: 5% !important;
-  margin-left: -15% !important;
+  margin-left: -35% !important;
   width: 1400px; }
 
 .linea {
