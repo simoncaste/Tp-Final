@@ -505,3 +505,70 @@ body {
   margin-top: 15% !important;
   margin-left: 55% !important;
   color: white; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+#main {
+  height: auto;
+  background-color: #081925; }
+  #main #contenedor__titulo {
+    background-color: #0B161C;
+    align-self: center;
+    height: 135px;
+    display: flex; }
+    #main #contenedor__titulo h1 {
+      align-self: center;
+      font-size: 65px;
+      color: white;
+      padding-left: 5% !important; }
+  #main #contenedor__dealbumes {
+    margin-top: 2.5% !important;
+    margin-left: 2.5% !important; }
+    #main #contenedor__dealbumes .contenedor__album {
+      margin-top: 2.5% !important;
+      height: 300px;
+      background-color: #0B161C;
+      display: flex; }
+      #main #contenedor__dealbumes .contenedor__album #contenedor__imagen {
+        height: 245px;
+        width: 245px;
+        align-self: center;
+        margin-left: 2% !important; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__imagen img {
+          height: 100%;
+          width: 100%; }
+      #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea {
+        display: block;
+        width: 40%;
+        margin-left: 2% !important;
+        margin-top: 1% !important; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__tituloodisea h1 {
+          font-size: 60px;
+          color: white;
+          font-weight: bold; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__cancionesinfo {
+          margin-top: 1% !important;
+          color: #616060; }
+          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__cancionesinfo h1 {
+            font-weight: 400;
+            font-size: 30px !important; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentes {
+          margin-top: 0.8% !important;
+          color: #616060; }
+          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentes h1 {
+            font-weight: 400;
+            font-size: 30px !important; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 {
+          display: flex;
+          margin-top: 1.5% !important; }
+          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 img {
+            width: 55px;
+            height: 55px; }
+          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 h1 {
+            margin-left: 2% !important;
+            align-self: center;
+            font-weight: bold;
+            font-size: 35px !important;
+            color: #616060; }
