@@ -32,7 +32,7 @@
                     
                     
                     const canciones = {
-                        "qué nos pasó": "que nos paso",
+                        "que nos paso": "que nos paso",
                         "sola": "sola",
                         "mas rica que ayer": "mas rica que ayer",
                         "she dont give fo": "she dont give fo",
@@ -105,47 +105,51 @@
         </div>
     </div>
 </div>
-    <script>
-        
-    </script>
+    
     <script>
         function cambiarColorYReproducir(audioId) {
-            const audio = document.getElementById(audioId);
-            if (!audio) return; // Si no hay audio, salir
+    const audio = document.getElementById(audioId);
+    const playIcon = document.getElementById('icono-play'); // Obtener el icono de play
     
-            // Si el audio ya se está reproduciendo, detenerlo
-            if (!audio.paused) {
-                audio.pause(); // Pausar el audio
-                audio.currentTime = 0; // Reiniciar el audio
-                return; // Salir de la función
-            }
-    
-            // Detener y reiniciar todos los demás audios
-            const audios = document.querySelectorAll('audio');
-            audios.forEach((aud) => {
-                if (aud !== audio) {
-                    aud.pause();
-                    aud.currentTime = 0;
-                }
-            });
-    
-            // Reproducir el audio
-            audio.play();
-    
-            // Configurar la reproducción del siguiente audio (si aplica)
-            const nextAudioId = audio.dataset.next;
-            if (nextAudioId) {
-                audio.onended = () => {
-                    cambiarColorYReproducir(nextAudioId); // Reproducir el siguiente
-                };
-            }
+    if (!audio) return; // Si no hay audio, salir
+
+    // Si el audio ya se está reproduciendo, detenerlo
+    if (!audio.paused) {
+        audio.pause(); // Pausar el audio
+        audio.currentTime = 0; // Reiniciar el audio
+        playIcon.classList.remove('img-active'); // Eliminar la clase para poner el icono de vuelta al estado original
+        return; // Salir de la función
+    }
+
+    // Detener y reiniciar todos los demás audios
+    const audios = document.querySelectorAll('audio');
+    audios.forEach((aud) => {
+        if (aud !== audio) {
+            aud.pause();
+            aud.currentTime = 0;
         }
+    });
+
+    // Reproducir el audio
+    audio.play();
+
+    // Aplicar la clase img-active al icono de play
+    playIcon.classList.add('img-active');
+
+    // Configurar la reproducción del siguiente audio (si aplica)
+    const nextAudioId = audio.dataset.next;
+    if (nextAudioId) {
+        audio.onended = () => {
+            cambiarColorYReproducir(nextAudioId); // Reproducir el siguiente
+        };
+    }
+}
     </script>
     
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('QueNosPaso')">
+            <div class="cont-cancion" id="que nos paso" onclick="cambiarColorYReproducir('QueNosPaso')">
                 <div class="cont-img-cancion">
                     <img id="img-quenospaso" src="../assets/imagenes/qnospaso.png" alt="Reproducir Audio">
                 </div>
@@ -176,7 +180,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('Sola')">
+            <div class="cont-cancion" id="sola" onclick="cambiarColorYReproducir('Sola')">
                 <div class="cont-img-cancion">
                     <img id="img-sola" src="../assets/imagenes/sola.png" alt="Reproducir Audio" class="playable-image">
                 </div>
@@ -207,7 +211,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('MasRicaQueAyer')">
+            <div class="cont-cancion" id="mas rica que ayer" onclick="cambiarColorYReproducir('MasRicaQueAyer')">
                 <div class="cont-img-cancion">
                     <img id="img-masricaqueayer" src="../assets/imagenes/masricaqueayer.png" alt="Reproducir Audio">
                 </div>
@@ -238,7 +242,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('SheDont')">
+            <div class="cont-cancion" id="she dont give fo" onclick="cambiarColorYReproducir('SheDont')">
                 <div class="cont-img-cancion">
                     <img id="img-shedont" src="../assets/imagenes/shedont.png" alt="Reproducir Audio" class="playable-image">
                 </div>
@@ -269,7 +273,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('Hipocrita')">
+            <div class="cont-cancion" id="hipocrita" onclick="cambiarColorYReproducir('Hipocrita')">
                 <div class="cont-img-cancion">
                     <img id="img-hipocrita" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image">
                 </div>
@@ -300,7 +304,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('Bandolera')">
+            <div class="cont-cancion" id="bandolera" onclick="cambiarColorYReproducir('Bandolera')">
                 <div class="cont-img-cancion">
                     <img id="img-bandolera" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image">
                 </div>
@@ -333,7 +337,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('TuNoLoAmas')">
+            <div class="cont-cancion" id="tu no lo amas" onclick="cambiarColorYReproducir('TuNoLoAmas')">
                 <div class="cont-img-cancion">
                     <img id="img-tunoloamas" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image" >
                 </div>
@@ -364,7 +368,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion"  onclick="cambiarColorYReproducir('MoscowMule')">
+            <div class="cont-cancion" id="moscow mule"  onclick="cambiarColorYReproducir('MoscowMule')">
                 <div class="cont-img-cancion">
                     <img id="img-moscowmule" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image">
                 </div>
@@ -395,7 +399,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('Tarot')">
+            <div class="cont-cancion" id="tarot" onclick="cambiarColorYReproducir('Tarot')">
                 <div class="cont-img-cancion">
                     <img id="img-tarot" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" >
                 </div>
@@ -426,7 +430,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('TitiMePregunto')">
+            <div class="cont-cancion" id="titi me pregunto" onclick="cambiarColorYReproducir('TitiMePregunto')">
                 <div class="cont-img-cancion">
                     <img id="img-titimepregunto" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" >
                 </div>
@@ -457,7 +461,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('Efecto')">
+            <div class="cont-cancion" id="efecto" onclick="cambiarColorYReproducir('Efecto')">
                 <div class="cont-img-cancion">
                     <img id="img-efecto" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" >
                 </div>
@@ -488,7 +492,7 @@
     <div class="row container-fluid" id="fila-1">
         <div class="col-lg-1"></div>
         <div class="col-lg-2">
-            <div class="cont-cancion" onclick="cambiarColorYReproducir('Neverita')">
+            <div class="cont-cancion" id="neverita" onclick="cambiarColorYReproducir('Neverita')">
                 <div class="cont-img-cancion">
                     <img id="img-neverita" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" >
                 </div>
