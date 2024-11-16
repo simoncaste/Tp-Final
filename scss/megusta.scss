@@ -5,7 +5,7 @@
     height: 40px;
 }
 
-/* Estilo del input */
+
 #searchInput {
     background-color: #2c2f33; 
     border: none;
@@ -14,23 +14,23 @@
     padding: 5px 10px;
     font-size: 16px;
     
-    width: 250px; /* Ancho del input */
+    width: 250px; 
     transition: border-color 0.3s ease;
 }
 
 #searchInput::placeholder {
-    color: #888888; /* Color del texto de marcador */
+    color: #888888; 
 }
 
 #searchInput:focus {
-    border-bottom-color: #00aaff; /* Línea azul al hacer clic */
+    border-bottom-color: #00aaff; 
 }
 
-/* Estilo del botón */
+
 button {
-    background-color: #00aaff; /* Azul */
+    background-color: #00aaff; 
     border: none;
-    color: white; /* Texto blanco */
+    color: white;
     padding: 6px 15px;
     font-size: 16px;
     cursor: pointer;
@@ -39,7 +39,7 @@ button {
 }
 
 button:hover {
-    background-color: #0088cc; /* Azul más oscuro al pasar el ratón */
+    background-color: #0088cc; 
 }
 
 
@@ -179,7 +179,9 @@ button:hover {
     margin-left: -110% !important;
     height: 29px;
     width: 109px;
+    
 }
+
 #seekBar {
     width: 200px;
 }

@@ -27,10 +27,10 @@
             </form>
             <script>
                 function buscarCancion(event) {
-                    event.preventDefault(); // Prevenir el envío del formulario
+                    event.preventDefault(); 
                     const input = document.getElementById("searchInput").value.toLowerCase();
                     
-                    // Lista de canciones con sus identificadores
+                    
                     const canciones = {
                         "qué nos pasó": "que nos paso",
                         "sola": "sola",
@@ -111,7 +111,7 @@
             <div class="cont-cancion" id="que nos paso" itemid="quenospaso">
                 
                 <div class="cont-img-cancion">
-                    <img  id="img-quenospaso" src="../assets/imagenes/qnospaso.png" alt="" onclick="document.getElementById('miAudio').play()" >
+                    <img  id="img-quenospaso" src="../assets/imagenes/qnospaso.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('QueNosPaso')">
                 </div>
                 
                 
@@ -123,9 +123,11 @@
         </div>
                         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="QueNosPaso" data-next="Sola">
+                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
+            
             
         </div>             
                         
@@ -161,7 +163,7 @@
             <div class="cont-cancion" id="sola">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-sola" src="../assets/imagenes/sola.png" alt="">
+                    <img id="img-sola" src="../assets/imagenes/sola.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('Sola')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -173,9 +175,11 @@
         </div>
         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="Sola">
+                <source src="../assets/imagenes/audios/sola-official-audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
+            
             
         </div>
                     
@@ -205,7 +209,7 @@
             <div class="cont-cancion" id="mas rica que ayer">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-masricaqueayer" src="../assets/imagenes/masricaqueayer.png" alt="">
+                    <img id="img-masricaqueayer" src="../assets/imagenes/masricaqueayer.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('MasRicaQueAyer')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -219,9 +223,11 @@
         </div>
          
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="MasRicaQueAyer">
+                <source src="../assets/imagenes/audios/mas-rica-que-ayer-video-oficial.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
+            
             
         </div>
         
@@ -248,7 +254,7 @@
             <div class="cont-cancion" id="she dont give fo">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-shedont" src="../assets/imagenes/shedont.png" alt="">
+                    <img id="img-shedont" src="../assets/imagenes/shedont.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('SheDont')">
                 </div>
                 
                 
@@ -262,9 +268,11 @@
         </div>
         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="SheDont">
+                <source src="../assets/imagenes/audios/she-dont-give-a-fo-ft-khea-prod-by-omar-varela.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
+            
             
         </div>
                 
@@ -280,6 +288,20 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function reproducirAudio(audioId) {
+            
+            const audios = document.querySelectorAll('audio');
+            audios.forEach(audio => audio.pause());
+
+            
+            const audio = document.getElementById(audioId);
+            audio.currentTime = 0; 
+            audio.play();
+        }
+        
+    </script>
             
                 
                 
@@ -291,7 +313,7 @@
             <div class="cont-cancion" id="hipocrita">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-hipocrita" src="../assets/imagenes/albumAnuel.png" alt="">
+                    <img id="img-hipocrita" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('Hipocrita')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -303,8 +325,9 @@
         </div>
         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="Hipocrita">
+                <source src="../assets/imagenes/audios/hipócrita-feat-zion-audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
             
         </div>
@@ -330,7 +353,7 @@
             <div class="cont-cancion" id="bandolera">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-bandolera" src="../assets/imagenes/albumAnuel.png" alt="">
+                    <img id="img-bandolera" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('Bandolera')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -342,8 +365,9 @@
         </div>
         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="Bandolera">
+                <source src="../assets/imagenes/audios/bandolera.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
             
         </div>
@@ -370,7 +394,7 @@
             <div class="cont-cancion" id="tu no lo amas">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-tunoloamas" src="../assets/imagenes/albumAnuel.png" alt="">
+                    <img id="img-tunoloamas" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('TuNoLoAmas')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -382,8 +406,9 @@
         </div>
         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="TuNoLoAmas">
+                <source src="../assets/imagenes/audios/tu-no-lo-amas.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
             
         </div>
@@ -411,7 +436,7 @@
             <div class="cont-cancion" id="moscow mule">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-moscowmule" src="../assets/imagenes/albumbaddbunny.png" alt="">
+                    <img id="img-moscowmule" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('MoscowMule')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -423,8 +448,9 @@
         </div>
         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="MoscowMule">
+                <source src="../assets/imagenes/audios/moscow-mule-video-oficial--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
             
         </div>
@@ -451,7 +477,7 @@
             <div class="cont-cancion" id="tarot">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-tarot" src="../assets/imagenes/albumbaddbunny.png" alt="">
+                    <img id="img-tarot" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('Tarot')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -463,8 +489,9 @@
         </div>
         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="Tarot">
+                <source src="../assets/imagenes/audios/tarot-360-visualizer--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
             
         </div>
@@ -492,7 +519,7 @@
             <div class="cont-cancion" id="titi me pregunto">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-titimepregunto" src="../assets/imagenes/albumbaddbunny.png" alt="">
+                    <img id="img-titimepregunto" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('TitiMePregunto')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -504,8 +531,9 @@
         </div>
                         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="TitiMePregunto">
+                <source src="../assets/imagenes/audios/tití-me-preguntó-video-oficial--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
             
         </div>
@@ -533,7 +561,7 @@
             <div class="cont-cancion" id="efecto">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-efecto" src="../assets/imagenes/albumbaddbunny.png" alt="">
+                    <img id="img-efecto" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('Efecto')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -545,8 +573,9 @@
         </div>
                         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="Efecto">
+                <source src="../assets/imagenes/audios/efecto-360-visualizer--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
             
         </div>
@@ -573,7 +602,7 @@
             <div class="cont-cancion" id="neverita">
                 
                 <div class="cont-img-cancion">
-                    <img id="img-neverita" src="../assets/imagenes/albumbaddbunny.png" alt="">
+                    <img id="img-neverita" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" onclick="reproducirAudio('Neverita')">
                 </div>
                 
                 <div class="cont-titulo-cancion">
@@ -585,8 +614,9 @@
         </div>
                         
         <div class="col-lg-1">
-            <audio class="musica" id="mi-audio" controls>
-                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mp3">
+            <audio id="Neverita">
+                <source src="../assets/imagenes/audios/neverita-360-visualizer--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
             </audio>
             
         </div>
