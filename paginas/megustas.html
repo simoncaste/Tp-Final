@@ -46,11 +46,11 @@
                         "neverita": "neverita",
                     };
                 
-                    // Buscar el id de la canción
+                    
                     const idCancion = canciones[input];
                 
                     if (idCancion) {
-                        // Hacer scroll hacia la canción encontrada
+                        
                         document.getElementById(idCancion).scrollIntoView({ behavior: 'smooth' });
                     } else {
                         alert("Canción no encontrada");
@@ -89,7 +89,7 @@
         <div id="cont-iconos">
             <div class="col-lg-3">
                 <div id="cont-icono-play">
-                    <!-- Cambiar onclick para pasar el ID del audio correctamente -->
+                    
                     <img id="icono-play" src="../assets/imagenes/iconoPlay.png" alt="Reproducir Audio"   
                          class="playable-image" 
                          onclick="cambiarColorYReproducir('QueNosPaso')">
@@ -109,19 +109,19 @@
     <script>
         function cambiarColorYReproducir(audioId) {
     const audio = document.getElementById(audioId);
-    const playIcon = document.getElementById('icono-play'); // Obtener el icono de play
+    const playIcon = document.getElementById('icono-play'); 
     
-    if (!audio) return; // Si no hay audio, salir
+    if (!audio) return;
 
-    // Si el audio ya se está reproduciendo, detenerlo
+    
     if (!audio.paused) {
-        audio.pause(); // Pausar el audio
-        audio.currentTime = 0; // Reiniciar el audio
-        playIcon.classList.remove('img-active'); // Eliminar la clase para poner el icono de vuelta al estado original
-        return; // Salir de la función
+        audio.pause(); 
+        audio.currentTime = 0;
+        playIcon.classList.remove('img-active');
+        return; 
     }
 
-    // Detener y reiniciar todos los demás audios
+   
     const audios = document.querySelectorAll('audio');
     audios.forEach((aud) => {
         if (aud !== audio) {
@@ -130,17 +130,17 @@
         }
     });
 
-    // Reproducir el audio
+    
     audio.play();
 
-    // Aplicar la clase img-active al icono de play
+    
     playIcon.classList.add('img-active');
 
-    // Configurar la reproducción del siguiente audio (si aplica)
+    
     const nextAudioId = audio.dataset.next;
     if (nextAudioId) {
         audio.onended = () => {
-            cambiarColorYReproducir(nextAudioId); // Reproducir el siguiente
+            cambiarColorYReproducir(nextAudioId); 
         };
     }
 }
@@ -519,30 +519,51 @@
             </div>
         </div>
     </div>
-            
-            
-            
-            
-            
-            
-            
-                
-                
-                
-                
 
-                
-                
-                
-                
-
-        
+    <footer>
+        <div id="primerafila">
+            <div id="timemusic__contenedor">
+                <h1>
+                    Time Music
+                </h1>
+                <div id="redessociales">
+                    <div class="imagenesredes"><img src="../assets/imagenes/logofacebook.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logotwitter.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logoWhatsapp.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logoig.png" alt=""></div>
+                </div>
+            </div>
+            
 
 
+            <div id="imagenlogotime">
+                <img src="../assets/imagenes/0.3.gif" alt="">
+            </div>
+        </div>
 
-    
+        <div id="segundafila">
+            <p class="terminosycondiciones">
+                Politica de Privacidad 
+            </p>
 
+            <p class="terminosycondiciones">
+                Politica de Rembolso
+            </p>
 
+            <p class="terminosycondiciones">
+                Terminos y Condiciones
+            </p>
+
+            <p class="terminosycondiciones">
+                Soporte
+            </p>
+        </div>
+
+        <div id="tercerafila">
+            <p>℗Time Music Inc.</p>
+        </div>
+
+    </footer>
 
 </body>
 </html>
