@@ -82,21 +82,50 @@ body{
         }
       
     }
-
-    .segundaPar{
-        .tituloAP{
-            color: white;
-        }
-        .fotosAlb{
-            padding-top: 50px !important;
-            padding-left: 500px !important;
-            
+    .fotosC {
+        top: 200px !important;
+        display: flex;
+        justify-content: center; 
+        align-items: end; 
+        margin-bottom: 20px; 
     
+        img {
+            width: 200px; 
+            height: 200px; 
+            object-fit: cover; 
+            border-radius: 10px; 
+        }
+    }
+    
+    
+    
+    .ContAP{
+        padding-top: 150px !important ;
+        padding-left: 400px !important;
+        color: white;
+    }
+
+    .segundaParte{
+        padding-right: 200px !important;
+    }
+    .segundaPar{
+        flex-direction: column;
+        gap: 20px;
+        display: flex;
+        align-items:end;
+        .fotosAlb{
+            .nbrAl{
+                color: white;
+            }
+            .tiemoAl{
+                color: gray;
+                font-size: 15px;
+            }
             img {
-                width: 80%; 
-                height: auto; 
-                max-width: 300px;
-                object-fit: cover; 
+                width: 200px; 
+                height: 200px; 
+                
+               
             }
         }
     }

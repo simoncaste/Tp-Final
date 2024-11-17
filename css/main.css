@@ -305,16 +305,36 @@ body {
         transition: transform 0.3s ease; }
         body .Artistas .artistas .fotosAr:hover {
           transform: scale(1.1); }
-  body .segundaPar .tituloAP {
+  body .fotosC {
+    top: 200px !important;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-bottom: 20px; }
+    body .fotosC img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px; }
+  body .ContAP {
+    padding-top: 150px !important;
+    padding-left: 400px !important;
     color: white; }
-  body .segundaPar .fotosAlb {
-    padding-top: 50px !important;
-    padding-left: 500px !important; }
+  body .segundaParte {
+    padding-right: 200px !important; }
+  body .segundaPar {
+    flex-direction: column;
+    gap: 20px;
+    display: flex;
+    align-items: end; }
+    body .segundaPar .fotosAlb .nbrAl {
+      color: white; }
+    body .segundaPar .fotosAlb .tiemoAl {
+      color: gray;
+      font-size: 15px; }
     body .segundaPar .fotosAlb img {
-      width: 80%;
-      height: auto;
-      max-width: 300px;
-      object-fit: cover; }
+      width: 200px;
+      height: 200px; }
 
 /* SASS */
 /* SASS */
