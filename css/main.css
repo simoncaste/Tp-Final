@@ -319,6 +319,8 @@ body {
         height: 200px;
         object-fit: cover;
         border-radius: 10px; }
+  body a {
+    text-decoration: none; }
   body .ContAP {
     padding-top: 150px !important;
     padding-left: 400px !important;

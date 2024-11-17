@@ -82,7 +82,7 @@ body{
         }
       
     }
-
+    
     .Carr{
         overflow: auto;
         padding-left: 400px !important;
@@ -104,7 +104,9 @@ body{
        
     }
    
-    
+    a{
+        text-decoration: none;
+    }
     
     
     .ContAP{
@@ -122,6 +124,7 @@ body{
         display: flex;
         align-items:end;
         .fotosAlb{
+            
             .nbrAl{
                 color: white;
             }
