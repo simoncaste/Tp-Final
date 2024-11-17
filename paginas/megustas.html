@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="row container-fluid" id="menu">
+        <div class="col-lg-2">
+            <div id="cont-logo">
+                <img id="logo" src="../assets/imagenes/logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="col-lg-3"></div>
+        <div class="col-lg-3" id="pr">
+            <div id="cont-casa">
+                <a href="../index.html"><img id="logo-casa" src="../assets/imagenes/logoCasa.png" alt=""></a>
+            </div>
+            <form id="buscador" onsubmit="buscarCancion(event)">
+                <input type="text" id="searchInput" placeholder="Buscar">
+                <button type="submit">Buscar</button>
+            </form>
+            <script>
+                function buscarCancion(event) {
+                    event.preventDefault(); 
+                    const input = document.getElementById("searchInput").value.toLowerCase();
+                    
+                    
+                    const canciones = {
+                        "que nos paso": "que nos paso",
+                        "sola": "sola",
+                        "mas rica que ayer": "mas rica que ayer",
+                        "she dont give fo": "she dont give fo",
+                        "hipocrita": "hipocrita",
+                        "bandolera": "bandolera",
+                        "tu no lo amas": "tu no lo amas",
+                        "moscow mule": "moscow mule",
+                        "tarot": "tarot",
+                        "titi me pregunto": "titi me pregunto",
+                        "efecto": "efecto",
+                        "neverita": "neverita",
+                    };
+                
+                    
+                    const idCancion = canciones[input];
+                
+                    if (idCancion) {
+                        
+                        document.getElementById(idCancion).scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        alert("Canción no encontrada");
+                    }
+                }
+            </script>
+        </div>
+        <div class="col-lg-3"></div>
+        <div class="col-lg-1">
+            <div id="cont-persona">
+                <img id="persona" src="../assets/imagenes/logoPersona.png" alt="">
+            </div>
+        </div>
+        
+        
+        
+        
+        
+    </header>
+
+    
+
+    <div class="row container-fluid">
+        
+        <div class="col-lg-4">
+            <div id="cont-titulo__mg">
+                <h1 id="titulo__mg">Tus me gusta</h1>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row container-fluid">
+    <div class="col-lg-3">
+        <div id="cont-iconos">
+            <div class="col-lg-3">
+                <div id="cont-icono-play">
+                    
+                    <img id="icono-play" src="../assets/imagenes/iconoPlay.png" alt="Reproducir Audio"   
+                         class="playable-image" 
+                         onclick="cambiarColorYReproducir('QueNosPaso')">
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div id="cont-icono-descargar">
+                    <img id="icono-descargar" src="../assets/imagenes/logodescarga.png" alt="Descargar" 
+                         onclick="cambiarColorImagen('icono-descargar')">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    <script>
+        function cambiarColorYReproducir(audioId) {
+    const audio = document.getElementById(audioId);
+    const playIcon = document.getElementById('icono-play'); 
+    
+    if (!audio) return;
+
+    
+    if (!audio.paused) {
+        audio.pause(); 
+        audio.currentTime = 0;
+        playIcon.classList.remove('img-active');
+        return; 
+    }
+
+   
+    const audios = document.querySelectorAll('audio');
+    audios.forEach((aud) => {
+        if (aud !== audio) {
+            aud.pause();
+            aud.currentTime = 0;
+        }
+    });
+
+    
+    audio.play();
+
+    
+    playIcon.classList.add('img-active');
+
+    
+    const nextAudioId = audio.dataset.next;
+    if (nextAudioId) {
+        audio.onended = () => {
+            cambiarColorYReproducir(nextAudioId); 
+        };
+    }
+}
+    </script>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="que nos paso" onclick="cambiarColorYReproducir('QueNosPaso')">
+                <div class="cont-img-cancion">
+                    <img id="img-quenospaso" src="../assets/imagenes/qnospaso.png" alt="Reproducir Audio">
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">¿Que nos pasó?</h4>
+                    <p class="artista">Anuel AA</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="QueNosPaso" data-next="Sola">
+                <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>6:19</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="sola" onclick="cambiarColorYReproducir('Sola')">
+                <div class="cont-img-cancion">
+                    <img id="img-sola" src="../assets/imagenes/sola.png" alt="Reproducir Audio" class="playable-image">
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Sola</h4>
+                    <p class="artista">Anuel AA</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="Sola" data-next="MasRicaQueAyer">
+                <source src="../assets/imagenes/audios/sola-official-audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>4:27</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="mas rica que ayer" onclick="cambiarColorYReproducir('MasRicaQueAyer')">
+                <div class="cont-img-cancion">
+                    <img id="img-masricaqueayer" src="../assets/imagenes/masricaqueayer.png" alt="Reproducir Audio">
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Mas rica que ayer</h4>
+                    <p class="artista">Anuel AA</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="MasRicaQueAyer" data-next="SheDont">
+                <source src="../assets/imagenes/audios/mas-rica-que-ayer-video-oficial.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>3:36</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="she dont give fo" onclick="cambiarColorYReproducir('SheDont')">
+                <div class="cont-img-cancion">
+                    <img id="img-shedont" src="../assets/imagenes/shedont.png" alt="Reproducir Audio" class="playable-image">
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">She Don’t Give Fo</h4>
+                    <p class="artista">Duki</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="SheDont" data-next="Hipocrita">
+                <source src="../assets/imagenes/audios/she-dont-give-a-fo-ft-khea-prod-by-omar-varela.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>3:29</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="hipocrita" onclick="cambiarColorYReproducir('Hipocrita')">
+                <div class="cont-img-cancion">
+                    <img id="img-hipocrita" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image">
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Hipocrita</h4>
+                    <p class="artista">Anuel AA</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="Hipocrita" data-next="Bandolera">
+                <source src="../assets/imagenes/audios/hipócrita-feat-zion-audio.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>3:09</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="bandolera" onclick="cambiarColorYReproducir('Bandolera')">
+                <div class="cont-img-cancion">
+                    <img id="img-bandolera" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image">
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Bandolera</h4>
+                    <p class="artista">Anuel AA</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="Bandolera">
+                <source src="../assets/imagenes/audios/bandolera.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>2:47</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="tu no lo amas" onclick="cambiarColorYReproducir('TuNoLoAmas')">
+                <div class="cont-img-cancion">
+                    <img id="img-tunoloamas" src="../assets/imagenes/albumAnuel.png" alt="Reproducir Audio" class="playable-image" >
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Tu no lo amas</h4>
+                    <p class="artista">Anuel AA</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="TuNoLoAmas" data-next="MoscowMule">
+                <source src="../assets/imagenes/audios/tu-no-lo-amas.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>3:34</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="moscow mule"  onclick="cambiarColorYReproducir('MoscowMule')">
+                <div class="cont-img-cancion">
+                    <img id="img-moscowmule" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image">
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Moscow mule</h4>
+                    <p class="artista">Bad Bunny</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="MoscowMule" data-next="Tarot">
+                <source src="../assets/imagenes/audios/moscow-mule-video-oficial--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>4:27</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="tarot" onclick="cambiarColorYReproducir('Tarot')">
+                <div class="cont-img-cancion">
+                    <img id="img-tarot" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" >
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Tarot</h4>
+                    <p class="artista">Bad Bunny</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="Tarot" data-next="TitiMePregunto">
+                <source src="../assets/imagenes/audios/tarot-360-visualizer--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>3:37</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="titi me pregunto" onclick="cambiarColorYReproducir('TitiMePregunto')">
+                <div class="cont-img-cancion">
+                    <img id="img-titimepregunto" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" >
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Titi me pregunto</h4>
+                    <p class="artista">Bad Bunny</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="TitiMePregunto" data-next="Efecto">
+                <source src="../assets/imagenes/audios/tití-me-preguntó-video-oficial--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>4:03</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="efecto" onclick="cambiarColorYReproducir('Efecto')">
+                <div class="cont-img-cancion">
+                    <img id="img-efecto" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" >
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Efecto</h4>
+                    <p class="artista">Bad Bunny</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="Efecto" data-next="Neverita">
+                <source src="../assets/imagenes/audios/efecto-360-visualizer--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>3:09</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container-fluid" id="fila-1">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-2">
+            <div class="cont-cancion" id="neverita" onclick="cambiarColorYReproducir('Neverita')">
+                <div class="cont-img-cancion">
+                    <img id="img-neverita" src="../assets/imagenes/albumbaddbunny.png" alt="Reproducir Audio" class="playable-image" >
+                </div>
+                <div class="cont-titulo-cancion">
+                    <h4 class="titulo-cancion">Neverita</h4>
+                    <p class="artista">Bad Bunny</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1">
+            <audio id="Neverita">
+                <source src="../assets/imagenes/audios/neverita-360-visualizer--un-verano-sin-ti.mp3" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+        </div>
+        <div class="col-lg-6">
+            <div class="cont-linea">
+                <img class="linea" src="../assets/imagenes/linea.png" alt="">
+            </div>
+        </div>
+        <div class="col-lg-2">
+            <div class="cont-segundos">
+                <p>2:53</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div id="primerafila">
+            <div id="timemusic__contenedor">
+                <h1>
+                    Time Music
+                </h1>
+                <div id="redessociales">
+                    <div class="imagenesredes"><img src="../assets/imagenes/logofacebook.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logotwitter.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logoWhatsapp.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logoig.png" alt=""></div>
+                </div>
+            </div>
+            
+
+
+            <div id="imagenlogotime">
+                <img src="../assets/imagenes/0.3.gif" alt="">
+            </div>
+        </div>
+
+        <div id="segundafila">
+            <p class="terminosycondiciones">
+                Politica de Privacidad 
+            </p>
+
+            <p class="terminosycondiciones">
+                Politica de Rembolso
+            </p>
+
+            <p class="terminosycondiciones">
+                Terminos y Condiciones
+            </p>
+
+            <p class="terminosycondiciones">
+                Soporte
+            </p>
+        </div>
+
+        <div id="tercerafila">
+            <p>℗Time Music Inc.</p>
+        </div>
+
+    </footer>
+
+</body>
+</html>

@@ -196,30 +196,30 @@ header {
 /*MIXIN*/
 /*Variables*/
 footer {
-  margin-top: 5%;
+  margin-top: 5% !important;
   background-color: white; }
   footer #primerafila {
     height: 200px;
     width: 100%;
     display: flex; }
     footer #primerafila #timemusic__contenedor {
-      padding-top: 1.5%;
-      margin-left: 2.5%; }
+      padding-top: 1.5% !important;
+      margin-left: 2.5% !important; }
     footer #primerafila #redessociales {
       display: flex;
       padding-top: 0.6%;
       height: 34px;
       width: 30%;
-      margin-left: -5%; }
+      margin-left: -5% !important; }
       footer #primerafila #redessociales .imagenesredes {
         background-color: none;
-        margin-left: 20%;
-        margin-right: 20%; }
+        margin-left: 20% !important;
+        margin-right: 20% !important; }
         footer #primerafila #redessociales .imagenesredes img {
           height: 38px;
           width: 38px; }
     footer #primerafila #imagenlogotime {
-      padding-left: 70%;
+      padding-left: 75% !important;
       padding-top: 1%;
       height: 140px;
       width: 140px; }
@@ -509,19 +509,20 @@ body {
   background-color: #081925 !important;
   width: 100%; }
   body .banner {
-    height: 400px !important;
+    height: 500px !important;
     display: flex;
     justify-content: center;
     margin-top: 70px !important; }
     body .banner img {
-      height: 370px;
-      width: 19.3%; }
+      height: 500px;
+      width: 500px; }
   body .titulo {
     margin-top: 70px !important;
     color: white; }
     body .titulo h1 {
       width: 40%;
-      margin-left: 3% !important; }
+      margin-left: 3% !important;
+      font-size: 50px !important; }
   body .botones {
     width: 80%;
     height: 80px;
@@ -546,19 +547,279 @@ body {
     margin-top: 50px !important;
     margin-left: 3% !important; }
     body main .canciones {
-      margin-top: 50px !important; }
+      margin-top: 50px !important;
+      height: 130px; }
       body main .canciones .rhlm-foto {
-        height: 120px;
-        width: 120px; }
+        height: 40%;
+        width: 100%; }
       body main .canciones .cont-tituloCancion {
         width: 20%;
         margin-top: 5px !important;
         margin-left: 50px !important; }
-        body main .canciones .cont-tituloCancion h2 {
+        body main .canciones .cont-tituloCancion h4 {
           color: white; }
       body main .canciones .cont-tiempo {
         display: flex;
         align-items: center;
-        margin-left: 1200px !important; }
+        margin-left: 62% !important; }
         body main .canciones .cont-tiempo h5 {
           color: #838383; }
+  body .cont-albumes {
+    margin: 90px 0 0 3% !important;
+    color: white;
+    width: 97%; }
+    body .cont-albumes h2 {
+      font-size: 50px; }
+  body .cont-foto-albumes {
+    margin-top: 100px !important; }
+    body .cont-foto-albumes .cont-img-abumes {
+      width: 90%;
+      height: 85%; }
+      body .cont-foto-albumes .cont-img-abumes img {
+        width: 100%;
+        height: 100%; }
+    body .cont-foto-albumes .cont-titulo-album {
+      margin-top: 20px !important; }
+      body .cont-foto-albumes .cont-titulo-album h3 {
+        color: white; }
+    body .cont-foto-albumes h4 {
+      margin-top: 10px !important;
+      color: #838383; }
+
+.img-active {
+  filter: brightness(100%) saturate(0%) invert(39%) sepia(93%) saturate(319%) hue-rotate(94deg) brightness(92%) contrast(90%);
+  transition: all 0.3s ease; }
+
+#buscador {
+  height: 40px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  gap: 10px; }
+
+#searchInput {
+  height: 25px;
+  width: 250px;
+  background-color: #2c2f33;
+  border: none;
+  padding: 5px 10px;
+  font-size: 16px;
+  transition: border-color 0.3s ease; }
+
+#searchInput::placeholder {
+  color: #888888; }
+
+#searchInput:focus {
+  border-bottom-color: #00aaff; }
+
+button {
+  background-color: #00aaff;
+  border: none;
+  color: white;
+  padding: 6px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease; }
+
+button:hover {
+  background-color: #0088cc; }
+
+#menu {
+  height: 60px;
+  width: 100%;
+  display: flex; }
+
+#cont-logo {
+  height: 50px;
+  width: 50px;
+  background-color: white; }
+
+#logo {
+  height: 100%;
+  width: 100%; }
+
+#cont-persona {
+  height: 50px;
+  width: 50px; }
+
+#persona {
+  height: 100%;
+  width: 100%; }
+
+#pr {
+  display: flex; }
+
+#cont-casa {
+  height: 40px;
+  width: 40px; }
+
+#logo-casa {
+  height: 100%;
+  width: 100%; }
+
+#buscador {
+  justify-content: center;
+  align-items: center; }
+
+#cont-titulo__mg {
+  height: 50px;
+  width: 100%;
+  color: white;
+  display: flex;
+  margin-top: 15% !important;
+  margin-left: 5% !important;
+  font-size: 40px; }
+
+#titulo__mg {
+  font-size: 50px; }
+
+#cont-iconos {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  margin-left: 12% !important;
+  margin-top: 25% !important; }
+
+#cont-icono-play {
+  height: 40px;
+  width: 40px; }
+
+#icono-play {
+  height: 100%;
+  width: 100%; }
+
+#cont-icono-descargar {
+  height: 40px;
+  width: 40px;
+  color: white; }
+
+#icono-descargar {
+  height: 100%;
+  width: 100%; }
+
+#fila-1 {
+  margin-top: 2% !important; }
+
+.cont-cancion {
+  display: flex;
+  color: white;
+  margin-left: -38% !important; }
+
+.cont-img-cancion {
+  height: 80px;
+  width: 80px;
+  margin-left: 0% !important;
+  transition: transform 0.5s ease; }
+
+.cont-img-cancion:hover {
+  transform: scale(1.3); }
+
+.cont-titulo-cancion {
+  margin-top: 3% !important;
+  margin-left: 8% !important; }
+
+.musica {
+  height: 29px;
+  width: 109px;
+  margin-top: 29% !important;
+  margin-left: -110% !important; }
+
+#seekBar {
+  height: 40px;
+  width: 200px; }
+
+.titulo-cancion {
+  margin-top: -7% !important; }
+
+.artista {
+  height: 30px;
+  width: 100%;
+  margin-top: 9% !important;
+  margin-left: 5% !important; }
+
+#img-quenospaso, #img-sola, #img-masricaqueayer, #img-shedont, #img-hipocrita, #img-bandolera, #img-tunoloamas, #img-moscowmule, #img-tarot, #img-titimepregunto, #img-efecto, #img-neverita {
+  height: 100%;
+  width: 100%; }
+
+.cont-linea {
+  height: 20px;
+  width: 1400px;
+  margin-top: 5% !important;
+  margin-left: -38% !important; }
+
+.linea {
+  height: 1px;
+  width: 100%; }
+
+.cont-segundos {
+  margin-top: 15% !important;
+  margin-left: 55% !important;
+  color: white; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+#main {
+  height: auto;
+  background-color: #081925; }
+  #main #contenedor__titulo {
+    background-color: #0B161C;
+    align-self: center;
+    height: 135px;
+    display: flex; }
+    #main #contenedor__titulo h1 {
+      align-self: center;
+      font-size: 65px;
+      color: white;
+      padding-left: 5% !important; }
+  #main #contenedor__dealbumes {
+    margin-top: 2.5% !important;
+    margin-left: 2.5% !important; }
+    #main #contenedor__dealbumes .contenedor__album {
+      margin-top: 2.5% !important;
+      height: 300px;
+      background-color: #0B161C;
+      display: flex; }
+      #main #contenedor__dealbumes .contenedor__album #contenedor__imagen {
+        height: 245px;
+        width: 245px;
+        align-self: center;
+        margin-left: 2% !important; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__imagen img {
+          height: 100%;
+          width: 100%; }
+      #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea {
+        display: block;
+        width: 40%;
+        margin-left: 2% !important;
+        margin-top: 1% !important; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__tituloodisea h1 {
+          font-size: 60px;
+          color: white;
+          font-weight: bold; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__cancionesinfo {
+          margin-top: 1% !important;
+          color: #616060; }
+          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__cancionesinfo h1 {
+            font-weight: 400;
+            font-size: 30px !important; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentes {
+          margin-top: 0.8% !important;
+          color: #616060; }
+          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentes h1 {
+            font-weight: 400;
+            font-size: 30px !important; }
+        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 {
+          display: flex;
+          margin-top: 1.5% !important; }
+          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 img {
+            width: 55px;
+            height: 55px; }
+          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 h1 {
+            margin-left: 2% !important;
+            align-self: center;
+            font-weight: bold;
+            font-size: 35px !important;
+            color: #616060; }
