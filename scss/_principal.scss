@@ -82,21 +82,31 @@ body{
         }
       
     }
-    .fotosC {
-        top: 200px !important;
-        display: flex;
-        justify-content: center; 
-        align-items: end; 
-        margin-bottom: 20px; 
     
-        img {
-            width: 200px; 
-            height: 200px; 
-            object-fit: cover; 
-            border-radius: 10px; 
+    .Carr{
+        overflow: auto;
+        padding-left: 400px !important;
+        padding-top: 100px !important;
+        .fotosC {
+            top: 300px !important;
+            padding-bottom: 150px !important;
+            display: flex;
+            justify-content: center; 
+             
+            img {
+                width: 200px; 
+                height: 200px; 
+                object-fit: cover; 
+                border-radius: 10px; 
+                
+            }
         }
+       
     }
-    
+   
+    a{
+        text-decoration: none;
+    }
     
     
     .ContAP{
@@ -114,6 +124,7 @@ body{
         display: flex;
         align-items:end;
         .fotosAlb{
+            
             .nbrAl{
                 color: white;
             }
@@ -124,6 +135,8 @@ body{
             img {
                 width: 200px; 
                 height: 200px; 
+                border-radius: 10px; 
+
                 
                
             }

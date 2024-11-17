@@ -305,17 +305,22 @@ body {
         transition: transform 0.3s ease; }
         body .Artistas .artistas .fotosAr:hover {
           transform: scale(1.1); }
-  body .fotosC {
-    top: 200px !important;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    margin-bottom: 20px; }
-    body .fotosC img {
-      width: 200px;
-      height: 200px;
-      object-fit: cover;
-      border-radius: 10px; }
+  body .Carr {
+    overflow: auto;
+    padding-left: 400px !important;
+    padding-top: 100px !important; }
+    body .Carr .fotosC {
+      top: 300px !important;
+      padding-bottom: 150px !important;
+      display: flex;
+      justify-content: center; }
+      body .Carr .fotosC img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px; }
+  body a {
+    text-decoration: none; }
   body .ContAP {
     padding-top: 150px !important;
     padding-left: 400px !important;
@@ -334,7 +339,8 @@ body {
       font-size: 15px; }
     body .segundaPar .fotosAlb img {
       width: 200px;
-      height: 200px; }
+      height: 200px;
+      border-radius: 10px; }
 
 /* SASS */
 /* SASS */
