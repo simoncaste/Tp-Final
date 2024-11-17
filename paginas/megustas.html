@@ -110,39 +110,47 @@
         function cambiarColorYReproducir(audioId) {
     const audio = document.getElementById(audioId);
     const playIcon = document.getElementById('icono-play'); 
-    
+    const contLinea = document.getElementById(`linea-${audioId}`);
+
     if (!audio) return;
 
-    
+
     if (!audio.paused) {
         audio.pause(); 
         audio.currentTime = 0;
         playIcon.classList.remove('img-active');
+        contLinea.classList.remove('linea-activa'); 
         return; 
     }
 
-   
     const audios = document.querySelectorAll('audio');
     audios.forEach((aud) => {
         if (aud !== audio) {
             aud.pause();
             aud.currentTime = 0;
+
+            const contLineaOtros = document.getElementById(`linea-${aud.id}`);
+            contLineaOtros?.classList.remove('linea-activa'); 
         }
     });
 
-    
     audio.play();
 
-    
     playIcon.classList.add('img-active');
+    contLinea.classList.add('linea-activa'); 
 
-    
+
     const nextAudioId = audio.dataset.next;
     if (nextAudioId) {
         audio.onended = () => {
             cambiarColorYReproducir(nextAudioId); 
         };
     }
+
+
+    audio.onpause = () => {
+        contLinea.classList.remove('linea-activa');
+    };
 }
     </script>
     
@@ -166,7 +174,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-QueNosPaso">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -197,7 +205,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-Sola">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -228,7 +236,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-MasRicaQueAyer">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -259,7 +267,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-SheDont">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -290,7 +298,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-Hipocrita">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -315,13 +323,13 @@
             </div>
         </div>
         <div class="col-lg-1">
-            <audio id="Bandolera">
+            <audio id="Bandolera" data-next="TuNoLoAmas">
                 <source src="../assets/imagenes/audios/bandolera.mp3" type="audio/mpeg">
                 Tu navegador no soporta el elemento de audio.
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-Bandolera">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -354,7 +362,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-TuNoLoAmas"> 
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -385,7 +393,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-MoscowMule">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -416,7 +424,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-Tarot">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -447,7 +455,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-TitiMePregunto">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -478,7 +486,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-Efecto">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>
@@ -509,7 +517,7 @@
             </audio>
         </div>
         <div class="col-lg-6">
-            <div class="cont-linea">
+            <div class="cont-linea" id="linea-Neverita">
                 <img class="linea" src="../assets/imagenes/linea.png" alt="">
             </div>
         </div>

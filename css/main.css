@@ -507,8 +507,11 @@ body {
       margin-top: 10px !important;
       color: #838383; }
 
+.linea-activa img.linea {
+  filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(581%) hue-rotate(84deg) brightness(92%) contrast(104%); }
+
 .img-active {
-  filter: brightness(100%) saturate(0%) invert(39%) sepia(93%) saturate(319%) hue-rotate(94deg) brightness(92%) contrast(90%);
+  filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(581%) hue-rotate(84deg) brightness(92%) contrast(104%);
   transition: all 0.3s ease; }
 
 #buscador {
