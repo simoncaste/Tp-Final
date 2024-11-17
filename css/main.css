@@ -245,41 +245,183 @@ footer {
       margin-top: 1%; }
 
 body {
-  background-color: #202020; }
+  background-color: #202020;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
   body .secciones {
-    height: calc(100vh - 60px);
+    width: 20%;
+    height: calc(100vh);
     overflow-y: auto;
     background-color: black;
-    position: static; }
+    color: white;
+    position: fixed;
+    top: 0;
+    /* From Uiverse.io by csozidev */
+    /* Spotify music card made by: csozi | Website: www.csozi.hu*/ }
+    body .secciones .card {
+      position: relative;
+      width: 250px;
+      height: 120px;
+      background: #191414;
+      border-radius: 10px;
+      padding: 10px; }
+    body .secciones .top {
+      position: relative;
+      width: 100%;
+      display: flex;
+      gap: 10px; }
+    body .secciones .pfp {
+      position: relative;
+      top: 5px;
+      left: 5px;
+      height: 40px;
+      width: 40px;
+      background-color: #d2d2d2;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+    body .secciones .title-1 {
+      color: white;
+      font-size: 25px;
+      font-weight: bolder; }
+    body .secciones .title-2 {
+      color: white;
+      font-size: 12px;
+      font-weight: bold; }
+    body .secciones .time {
+      width: 90%;
+      background-color: #5e5e5e;
+      height: 6px;
+      border-radius: 3px;
+      position: absolute;
+      left: 5%;
+      bottom: 22px; }
+    body .secciones .elapsed {
+      width: 42%;
+      background-color: #1db954;
+      height: 100%;
+      border-radius: 3px; }
+    body .secciones .controls {
+      color: white;
+      display: flex;
+      position: absolute;
+      bottom: 30px;
+      left: 0;
+      width: 100%;
+      justify-content: center; }
+    body .secciones .volume {
+      height: 100%;
+      width: 48px; }
+    body .secciones .air {
+      height: 100%;
+      width: 48px; }
+    body .secciones .controls svg {
+      cursor: pointer;
+      transition: 0.1s; }
+    body .secciones .controls svg:hover {
+      color: #1db954; }
+    body .secciones .volume {
+      opacity: 0;
+      position: relative;
+      transition: 0.2s; }
+    body .secciones .volume .slider {
+      height: 4px;
+      background-color: #5e5e5e;
+      width: 80%;
+      border-radius: 2px;
+      margin-top: 8px;
+      margin-left: 10%; }
+    body .secciones .volume .slider .green {
+      background-color: #1db954;
+      height: 100%;
+      width: 80%;
+      border-radius: 3px; }
+    body .secciones .volume .circle {
+      background-color: white;
+      height: 6px;
+      width: 6px;
+      border-radius: 3px;
+      position: absolute;
+      right: 20%;
+      top: 60%; }
+    body .secciones .volume_button:hover ~ .volume {
+      opacity: 1; }
+    body .secciones .timetext {
+      color: white;
+      font-size: 8px;
+      position: absolute; }
+    body .secciones .time_now {
+      bottom: 11px;
+      left: 10px; }
+    body .secciones .time_full {
+      bottom: 11px;
+      right: 10px; }
+    body .secciones .playing {
+      display: flex;
+      position: relative;
+      justify-content: center;
+      gap: 1px;
+      width: 30px;
+      height: 20px; }
+    body .secciones .greenline {
+      background-color: #1db954;
+      height: 20px;
+      width: 2px;
+      position: relative;
+      transform-origin: bottom; }
+    body .secciones .line-1 {
+      animation: infinite playing 1s ease-in-out;
+      animation-delay: 0.2s; }
+    body .secciones .line-2 {
+      animation: infinite playing 1s ease-in-out;
+      animation-delay: 0.5s; }
+    body .secciones .line-3 {
+      animation: infinite playing 1s ease-in-out;
+      animation-delay: 0.6s; }
+    body .secciones .line-4 {
+      animation: infinite playing 1s ease-in-out;
+      animation-delay: 0s; }
+    body .secciones .line-5 {
+      animation: infinite playing 1s ease-in-out;
+      animation-delay: 0.4s; }
+
+@keyframes playing {
+  0% {
+    transform: scaleY(0.1); }
+  33% {
+    transform: scaleY(0.6); }
+  66% {
+    transform: scaleY(0.9); }
+  100% {
+    transform: scaleY(0.1); } }
   body .meGustas {
-    padding-top: 20px;
-    padding-left: 30%;
-    width: 100%; }
+    width: 100% !important;
+    padding-left: 500px !important; }
     body .meGustas .fotosMeGustas {
       border: 1px solid white;
-      width: 100%;
-      padding: 20px;
+      margin-bottom: 40px !important;
+      width: 90%;
+      padding: 50px;
       height: 200px; }
       body .meGustas .fotosMeGustas .fotos {
         width: 20%;
         height: 100%; }
     body .meGustas .ContVer .ver-mas {
-      display: inline-block;
       margin-top: 10px;
-      padding-left: 840px;
+      padding-left: 730px !important;
       color: white;
       text-decoration: underline;
       font-size: 20px; }
-  body .ContfotosPopu {
-    padding-left: 400px;
-    width: 100%; }
-    body .ContfotosPopu .lista-imagenes {
-      display: flex;
-      overflow: auto; }
-    body .ContfotosPopu .lista-imagenes img {
+  body .popular {
+    padding-left: 500px;
+    overflow-y: auto;
+    width: 80%;
+    height: 400px; }
+    body .popular .fotosP {
       width: 100%;
-      object-fit: cover;
-      margin-right: 20px; }
+      height: 100%; }
 
 /* SASS */
 /* SASS */
