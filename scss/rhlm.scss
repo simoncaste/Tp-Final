@@ -8,6 +8,7 @@
     padding: 0 !important;
 }
 
+
 body{
     background-color: #081925 !important;
     width: 100%;
@@ -60,43 +61,13 @@ body{
         }
         
     }
-    main{
-        margin-top: 50px !important;
-        margin-left: 3% !important;
-        
-        
-        .canciones{
-            margin-top: 50px!important;
-            height: 130px;
-            .rhlm-foto{
-                @include medidasFotos(100%, 40%)
-            }
-            .cont-tituloCancion{
-                width: 20%;
-                margin-top: 5px !important;
-                margin-left: 50px !important;
-                h4{
-                    color: white;
-                    
-                }
-            }
-            .cont-tiempo{
-                display: flex;
-                align-items: center;
-                margin-left: 62%!important;
-                h5{
-                    color: rgb(131, 131, 131);
-                }
-            }
-        }
-    }
-
+    
     .cont-albumes{
         margin: 90px 0 0 3%!important;
         color: white;
         width: 97%;
         h2{
-            font-size: 50px;
+            font-size: 45px;
         }
     }
     
@@ -106,9 +77,10 @@ body{
             width: 90%;
             height: 85%;
             img{
-                width: 100%;
-                height: 100%;
+                @include medidasFotos(100%, 100%)
+                
             }
+            
         }
         .cont-titulo-album{
             margin-top: 20px !important;
@@ -121,7 +93,7 @@ body{
         h4{
             margin-top: 10px !important;
             color: rgb(131, 131, 131);
-
+            font-size: 20px
         }
         
         
