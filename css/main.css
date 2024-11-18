@@ -196,6 +196,8 @@ header {
 /*MIXIN*/
 /*Variables*/
 footer {
+  padding: 20px;
+  position: relative;
   margin-top: 5% !important;
   background-color: white; }
   footer #primerafila {
@@ -245,32 +247,49 @@ footer {
       margin-top: 1%; }
 
 body {
-  background-color: #202020;
+  background-color: #293752;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; }
+  padding-bottom: 150px; }
   body .secciones {
     width: 20%;
     height: calc(100vh);
     overflow-y: auto;
-    background-color: black;
+    background-color: #334664;
     color: white;
     position: fixed;
-    top: 0; }
+    top: 0;
+    padding-bottom: 200px !important; }
   body .meGustas {
     width: 100% !important;
     padding-left: 400px !important; }
-    body .meGustas #tituloMG {
-      color: white; }
+    body .meGustas #titulo1 {
+      color: white;
+      padding-bottom: 20px !important; }
     body .meGustas .fotosMeGustas {
-      border: 1px solid white;
-      margin-bottom: 40px !important;
-      width: 90%;
-      padding: 60px;
-      height: 150px; }
+      display: flex;
+      border: 1px solid  #334664;
+      background-color: #334664;
+      margin-bottom: 70px !important;
+      width: 80%;
+      height: 230px; }
+      body .meGustas .fotosMeGustas .ContLogo {
+        width: 5%;
+        height: 30px; }
+        body .meGustas .fotosMeGustas .ContLogo .fotoLogo {
+          width: 100%;
+          height: 100%; }
+      body .meGustas .fotosMeGustas .titulos {
+        display: grid;
+        height: 60px !important; }
+        body .meGustas .fotosMeGustas .titulos .principal {
+          color: white; }
+        body .meGustas .fotosMeGustas .titulos .subtitulo {
+          color: gray; }
       body .meGustas .fotosMeGustas .fotos {
-        padding: 10px;
-        width: 20%;
+        justify-content: left;
+        padding: 10px !important;
+        width: 30%;
         height: 100%; }
     body .meGustas .ContVer .ver-mas {
       margin-top: 10px;
@@ -305,20 +324,49 @@ body {
         transition: transform 0.3s ease; }
         body .Artistas .artistas .fotosAr:hover {
           transform: scale(1.1); }
-  body .Carr {
-    overflow: auto;
+  body .carousel-container {
+    display: flex;
+    align-items: center;
+    padding-bottom: 80px !important;
+    position: relative;
     padding-left: 400px !important;
-    padding-top: 100px !important; }
-    body .Carr .fotosC {
-      top: 300px !important;
-      padding-bottom: 150px !important;
+    padding-top: 40px !important;
+    width: 100%;
+    margin: auto;
+    overflow: hidden; }
+    body .carousel-container .carousel-track-container {
+      overflow: hidden;
+      width: 100%; }
+    body .carousel-container .carousel-track {
       display: flex;
-      justify-content: center; }
-      body .Carr .fotosC img {
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
-        border-radius: 10px; }
+      transition: transform 0.5s ease-in-out; }
+    body .carousel-container .carousel-slide {
+      min-width: 25%;
+      box-sizing: border-box; }
+      body .carousel-container .carousel-slide img {
+        padding-left: 20px !important;
+        width: 100%;
+        height: auto; }
+    body .carousel-container .carousel-arrow {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: none;
+      color: white;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2; }
+      body .carousel-container .carousel-arrow.prev {
+        left: 360px; }
+      body .carousel-container .carousel-arrow.next {
+        right: 1px; }
+      body .carousel-container .carousel-arrow:hover {
+        background-color: rgba(0, 0, 0, 0.5); }
   body a {
     text-decoration: none; }
   body .ContAP {
@@ -326,21 +374,27 @@ body {
     padding-left: 400px !important;
     color: white; }
   body .segundaParte {
-    padding-right: 200px !important; }
+    padding-top: 80px !important;
+    padding-right: 100px !important;
+    align-items: end; }
   body .segundaPar {
+    padding-top: 80px !important;
     flex-direction: column;
     gap: 20px;
     display: flex;
     align-items: end; }
-    body .segundaPar .fotosAlb .nbrAl {
-      color: white; }
-    body .segundaPar .fotosAlb .tiemoAl {
-      color: gray;
-      font-size: 15px; }
-    body .segundaPar .fotosAlb img {
-      width: 200px;
-      height: 200px;
-      border-radius: 10px; }
+    body .segundaPar .fotosAlb {
+      border: 1px solid #334664;
+      background-color: #334664;
+      padding: 10px !important; }
+      body .segundaPar .fotosAlb .nbrAl {
+        color: white; }
+      body .segundaPar .fotosAlb .tiemoAl {
+        color: gray;
+        font-size: 15px; }
+      body .segundaPar .fotosAlb img {
+        width: 250px;
+        height: 250px; }
 
 /* SASS */
 /* SASS */

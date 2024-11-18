@@ -1,35 +1,62 @@
 body{
-    background-color: #202020;
+    background-color: #293752;
     margin: 0; 
     padding: 0;
-    overflow-x: hidden; 
+    padding-bottom: 150px;
+    
     .secciones{
         width: 20%;
         height: calc(100vh ); 
         overflow-y: auto; 
-        background-color: rgb(0, 0, 0);
+        background-color: #334664;
         color: white;
         position: fixed;
         top: 0;
+        padding-bottom: 200px !important;
+         
+        
         
         
     }
     .meGustas{
         width: 100% !important;
         padding-left: 400px !important;
-        #tituloMG{
+        #titulo1{
             color: white;
+            padding-bottom: 20px !important;
         }
         .fotosMeGustas{
-            border: 1px solid white ;
-            margin-bottom: 40px !important;
-            width: 90%;
-            padding: 60px;
-            height: 150px;
-        
+            display:flex;
+            border: 1px solid  #334664; 
+            background-color: #334664;
+            margin-bottom: 70px !important;
+            width: 80%;
+            height: 230px;
+
+            .ContLogo{
+                width: 5%;
+                height: 30px;
+                .fotoLogo{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            
+            .titulos{
+                display: grid;
+                height: 60px !important;
+                .principal{
+                    color: white;
+                }
+                .subtitulo{
+                    color: gray;
+                }
+            }
+            
             .fotos{
-                padding: 10px;
-                width: 20%;
+                justify-content: left;
+                padding: 10px !important;
+                width: 30%;
                 height: 100%;
             }
         }
@@ -83,26 +110,71 @@ body{
       
     }
     
-    .Carr{
-        overflow: auto;
-        padding-left: 400px !important;
-        padding-top: 100px !important;
-        .fotosC {
-            top: 300px !important;
-            padding-bottom: 150px !important;
-            display: flex;
-            justify-content: center; 
-             
-            img {
-                width: 200px; 
-                height: 200px; 
-                object-fit: cover; 
-                border-radius: 10px; 
-                
-            }
-        }
-       
+    $carousel-bg: rgba(0, 0, 0, 0.5);
+$arrow-size: 40px;
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 80px !important;
+  position: relative;
+  padding-left: 400px !important;
+  padding-top: 40px !important;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+
+  .carousel-track-container {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .carousel-slide {
+    min-width: 25%; // Mostrar 4 imágenes a la vez (ajusta según sea necesario)
+    box-sizing: border-box;
+    
+
+    img {
+      padding-left: 20px !important;
+      width: 100%;
+      height: auto;
     }
+  }
+
+  .carousel-arrow {
+    background-color: $carousel-bg;
+    border: none;
+    color: white;
+    width: $arrow-size;
+    height: $arrow-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+
+    &.prev {
+      left: 360px;
+    }
+
+    &.next {
+      right: 1px;
+    }
+
+    &:hover {
+      background-color: darken($carousel-bg, 10%);
+    }
+  }
+}
+
    
     a{
         text-decoration: none;
@@ -116,14 +188,21 @@ body{
     }
 
     .segundaParte{
-        padding-right: 200px !important;
+        padding-top: 80px !important;
+        padding-right: 100px !important;
+        align-items: end;
     }
     .segundaPar{
+        padding-top: 80px !important;
         flex-direction: column;
         gap: 20px;
         display: flex;
         align-items:end;
         .fotosAlb{
+            
+            border: 1px solid #334664 ;
+            background-color: #334664;
+            padding: 10px !important;
             
             .nbrAl{
                 color: white;
@@ -133,11 +212,8 @@ body{
                 font-size: 15px;
             }
             img {
-                width: 200px; 
-                height: 200px; 
-                border-radius: 10px; 
-
-                
+                width: 250px; 
+                height: 250px; 
                
             }
         }

@@ -53,65 +53,156 @@
                 <li>...</li>
             </ul>
         </div>
+
+        <script>
+            function manejarReproduccion(idAudio) {
+              const audioSeleccionado = document.querySelector(`#${idAudio}`);
+              
+              if (!audioSeleccionado) return;
+          
+              // Detener otros audios
+              const todosLosAudios = document.querySelectorAll('audio');
+              todosLosAudios.forEach((audio) => {
+                if (audio !== audioSeleccionado) {
+                  audio.pause();
+                  audio.currentTime = 0; // Reinicia el audio
+                }
+              });
+          
+              // Control de reproducción
+              if (audioSeleccionado.paused) {
+                audioSeleccionado.play();
+              } else {
+                audioSeleccionado.pause();
+                audioSeleccionado.currentTime = 0;
+              }
+            }
+          </script>
+          
+          
         <div class="meGustas col-lg-9">
-            <h1 id="tituloMG">Tus Me Gusta</h1>
-            <div class="fotosMeGustas" id="Cont1">
+            <h1 id="titulo1">Tus Me Gusta</h1>
+            <div class="fotosMeGustas" id="Cont1" onclick="manejarReproduccion('audio1')">
+               
                 <img class="fotos" src="assets/imagenes/1.megustas.png" alt="">
-
-                <audio controls>
-                    <source id="mi-audio" src="assets/imagenes/audios/videoplayback (1).mp3" type="audio/mp3"> 
-                </audio>
-            </div>
-           
-            <div class="fotosMeGustas" id="Cont2">
-                <img class="fotos" src="assets/imagenes/2.megustas.png" alt="">
-                <audio controls>
-                    <source id="mi-audio" src="assets/imagenes/audios/videoplayback.mp3" type="audio/mp3"> 
-                </audio>
-            </div>
-            <div class="fotosMeGustas" id="Cont3">
-                <img class="fotos" src="assets/imagenes/3.megustas.png" alt="">
-                <audio controls>
-                    <source id="mi-audio" src="assets/imagenes/audios/videoplayback (2).mp3" type="audio/mp3"> 
-                </audio>
+                <div class="ContLogo">
+                    <img class="fotoLogo" src="assets/imagenes/iconoPlay.png" alt="">
+                </div>
                 
+                <audio id="audio1">
+                  <source src="assets/imagenes/audios/videoplayback (1).mp3" type="audio/mp3"> 
+                </audio>
+                <div class="titulos">
+                    <h1 class="principal">¿QUE NOS PASO?</h1>
+                    <P class="subtitulo">22,360,597 oyentes mensuales</P>
+                </div>
+                
+             
             </div>
-            <div class="fotosMeGustas" id="Cont4">
+              <div class="fotosMeGustas" id="Cont2" onclick="manejarReproduccion('audio2')">
+                <img class="fotos" src="assets/imagenes/2.megustas.png" alt="">
+                <audio id="audio2">
+                  <source src="assets/imagenes/audios/videoplayback.mp3" type="audio/mp3"> 
+                </audio>
+                <div class="titulos">
+                    <h1 class="principal">SOLA</h1>
+                    <P class="subtitulo">122,340,061 oyentes mensuales                    </P>
+                </div>
+              </div>
+              <div class="fotosMeGustas" id="Cont3" onclick="manejarReproduccion('audio3')">
+                <img class="fotos" src="assets/imagenes/3.megustas.png" alt="">
+                <audio id="audio3">
+                  <source src="assets/imagenes/audios/videoplayback (2).mp3" type="audio/mp3"> 
+                </audio>
+                <div class="titulos">
+                    <h1 class="principal">MAS RICA QUE AYER</h1>
+                    <P class="subtitulo">278,360,597 oyentes mensuales                    </P>
+                </div>
+              </div>
+              <div class="fotosMeGustas" id="Cont4" onclick="manejarReproduccion('audio4')">
                 <img class="fotos" src="assets/imagenes/4.megustas.png" alt="">
-                <audio controls>
-                    <source id="mi-audio" src="assets/imagenes/audios/videoplayback (4).mp3" type="audio/mp3"> 
+                <audio id="audio4">
+                  <source src="assets/imagenes/audios/she-dont-give-a-fo-ft-khea-prod-by-omar-varela.mp3" type="audio/mp3"> 
                 </audio>
-            </div>
-            <div class="fotosMeGustas" id="Cont5">
+                <div class="titulos">
+                    <h1 class="principal">SHE DON'T GIVE FO</h1>
+                    <P class="subtitulo">538,963,834 oyentes mensuales                    </P>
+                </div>
+              </div>
+              <div class="fotosMeGustas" id="Cont5" onclick="manejarReproduccion('audio5')">
                 <img class="fotos" src="assets/imagenes/5.megustas.png" alt="">
-                <audio controls>
-                    <source id="mi-audio" src="assets/imagenes/audios/videoplayback (3).mp3" type="audio/mp3"> 
+                <audio id="audio5">
+                  <source src="assets/imagenes/audios/videoplayback (4).mp3" type="audio/mp3"> 
                 </audio>
-            </div>
-            <div class="ContVer">
-                <a href="paginas/megustas.html" class="ver-mas">Ver más</a>
-            </div>
-
+                <div class="titulos">
+                    <h1 class="principal">HIPOCRITA</h1>
+                    <P class="subtitulo">402,252,049 oyentes mensuales                    </P>
+                </div>
+              </div>
+              <!-- Repite la estructura para los demás audios -->
+              
         </div>
 
     </main>
 
-    <section>
-        <div class="Carr row container-fluid">
-            <div class="fotosC col-lg-3">
-                <img src="assets/imagenes/albumTini.png" alt="">
+    <section class="row container-fluid">
+        <div class="carousel-container col-lg-12">
+            <button class="carousel-arrow prev" id="prevBtn">&#8249;</button>
+            <div class="carousel-track-container">
+              <ul class="carousel-track">
+                <li class="carousel-slide"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 1"></li>
+                <li class="carousel-slide"><img src="assets/imagenes/albumbaddbunny.png" alt="Imagen 2"></li>
+                <li class="carousel-slide"><img src="assets/imagenes/albumDuki.png" alt="Imagen 3"></li>
+                <li class="carousel-slide"><img src="assets/imagenes/albumbaddbunny.png" alt="Imagen 4"></li>
+                <li class="carousel-slide"><img src="assets/imagenes/albumTini.png" alt="Imagen 4"></li>
+                <li class="carousel-slide"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 4"></li>
+                <li class="carousel-slide"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 4"></li>
+                <li class="carousel-slide"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 4"></li>
+                <li class="carousel-slide"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 4"></li>
+              </ul>
             </div>
-            <div class="fotosC col-lg-3">
-                <img src="assets/imagenes/albumbaddbunny.png" alt="">
-            </div>
-            <div class="fotosC col-lg-3">
-                <img src="assets/imagenes/albumDuki.png" alt="">
-            </div>
-            <div class="fotosC col-lg-3">
-                <img src="assets/imagenes/albumzuna.png" alt="">
-            </div>
-            
-        </div>
+            <button class="carousel-arrow next" id="nextBtn">&#8250;</button>
+          </div>
+        
+          <script>
+            // JavaScript del carrusel
+            const track = document.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = document.querySelector('#nextBtn');
+            const prevButton = document.querySelector('#prevBtn');
+            const slideWidth = slides[0].getBoundingClientRect().width;
+
+            // Configuración inicial para alinear las diapositivas
+            const setSlidePosition = (slide, index) => {
+            slide.style.left = slideWidth * index + 'px';
+            };
+            slides.forEach(setSlidePosition);
+
+            let currentIndex = 0;
+
+            const moveToSlide = (track, index) => {
+            track.style.transform = 'translateX(-' + slideWidth * index + 'px)';
+            };
+
+            nextButton.addEventListener('click', () => {
+            currentIndex++;
+            // Si se llega al final, regresar al inicio
+            if (currentIndex >= slides.length) {
+                currentIndex = 0;
+            }
+            moveToSlide(track, currentIndex);
+            });
+
+            prevButton.addEventListener('click', () => {
+            currentIndex--;
+            // Si se llega al inicio, ir al final
+            if (currentIndex < 0) {
+                currentIndex = slides.length - 1;
+            }
+            moveToSlide(track, currentIndex);
+            });
+
+          </script>
         
     </section>
 
@@ -123,7 +214,7 @@
             <img class="fotosAr" src="assets/imagenes/Artista3.png" alt="">
 
         </div>
-        <div class=" col-lg-3">
+        <div class="artista col-lg-3">
             <div class="nombresAr">
                 <h1 class="tituloAr">Emilia</h1>
                 <p class="oyentes">22,360,597 oyentes mensuales</p>
@@ -169,10 +260,10 @@
             <div class="ContAP">
                 <h1>Albumes Populares</h1>
             </div>
-            <div class="segundaPar primeraPar col-lg-6">
+            <div class="segundaPar  col-lg-6">
                
                 <div class="fotosAlb">
-                    <a href="paginas/rhlm.html" class="enlaces"><img src="assets/imagenes/albumAnuel.png" alt="">
+                    <a href="paginas/rhlm-album.html" class="enlaces"><img src="assets/imagenes/albumAnuel.png" alt="">
                         <h1 class="nbrAl">RHLM</h1>
                         <P class="tiemoAl">12 canciones, 43 min</P>
                         <P class="tiemoAl">Anuel AA</P></a>
@@ -210,6 +301,51 @@
         </div>
         
     </section>
+
+    <footer>
+        <div id="primerafila">
+            <div id="timemusic__contenedor">
+                <h1>
+                    Time Music
+                </h1>
+                <div id="redessociales">
+                    <div class="imagenesredes"><img src="assets/imagenes/logofacebook.png" alt=""></div>
+                    <div class="imagenesredes"><img src="assets/imagenes/logotwitter.png" alt=""></div>
+                    <div class="imagenesredes"><img src="assets/imagenes/logoWhatsapp.png" alt=""></div>
+                    <div class="imagenesredes"><img src="assets/imagenes/logoig.png" alt=""></div>
+                </div>
+            </div>
+            
+
+
+            <div id="imagenlogotime">
+                <img src="assets/imagenes/0.3.gif" alt="">
+            </div>
+        </div>
+
+        <div id="segundafila">
+            <p class="terminosycondiciones">
+                Politica de Privacidad 
+            </p>
+
+            <p class="terminosycondiciones">
+                Politica de Rembolso
+            </p>
+
+            <p class="terminosycondiciones">
+                Terminos y Condiciones
+            </p>
+
+            <p class="terminosycondiciones">
+                Soporte
+            </p>
+        </div>
+
+        <div id="tercerafila">
+            <p>℗Time Music Inc.</p>
+        </div>
+
+    </footer>
 
 </body>
 </html>
