@@ -470,48 +470,28 @@ body {
       body .botones .logo-descargar img {
         height: 70px;
         width: 70px; }
-  body main {
-    margin-top: 50px !important;
-    margin-left: 3% !important; }
-    body main .canciones {
-      margin-top: 50px !important;
-      height: 130px; }
-      body main .canciones .rhlm-foto {
-        height: 40%;
-        width: 100%; }
-      body main .canciones .cont-tituloCancion {
-        width: 20%;
-        margin-top: 5px !important;
-        margin-left: 50px !important; }
-        body main .canciones .cont-tituloCancion h4 {
-          color: white; }
-      body main .canciones .cont-tiempo {
-        display: flex;
-        align-items: center;
-        margin-left: 62% !important; }
-        body main .canciones .cont-tiempo h5 {
-          color: #838383; }
   body .cont-albumes {
     margin: 90px 0 0 3% !important;
     color: white;
     width: 97%; }
     body .cont-albumes h2 {
-      font-size: 50px; }
+      font-size: 45px; }
   body .cont-foto-albumes {
     margin-top: 100px !important; }
     body .cont-foto-albumes .cont-img-abumes {
       width: 90%;
       height: 85%; }
       body .cont-foto-albumes .cont-img-abumes img {
-        width: 100%;
-        height: 100%; }
+        height: 100%;
+        width: 100%; }
     body .cont-foto-albumes .cont-titulo-album {
       margin-top: 20px !important; }
       body .cont-foto-albumes .cont-titulo-album h3 {
         color: white; }
     body .cont-foto-albumes h4 {
       margin-top: 10px !important;
-      color: #838383; }
+      color: #838383;
+      font-size: 20px; }
 
 .linea-activa img.linea {
   filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(581%) hue-rotate(84deg) brightness(92%) contrast(104%); }
@@ -519,6 +499,51 @@ body {
 .img-active {
   filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(581%) hue-rotate(84deg) brightness(92%) contrast(104%);
   transition: all 0.3s ease; }
+
+#menu {
+  height: 60px;
+  width: 100%;
+  display: flex; }
+
+#cont-logo {
+  height: 50px;
+  width: 50px;
+  background-color: white; }
+
+#logo {
+  height: 100%;
+  width: 100%; }
+
+#cont-persona {
+  height: 50px;
+  width: 50px; }
+
+#persona {
+  height: 100%;
+  width: 100%; }
+
+#pr {
+  display: flex; }
+
+#cont-casa {
+  height: 40px;
+  width: 40px; }
+
+#logo-casa {
+  height: 100%;
+  width: 100%; }
+
+#cont-titulo__mg {
+  height: 50px;
+  width: 100%;
+  color: white;
+  display: flex;
+  margin-top: 15% !important;
+  margin-left: 5% !important;
+  font-size: 40px; }
+
+#titulo__mg {
+  font-size: 50px; }
 
 #buscador {
   height: 40px;
@@ -555,55 +580,6 @@ button {
 button:hover {
   background-color: #0088cc; }
 
-#menu {
-  height: 60px;
-  width: 100%;
-  display: flex; }
-
-#cont-logo {
-  height: 50px;
-  width: 50px;
-  background-color: white; }
-
-#logo {
-  height: 100%;
-  width: 100%; }
-
-#cont-persona {
-  height: 50px;
-  width: 50px; }
-
-#persona {
-  height: 100%;
-  width: 100%; }
-
-#pr {
-  display: flex; }
-
-#cont-casa {
-  height: 40px;
-  width: 40px; }
-
-#logo-casa {
-  height: 100%;
-  width: 100%; }
-
-#buscador {
-  justify-content: center;
-  align-items: center; }
-
-#cont-titulo__mg {
-  height: 50px;
-  width: 100%;
-  color: white;
-  display: flex;
-  margin-top: 15% !important;
-  margin-left: 5% !important;
-  font-size: 40px; }
-
-#titulo__mg {
-  font-size: 50px; }
-
 #cont-iconos {
   height: 100%;
   width: 100%;
@@ -612,16 +588,17 @@ button:hover {
   margin-top: 25% !important; }
 
 #cont-icono-play {
-  height: 40px;
-  width: 40px; }
+  height: 60px;
+  width: 60px;
+  border-left: solid 1px; }
 
 #icono-play {
   height: 100%;
   width: 100%; }
 
 #cont-icono-descargar {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   color: white; }
 
 #icono-descargar {
