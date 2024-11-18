@@ -499,6 +499,51 @@ body {
   filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(581%) hue-rotate(84deg) brightness(92%) contrast(104%);
   transition: all 0.3s ease; }
 
+#menu {
+  height: 60px;
+  width: 100%;
+  display: flex; }
+
+#cont-logo {
+  height: 50px;
+  width: 50px;
+  background-color: white; }
+
+#logo {
+  height: 100%;
+  width: 100%; }
+
+#cont-persona {
+  height: 50px;
+  width: 50px; }
+
+#persona {
+  height: 100%;
+  width: 100%; }
+
+#pr {
+  display: flex; }
+
+#cont-casa {
+  height: 40px;
+  width: 40px; }
+
+#logo-casa {
+  height: 100%;
+  width: 100%; }
+
+#cont-titulo__mg {
+  height: 50px;
+  width: 100%;
+  color: white;
+  display: flex;
+  margin-top: 15% !important;
+  margin-left: 5% !important;
+  font-size: 40px; }
+
+#titulo__mg {
+  font-size: 50px; }
+
 #buscador {
   height: 40px;
   width: 300px;
@@ -534,55 +579,6 @@ button {
 button:hover {
   background-color: #0088cc; }
 
-#menu {
-  height: 60px;
-  width: 100%;
-  display: flex; }
-
-#cont-logo {
-  height: 50px;
-  width: 50px;
-  background-color: white; }
-
-#logo {
-  height: 100%;
-  width: 100%; }
-
-#cont-persona {
-  height: 50px;
-  width: 50px; }
-
-#persona {
-  height: 100%;
-  width: 100%; }
-
-#pr {
-  display: flex; }
-
-#cont-casa {
-  height: 40px;
-  width: 40px; }
-
-#logo-casa {
-  height: 100%;
-  width: 100%; }
-
-#buscador {
-  justify-content: center;
-  align-items: center; }
-
-#cont-titulo__mg {
-  height: 50px;
-  width: 100%;
-  color: white;
-  display: flex;
-  margin-top: 15% !important;
-  margin-left: 5% !important;
-  font-size: 40px; }
-
-#titulo__mg {
-  font-size: 50px; }
-
 #cont-iconos {
   height: 100%;
   width: 100%;
@@ -591,16 +587,17 @@ button:hover {
   margin-top: 25% !important; }
 
 #cont-icono-play {
-  height: 40px;
-  width: 40px; }
+  height: 60px;
+  width: 60px;
+  border-left: solid 1px; }
 
 #icono-play {
   height: 100%;
   width: 100%; }
 
 #cont-icono-descargar {
-  height: 40px;
-  width: 40px;
+  height: 60px;
+  width: 60px;
   color: white; }
 
 #icono-descargar {
