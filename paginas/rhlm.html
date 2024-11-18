@@ -4,11 +4,13 @@
     <link rel="stylesheet" href="../css/main.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bad Bunny Music Time</title>
+    <title>Real Hasta La Muerte Album Music Time</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 </head>
 <body>
+
     <section class="row container-fluid banner">
         <img src="../assets/imagenes/rhlm-banner.png" alt="">
     </section>
@@ -21,202 +23,461 @@
 
 
 
-    <section class="row container-fluid botones">
-        <div class="col-lg-1 logo-reproducir">
-            <a href=""><img src="../assets/imagenes/reproducirLogo.png" alt=""></a>
+    <div class="row container-fluid">
+        <div class="col-lg-3">
+            <div id="cont-iconos">
+                <div class="col-lg-3">
+                    <div id="cont-icono-play">
+                        
+                        <img id="icono-play" src="../assets/imagenes/iconoPlay.png" alt="Reproducir Audio"   
+                             class="playable-image" 
+                             onclick="cambiarColorYReproducir('Na´Nuevo')">
+                    </div>
+                </div>
+    
+                <div class="col-lg-3">
+                    <div id="cont-icono-descargar">
+                        <img id="icono-descargar" src="../assets/imagenes/logodescarga.png" alt="Descargar" 
+                             onclick="cambiarColorImagen('icono-descargar')">
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-lg-1 logo-descargar">
-            <a href=""><img src="../assets/imagenes/logoDescargar.png" alt=""></a>
-        </div>
-    </section>
+    </div>
+        
+        <script>
+            function cambiarColorYReproducir(audioId) {
+        const audio = document.getElementById(audioId);
+        const playIcon = document.getElementById('icono-play'); 
+        const contLinea = document.getElementById(`linea-${audioId}`);
+    
+        if (!audio) return;
+    
+    
+        if (!audio.paused) {
+            audio.pause(); 
+            audio.currentTime = 0;
+            playIcon.classList.remove('img-active');
+            contLinea.classList.remove('linea-activa'); 
+            return; 
+        }
+    
+        const audios = document.querySelectorAll('audio');
+        audios.forEach((aud) => {
+            if (aud !== audio) {
+                aud.pause();
+                aud.currentTime = 0;
+    
+                const contLineaOtros = document.getElementById(`linea-${aud.id}`);
+                contLineaOtros?.classList.remove('linea-activa'); 
+            }
+        });
+    
+        audio.play();
+    
+        playIcon.classList.add('img-active');
+        contLinea.classList.add('linea-activa'); 
+    
+    
+        const nextAudioId = audio.dataset.next;
+        if (nextAudioId) {
+            audio.onended = () => {
+                cambiarColorYReproducir(nextAudioId); 
+            };
+        }
+    
+    
+        audio.onpause = () => {
+            contLinea.classList.remove('linea-activa');
+        };
+    }
+        </script>
 
 
 
+    
 
     <main>
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion col-lg-12 col-sm-12">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Na´ Nuevo</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>4:43</h5>
+
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="Na´Nuevo" onclick="cambiarColorYReproducir('Na´Nuevo')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Na´ Nuevo</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="Na´Nuevo" data-next="QuiereBeber">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Na´Nuevo">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>4:43</p>
+                </div>
+            </div>
+        </div>
         
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Quiere Beber</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:07</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="QuiereBeber" onclick="cambiarColorYReproducir('QuiereBeber')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Quiere Beber</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="QuiereBeber" data-next="Hipocrita">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-QuiereBeber">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:07</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Hipócrita</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA, Zion</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:12</h5>
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="Hipocrita" onclick="cambiarColorYReproducir('Hipocrita')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Hipocrita</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="Hipocrita" data-next="ModoAvion">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Hipocrita">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:12</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="ModoAvion" onclick="cambiarColorYReproducir('MosoAvion')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Modo Avion</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="ModoAvion" data-next="Bandolera">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-ModoAvion">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:40</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Modo Avion</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:40</h5>
-                </div>
-            </div>
-        </section>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Bandolera</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:10</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="Bandolera" onclick="cambiarColorYReproducir('Bandolera')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Bandolera</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="Bandolera" data-next="PensandoEnTi">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Bandolera">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:10</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Pensando en Ti</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA, Wisin</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>2:59</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="PensandoEnTi" onclick="cambiarColorYReproducir('PensandoEnTi')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Pensando en Ti</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="PensandoEnTi" data-next="Brindemos">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-PensandoEnTi">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>2:59</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Brindemos</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA, Ozuna</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:36</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="Brindemos" onclick="cambiarColorYReproducir('Brindemos')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Brindemos</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="Brindemos" data-next="Espina">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Brindemos">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:36</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Espína</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:18</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="Espina" onclick="cambiarColorYReproducir('Espina')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Espina</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="Espina" data-next="TuNoLoAmas">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Espina">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:18</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Tú No Lo Amas</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:34</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="TuNoLoAmas" onclick="cambiarColorYReproducir('TuNoLoAmas')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Tu No Lo Amas</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="TuNoLoAmas" data-next="Naturaleza">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-TuNoLoAmas">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:34</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Naturaleza</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:34</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="Naturaleza" onclick="cambiarColorYReproducir('Naturaleza')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Naturaleza</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="Naturaleza" data-next="Yeezy">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Naturaleza">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:34</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Yeezy</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA, Ñengo Flow</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>4:21</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="Yeezy" onclick="cambiarColorYReproducir('Yeezy')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Yeezy</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="Yeezy" data-next="TeNecesito">
+                    <source src="../assets/imagenes/audios/qué-nos-pasó-letra-lyrics.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Yeezy">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>4:21</p>
+                </div>
+            </div>
+        </div>
 
-        <section class="row container-fluid canciones">
-            <div style="display: flex;" class="cancion">
-                <div>
-                    <img class="rhlm-foto" src="../assets/imagenes/rhlm-banner.png" alt="">
-                </div>
-                <div class="cont-tituloCancion ">
-                    <h4>Te Necesito</h4>
-                    <h5 style="margin-top: 10px!important; color: rgb(131, 131, 131);"> Anuel AA</h5>
-                </div>
-                <div class="cont-tiempo">
-                    <h5>3:55</h5>
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="TeNecesito" onclick="cambiarColorYReproducir('TeNecesito')">
+                    <div class="cont-img-cancion">
+                        <img id="img-neverita" src="../assets/imagenes/rhlm-banner.png" alt="Reproducir Audio" class="playable-image" >
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Te Necesito</h4>
+                        <p class="artista">Anuel AA</p>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="col-lg-1">
+                <audio id="Neverita">
+                    <source src="../assets/imagenes/audios/neverita-360-visualizer--un-verano-sin-ti.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-TeNecesito">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:55</p>
+                </div>
+            </div>
+        </div>
+
+    
+
+
+        
     </main>
-
-
-
 
 
     <section class="row container-fluid cont-albumes">
@@ -233,7 +494,7 @@
                 <a href=""><img src="../assets/imagenes/las-leyendas-nunca-mueren.jpg" alt=""></a>
             </div>
             <div class="cont-titulo-album">
-                <h3>Las Leyendas Nunca Mueren</h3>
+                <h3 style="font-size: 35px;">Las Leyendas Nunca Mueren</h3>
             </div>
             <div class="cont-subtitulo-album">
                 <h4>16 canciones</h4>
@@ -253,7 +514,7 @@
 
 
             <div class="cont-titulo-album">
-                <h3>Emmanuel</h3>
+                <h3 style="font-size: 35px;">Emmanuel</h3>
             </div>
             <div class="cont-subtitulo-album">
                 <h4>22 canciones</h4>
@@ -277,7 +538,7 @@
             </div>
             
             <div class="cont-titulo-album">
-                <h3>Los Dioses</h3>
+                <h3 style="font-size: 35px;">Los Dioses</h3>
             </div>
             <div class="cont-subtitulo-album">
                 <h4>12 canciones</h4>
@@ -295,10 +556,10 @@
             </div>
 
             <div class="cont-titulo-album">
-                <h3>LLNM2</h3>
+                <h3 style="font-size: 35px;">LLNM2</h3>
             </div>
             <div class="cont-subtitulo-album">
-                <h4>33 canciones</h4>
+                <h4 >33 canciones</h4>
             </div>
         </div>
 

@@ -470,33 +470,12 @@ body {
       body .botones .logo-descargar img {
         height: 70px;
         width: 70px; }
-  body main {
-    margin-top: 50px !important;
-    margin-left: 3% !important; }
-    body main .canciones {
-      margin-top: 50px !important;
-      height: 130px; }
-      body main .canciones .rhlm-foto {
-        height: 40%;
-        width: 100%; }
-      body main .canciones .cont-tituloCancion {
-        width: 20%;
-        margin-top: 5px !important;
-        margin-left: 50px !important; }
-        body main .canciones .cont-tituloCancion h4 {
-          color: white; }
-      body main .canciones .cont-tiempo {
-        display: flex;
-        align-items: center;
-        margin-left: 62% !important; }
-        body main .canciones .cont-tiempo h5 {
-          color: #838383; }
   body .cont-albumes {
     margin: 90px 0 0 3% !important;
     color: white;
     width: 97%; }
     body .cont-albumes h2 {
-      font-size: 50px; }
+      font-size: 45px; }
   body .cont-foto-albumes {
     margin-top: 100px !important; }
     body .cont-foto-albumes .cont-img-abumes {
