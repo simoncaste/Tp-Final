@@ -14,7 +14,7 @@
 $colorfondomain: #081925;
 $colorfondotitulo: #0B161C;
 $colorletras100: white;
-$colorletras50: rgb(97, 96, 96);
+$colorletras50: rgb(124, 124, 124);
 
 #main{
     
@@ -33,15 +33,17 @@ $colorletras50: rgb(97, 96, 96);
             padding-left: 5% !important;
         }
     }
-    #contenedor__dealbumes{
+
+
+    .contenedor__dealbumes{
         margin-top: 2.5% !important;
-        margin-left: 2.5% !important;
+        
         .contenedor__album{
             margin-top: 2.5% !important;
             height: 300px;
             background-color: $colorfondotitulo;
             display: flex;
-            #contenedor__imagen{
+            .contenedor__imagen{
                 @include medidasFotos( 245px, 245px);
                 align-self: center;
                 margin-left: 2% !important;
@@ -49,12 +51,12 @@ $colorletras50: rgb(97, 96, 96);
                     @include medidasFotos( 100%, 100%);
                 }
             }
-            #contenedor__infoodisea{  
+            .contenedor__infoodisea{  
                 display: block;
-                width: 40%;
+                width: 33%;
                 margin-left: 2% !important;
                 margin-top: 1% !important;
-                #contenedor__tituloodisea{
+                .contenedor__tituloodisea{
                     h1{
                         font-size: 60px;
                         color: $colorletras100;
@@ -62,7 +64,7 @@ $colorletras50: rgb(97, 96, 96);
                     }
                 }
 
-                #contenedor__cancionesinfo{
+                .contenedor__cancionesinfo{
                     margin-top: 1% !important   ;
                     color: $colorletras50;
                     h1{
@@ -71,7 +73,7 @@ $colorletras50: rgb(97, 96, 96);
                     }
                 }
 
-                #contenedor__oyentes{
+                .contenedor__oyentes{
                     margin-top: 0.8% !important   ;
                     color: $colorletras50;
                     h1{
@@ -81,10 +83,10 @@ $colorletras50: rgb(97, 96, 96);
                     }
                 }
 
-                #contenedor__oyentesnumero1{
+                .contenedor__oyentesnumero1{
                     display: flex;
                     margin-top: 1.5% !important   ;
-                    img{
+                    .imagten__contenedor__oyentesnumero1{
                         width: 55px;
                         height: 55px;
                     }
@@ -98,8 +100,68 @@ $colorletras50: rgb(97, 96, 96);
                     }
                 }
 
+
+
+            }
+
+
+
+            .contenedor__infoartista{
+                display: flex;
+                .imagenlineavertical{
+                    height: 250px;
+                    align-self: center;
+                    
+                }
+                .contenedor__imagentituloartista{
+                    display: block;
+                    align-self: center;
+                    margin-left: 10% !important;
+                    .contenedor__imagenartista{
+                        @include medidasFotos( 185px, 185px);
+                        justify-items: center;
+                        img{
+                            @include medidasFotos( 100%, 100%);
+                        }
+                    }
+                    
+                    .contenedor__tituloartistas{
+                        color: $colorletras100;
+                        justify-items: center;
+                    }
+                }
+
+                .contenedor__infoartistadetalles{
+                    
+                    font-size: 20px;
+                    align-self: center;
+                    margin-top: -10% !important;
+                    color: $colorletras50;
+                    margin-left: 8% !important;
+                }
+
+            }
+            
+            
+            .contenedor__imagenplay{
+                display: flex;
+                @include medidasFotos( 60px, 60px);
+                margin-top: 13% !important;
+                margin-left: 13% !important;
+                .imagenplayalbum{
+                    @include medidasFotos( 100%, 100%);
+                }
+
+                
+
             }
 
         }
+
+
+
+
+
+        
     }
 }
