@@ -77,12 +77,10 @@ body{
             width: 90%;
             height: 85%;
             img{
-                width: 100%;
-                height: 100%;
-            }
-            img:hover{
+                @include medidasFotos(100%, 100%)
                 
             }
+            
         }
         .cont-titulo-album{
             margin-top: 20px !important;
@@ -95,7 +93,7 @@ body{
         h4{
             margin-top: 10px !important;
             color: rgb(131, 131, 131);
-
+            font-size: 20px
         }
         
         

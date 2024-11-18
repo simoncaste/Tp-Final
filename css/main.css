@@ -482,15 +482,16 @@ body {
       width: 90%;
       height: 85%; }
       body .cont-foto-albumes .cont-img-abumes img {
-        width: 100%;
-        height: 100%; }
+        height: 100%;
+        width: 100%; }
     body .cont-foto-albumes .cont-titulo-album {
       margin-top: 20px !important; }
       body .cont-foto-albumes .cont-titulo-album h3 {
         color: white; }
     body .cont-foto-albumes h4 {
       margin-top: 10px !important;
-      color: #838383; }
+      color: #838383;
+      font-size: 20px; }
 
 .linea-activa img.linea {
   filter: brightness(0) saturate(100%) invert(34%) sepia(95%) saturate(581%) hue-rotate(84deg) brightness(92%) contrast(104%); }
