@@ -267,6 +267,7 @@ body {
       color: white;
       padding-bottom: 20px !important; }
     body .meGustas .fotosMeGustas {
+      position: relative;
       display: flex;
       border: 1px solid  #334664;
       background-color: #334664;
@@ -274,8 +275,11 @@ body {
       width: 80%;
       height: 230px; }
       body .meGustas .fotosMeGustas .ContLogo {
+        position: absolute;
         width: 5%;
-        height: 30px; }
+        height: 30px;
+        bottom: 5px !important;
+        left: 700px !important; }
         body .meGustas .fotosMeGustas .ContLogo .fotoLogo {
           width: 100%;
           height: 100%; }

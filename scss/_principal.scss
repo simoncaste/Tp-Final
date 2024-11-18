@@ -26,6 +26,7 @@ body{
             padding-bottom: 20px !important;
         }
         .fotosMeGustas{
+            position: relative;
             display:flex;
             border: 1px solid  #334664; 
             background-color: #334664;
@@ -34,12 +35,18 @@ body{
             height: 230px;
 
             .ContLogo{
+                position: absolute;
                 width: 5%;
                 height: 30px;
-                .fotoLogo{
+                bottom: 5px !important;
+                left: 700px !important;
+                
+                .fotoLogo{     
                     width: 100%;
                     height: 100%;
+                    
                 }
+                
             }
             
             .titulos{
