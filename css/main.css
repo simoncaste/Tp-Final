@@ -704,52 +704,85 @@ button:hover {
       font-size: 65px;
       color: white;
       padding-left: 5% !important; }
-  #main #contenedor__dealbumes {
-    margin-top: 2.5% !important;
-    margin-left: 2.5% !important; }
-    #main #contenedor__dealbumes .contenedor__album {
+  #main .contenedor__dealbumes {
+    margin-top: 2.5% !important; }
+    #main .contenedor__dealbumes .contenedor__album {
       margin-top: 2.5% !important;
       height: 300px;
       background-color: #0B161C;
       display: flex; }
-      #main #contenedor__dealbumes .contenedor__album #contenedor__imagen {
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagen {
         height: 245px;
         width: 245px;
         align-self: center;
         margin-left: 2% !important; }
-        #main #contenedor__dealbumes .contenedor__album #contenedor__imagen img {
+        #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img {
           height: 100%;
           width: 100%; }
-      #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea {
+      #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea {
         display: block;
-        width: 40%;
+        width: 33%;
         margin-left: 2% !important;
         margin-top: 1% !important; }
-        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__tituloodisea h1 {
+        #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea .contenedor__tituloodisea h1 {
           font-size: 60px;
           color: white;
           font-weight: bold; }
-        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__cancionesinfo {
+        #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea .contenedor__cancionesinfo {
           margin-top: 1% !important;
-          color: #616060; }
-          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__cancionesinfo h1 {
+          color: #7c7c7c; }
+          #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea .contenedor__cancionesinfo h1 {
             font-weight: 400;
             font-size: 30px !important; }
-        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentes {
+        #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea .contenedor__oyentes {
           margin-top: 0.8% !important;
-          color: #616060; }
-          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentes h1 {
+          color: #7c7c7c; }
+          #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea .contenedor__oyentes h1 {
             font-weight: 400;
             font-size: 30px !important; }
-        #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 {
+        #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea .contenedor__oyentesnumero1 {
           display: flex;
           margin-top: 1.5% !important; }
-          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 img {
+          #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea .contenedor__oyentesnumero1 .imagten__contenedor__oyentesnumero1 {
             width: 55px;
             height: 55px; }
-          #main #contenedor__dealbumes .contenedor__album #contenedor__infoodisea #contenedor__oyentesnumero1 h1 {
+          #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea .contenedor__oyentesnumero1 h1 {
             margin-left: 2% !important;
             align-self: center;
             font-weight: bold;
             font-size: 35px !important;
-            color: #616060; }
+            color: #7c7c7c; }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista {
+        display: flex; }
+        #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .imagenlineavertical {
+          height: 250px;
+          align-self: center; }
+        #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista {
+          display: block;
+          align-self: center;
+          margin-left: 10% !important; }
+          #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista {
+            height: 185px;
+            width: 185px;
+            justify-items: center; }
+            #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista img {
+              height: 100%;
+              width: 100%; }
+          #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__tituloartistas {
+            color: white;
+            justify-items: center; }
+        #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__infoartistadetalles {
+          font-size: 20px;
+          align-self: center;
+          margin-top: -10% !important;
+          color: #7c7c7c;
+          margin-left: 8% !important; }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay {
+        display: flex;
+        height: 60px;
+        width: 60px;
+        margin-top: 13% !important;
+        margin-left: 13% !important; }
+        #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay .imagenplayalbum {
+          height: 100%;
+          width: 100%; }
