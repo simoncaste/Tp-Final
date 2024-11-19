@@ -44,7 +44,7 @@
 
             <div class="contenedor__album col-lg-12">
                 <div class="contenedor__imagen">
-                    <img src="../assets/imagenes/odiesea.png" alt="">
+                    <a href="../paginas/odisea__album.html"><img src="../assets/imagenes/odiesea.png" alt=""></a>
                 </div>
 
                 <div class="contenedor__infoodisea">
@@ -117,7 +117,12 @@
                 </div>
                 
                 <div class="contenedor__imagenplay">
-                    <img class="imagenplayalbum" src="../assets/imagenes/imagenplayalbum.png" alt="">
+                    <img class="imagenplayalbum" data-playlist='["../assets/imagenes/audios/Ozuna - Se Preparó (Audio) - Luis Fernando Flores (youtube).mp3", "../assets/imagenes/audios/Tu Foto ( Audio Official) Ozuna - luis alexander esteban (youtube).mp3", "../assets/imagenes/Ozuna - Síguelo Bailando (Video Oficial) - Ozuna (youtube).mp3"]' src="../assets/imagenes/imagenplayalbum.png" alt="Play 1">
+
+                    
+
+
+
                 </div>
             </div>
             
@@ -203,7 +208,7 @@
                         
                     </div>
                     <div class="contenedor__imagenplay">
-                        <img class="imagenplayalbum" src="../assets/imagenes/imagenplayalbum.png" alt="">
+                        <img class="imagenplayalbum" data-playlist='["../assets/imagenes/audios/DUKI, Myke Towers - Nueva Era - Duki (youtube).mp3", "../assets/imagenes/audios/DUKI, Wiz Khalifa, Arcángel - Wake Up & Bake Up - Duki (youtube).mp3", "../assets/imagenes/audios/DUKI, Myke Towers - Nueva Era - Duki (youtube).mp3"]' src="../assets/imagenes/imagenplayalbum.png" alt="Play 2">
                     </div>
                     
                 </div>
@@ -217,7 +222,7 @@
 
                 <div class="contenedor__album col-lg-12">
                     <div class="contenedor__imagen">
-                        <img src="../assets/imagenes/portadaalbumrhlm.png" alt="">
+                        <a href="../paginas/rhlm-album.html"><img src="../assets/imagenes/portadaalbumrhlm.png" alt=""></a>
                     </div>
     
                     <div class="contenedor__infoodisea">
@@ -287,7 +292,7 @@
                         
                     </div>
                     <div class="contenedor__imagenplay">
-                        <img class="imagenplayalbum" src="../assets/imagenes/imagenplayalbum.png" alt="">
+                        <img class="imagenplayalbum" data-playlist='["../assets/imagenes/audios/Anuel AA - Ella Quiere Beber (Audio) - AnuelVEVO (youtube).mp3", "../assets/imagenes/audios/bandolera.mp3", "../assets/imagenes/audios/hipócrita-feat-zion-audio.mp3"]' src="../assets/imagenes/imagenplayalbum.png" alt="Play 3">
                     </div>
                     
                 </div>
@@ -343,7 +348,7 @@
     
                         <div class="contenedor__imagentituloartista">
                             <div class="contenedor__imagenartista">
-                                <img src="../assets/imagenes/badbunny.png" alt="">
+                               <a href="../paginas/artistaBadBunny.html"><img src="../assets/imagenes/badbunny.png" alt=""></a>
                             </div>
     
     
@@ -374,7 +379,7 @@
                         
                     </div>
                     <div class="contenedor__imagenplay">
-                        <img class="imagenplayalbum" src="../assets/imagenes/imagenplayalbum.png" alt="">
+                        <img class="imagenplayalbum" data-playlist='["../assets/imagenes/audios/tarot-360-visualizer--un-verano-sin-ti.mp3", "../assets/imagenes/audios/tití-me-preguntó-video-oficial--un-verano-sin-ti.mp3", "../assets/imagenes/audios/tarot-360-visualizer--un-verano-sin-ti.mp3"]' src="../assets/imagenes/imagenplayalbum.png" alt="Play 4">
                     </div>
                     
                 </div>
@@ -393,12 +398,12 @@
 
                 <div class="contenedor__album col-lg-12">
                     <div class="contenedor__imagen">
-                        <img src="../assets/imagenes/albumTini.png" alt="">
+                        <img src="../assets/imagenes/portadamp3emilia.png" alt="">
                     </div>
     
                     <div class="contenedor__infoodisea">
                         <div class="contenedor__tituloodisea">
-                            <h1>Cupido</h1>
+                            <h1>mp3</h1>
                         </div>
     
                         <div class="contenedor__cancionesinfo">
@@ -463,9 +468,56 @@
                         
                     </div>
                     <div class="contenedor__imagenplay">
-                        <img class="imagenplayalbum" src="../assets/imagenes/imagenplayalbum.png" alt="">
+                        <img class="imagenplayalbum" data-playlist='["../assets/imagenes/audios/Emilia - Jagger.mp3 (Official Video) - EmiliaMusicVEVO (youtube).mp3", "../assets/imagenes/audios/Emilia - GTA.mp3 (Official Video) - EmiliaMusicVEVO (youtube).mp3", "../assets/imagenes/audios/Emilia - Jagger.mp3 (Official Video) - EmiliaMusicVEVO (youtube).mp3"]' src="../assets/imagenes/imagenplayalbum.png" alt="Play 5">
                     </div>
                     
+                    <!-- Elemento de audio -->
+                    <audio id="audio-player"></audio>
+
+                    <script>
+                        // Referencias al reproductor y las imágenes
+                        const audioPlayer = document.getElementById('audio-player');
+                        const playButtons = document.querySelectorAll('.imagenplayalbum');
+
+                        let currentPlaylist = []; // Lista de canciones actual
+                        let currentIndex = 0; // Índice actual
+
+                        // Función para cargar y reproducir una canción
+                        function playSong(index) {
+                            if (index >= currentPlaylist.length) currentIndex = 0; // Reinicia si llega al final
+                            audioPlayer.src = currentPlaylist[currentIndex];
+                            audioPlayer.play();
+                        }
+
+                        // Evento de clic para cada imagen
+                        playButtons.forEach(button => {
+                            button.addEventListener('click', () => {
+                                // Obtiene el playlist de la imagen clickeada
+                                const playlist = JSON.parse(button.dataset.playlist);
+
+                                // Si se hace clic en otra imagen, reinicia la lista
+                                if (currentPlaylist !== playlist) {
+                                    currentPlaylist = playlist;
+                                    currentIndex = 0; // Reinicia el índice
+                                }
+
+                                // Reproduce o pausa según el estado del audio
+                                if (audioPlayer.paused || audioPlayer.ended) {
+                                    playSong(currentIndex);
+                                } else {
+                                    audioPlayer.pause();
+                                }
+                            });
+                        });
+
+                        // Evento para pasar a la siguiente canción cuando termine la actual
+                        audioPlayer.addEventListener('ended', () => {
+                            currentIndex++;
+                            playSong(currentIndex);
+                        });
+                    </script>
+
+
                 </div>
 
 
