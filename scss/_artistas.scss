@@ -1,0 +1,133 @@
+@mixin medidasFotos($ancho, $alto){
+    height: $alto;
+    width: $ancho;
+}
+*{
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body{
+    background-color: #293752 !important ;
+    margin: 0; 
+    padding: 0; 
+    .partesuperior{
+        background-color: #4CB7F2;
+        background: linear-gradient(to bottom,rgba(76, 183, 242, 0.5), rgba(76, 183, 242, 0));
+        #imagen{
+            width: 50%;
+            height: auto;
+            padding: 20px !important;
+
+            #imagen1{
+                border-radius: 10px;
+                width: 100%;
+            }
+        }
+        #titulo{
+            width: 200%;
+            padding-top: 70px !important;
+            #titulo1{
+                font-size: 90px;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            #info{
+                font-size: 20px;
+            }
+        }
+        
+    }
+    #cont-iconos{
+        #numer{
+            padding-left: 400px !important;
+        }
+    }
+    .banner{
+        height: 500px !important;
+        display: flex;
+        justify-content: center;
+        margin-top: 70px !important;
+        img{
+            @include medidasFotos(500px, 500px)
+            
+        }
+    }
+    .titulo{
+        margin-top: 70px !important;
+        color: white;
+        
+        h1{
+            width: 40%;
+            margin-left: 3% !important;
+            font-size: 50px !important;
+            
+        }
+    }
+    .botones{
+        width: 80%;
+        height: 80px;
+        margin-top: 50px !important;
+        margin-left: 30px !important;
+        .logo-reproducir{
+            display: flex;
+            justify-content: center;
+            border-left: solid 1px white;
+            align-items: center;
+            img{
+                @include medidasFotos(70px, 70px);  
+            }
+            
+        }
+        .logo-descargar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                @include medidasFotos(70px, 70px);
+                
+                
+               
+            }
+        }
+        
+    }
+    
+    .cont-albumes{
+        margin: 90px 0 0 3%!important;
+        color: white;
+        width: 97%;
+        h2{
+            font-size: 45px;
+        }
+    }
+    
+    .cont-foto-albumes{
+        margin-top: 100px!important;
+        .cont-img-abumes{
+            width: 90%;
+            height: 85%;
+            img{
+                @include medidasFotos(100%, 100%)
+                
+            }
+            
+        }
+        .cont-titulo-album{
+            margin-top: 20px !important;
+            h3{
+                color: white;
+            }
+    
+        }
+        
+        h4{
+            margin-top: 10px !important;
+            color: rgb(131, 131, 131);
+            font-size: 20px
+        }
+        
+        
+    }
+   
+    
+}
