@@ -260,6 +260,12 @@ body {
     position: fixed;
     top: 0;
     padding-bottom: 200px !important; }
+    body .secciones .tituloChico {
+      font-size: 30px;
+      font-weight: 200; }
+    body .secciones .lista {
+      font-size: 15px;
+      color: gray; }
   body .meGustas {
     width: 100% !important;
     padding-left: 400px !important; }
