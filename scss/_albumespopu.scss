@@ -17,7 +17,7 @@ $colorletras100: white;
 $colorletras50: rgb(124, 124, 124);
 
 #main{
-    
+    width: 97.5% !important;
     height: auto;
     background-color: $colorfondomain;
 
@@ -26,6 +26,8 @@ $colorletras50: rgb(124, 124, 124);
         align-self: center;
         height: 135px;
         display: flex;
+        margin-left: -1% !important;
+        margin-top: 2% !important;
         h1{
             align-self: center;
             font-size: 65px;
@@ -34,10 +36,11 @@ $colorletras50: rgb(124, 124, 124);
         }
     }
 
+    margin-left: 2.5% !important;
 
     .contenedor__dealbumes{
-        margin-top: 2.5% !important;
-        
+        margin-top: 2% !important;
+    
         .contenedor__album{
             margin-top: 2.5% !important;
             height: 300px;
@@ -49,6 +52,10 @@ $colorletras50: rgb(124, 124, 124);
                 margin-left: 2% !important;
                 img{
                     @include medidasFotos( 100%, 100%);
+                }
+
+                img:hover{
+                    opacity: 90%;
                 }
             }
             .contenedor__infoodisea{  
@@ -123,6 +130,10 @@ $colorletras50: rgb(124, 124, 124);
                         img{
                             @include medidasFotos( 100%, 100%);
                         }
+
+                        img:hover{
+                            opacity: 90%;
+                        }
                     }
                     
                     .contenedor__tituloartistas{
@@ -147,7 +158,7 @@ $colorletras50: rgb(124, 124, 124);
                 display: flex;
                 @include medidasFotos( 60px, 60px);
                 margin-top: 13% !important;
-                margin-left: 13% !important;
+                margin-left: 11.5% !important;
                 .imagenplayalbum{
                     @include medidasFotos( 100%, 100%);
                 }

@@ -231,7 +231,7 @@ footer {
   footer #segundafila {
     height: 80px;
     width: 100%;
-    padding-left: 10%;
+    padding-left: 10% !important;
     display: flex;
     justify-content: center; }
     footer #segundafila .terminosycondiciones {
@@ -695,20 +695,24 @@ body {
   padding: 0; }
 
 #main {
+  width: 97.5% !important;
   height: auto;
-  background-color: #081925; }
+  background-color: #081925;
+  margin-left: 2.5% !important; }
   #main #contenedor__titulo {
     background-color: #0B161C;
     align-self: center;
     height: 135px;
-    display: flex; }
+    display: flex;
+    margin-left: -1% !important;
+    margin-top: 2% !important; }
     #main #contenedor__titulo h1 {
       align-self: center;
       font-size: 65px;
       color: white;
       padding-left: 5% !important; }
   #main .contenedor__dealbumes {
-    margin-top: 2.5% !important; }
+    margin-top: 2% !important; }
     #main .contenedor__dealbumes .contenedor__album {
       margin-top: 2.5% !important;
       height: 300px;
@@ -722,6 +726,8 @@ body {
         #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img {
           height: 100%;
           width: 100%; }
+        #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img:hover {
+          opacity: 90%; }
       #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea {
         display: block;
         width: 33%;
@@ -771,6 +777,8 @@ body {
             #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista img {
               height: 100%;
               width: 100%; }
+            #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista img:hover {
+              opacity: 90%; }
           #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__tituloartistas {
             color: white;
             justify-items: center; }
@@ -785,7 +793,7 @@ body {
         height: 60px;
         width: 60px;
         margin-top: 13% !important;
-        margin-left: 13% !important; }
+        margin-left: 11.5% !important; }
         #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay .imagenplayalbum {
           height: 100%;
           width: 100%; }
