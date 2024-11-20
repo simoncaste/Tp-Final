@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>un verano sin ti Album Time Music</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <section class="row container-fluid banner">
+        <img src="../assets/imagenes/un verano sin ti.avif" alt="">
+    </section>
+
+
+
+    <section class="row container-fluid titulo">
+        <h1>Un Verano Sin Ti</h1>
+    </section>
+
+
+
+    <div class="row container-fluid">
+        <div class="col-lg-3">
+            <div id="cont-iconos">
+                <div class="col-lg-3">
+                    <div id="cont-icono-play" >
+                        
+                        <img  id="icono-play" src="../assets/imagenes/iconoPlay.png" alt="Reproducir Audio"   
+                             class="playable-image" 
+                             onclick="cambiarColorYReproducir('Tarot')">
+                    </div>
+                </div>
+    
+                <div class="col-lg-3">
+                    <div id="cont-icono-descargar">
+                        <img id="icono-descargar" src="../assets/imagenes/logodescarga.png" alt="Descargar" 
+                             onclick="cambiarColorImagen('icono-descargar')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <script>
+            function cambiarColorYReproducir(audioId) {
+        const audio = document.getElementById(audioId);
+        const playIcon = document.getElementById('icono-play'); 
+        const contLinea = document.getElementById(`linea-${audioId}`);
+    
+        if (!audio) return;
+    
+    
+        if (!audio.paused) {
+            audio.pause(); 
+            audio.currentTime = 0;
+            playIcon.classList.remove('img-active');
+            contLinea.classList.remove('linea-activa'); 
+            return; 
+        }
+    
+        const audios = document.querySelectorAll('audio');
+        audios.forEach((aud) => {
+            if (aud !== audio) {
+                aud.pause();
+                aud.currentTime = 0;
+    
+                const contLineaOtros = document.getElementById(`linea-${aud.id}`);
+                contLineaOtros?.classList.remove('linea-activa'); 
+            }
+        });
+    
+        audio.play();
+    
+        playIcon.classList.add('img-active');
+        contLinea.classList.add('linea-activa'); 
+    
+    
+        const nextAudioId = audio.dataset.next;
+        if (nextAudioId) {
+            audio.onended = () => {
+                cambiarColorYReproducir(nextAudioId); 
+            };
+        }
+    
+    
+        audio.onpause = () => {
+            contLinea.classList.remove('linea-activa');
+        };
+    }
+        </script>
+
+
+
+    
+
+    <main>
+
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="tarot" onclick="cambiarColorYReproducir('Tarot')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/un verano sin ti.avif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Tarot</h4>
+                        <a href=""><p class="artista">Bas Bunny</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Tarot" data-next="Efecto">
+                    <source src="../assets/imagenes/audios/hasta-que-dios-diga-audio.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Tarot">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:57</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="efecto" onclick="cambiarColorYReproducir('Efecto')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/un verano sin ti.avif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Efecto</h4>
+                        <a href=""><p class="artista">Bad Bunny</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Efecto" data-next="Neverita">
+                    <source src="../assets/imagenes/audios/china-video-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Efecto">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:33</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="neverita" onclick="cambiarColorYReproducir('Neverita')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/un verano sin ti.avif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Neverita</h4>
+                        <a href=""><p class="artista">Bad Bunny</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Neverita" data-next="UnRatito">
+                    <source src="../assets/imagenes/audios/jangueo-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Neverita">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>2:53</p>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="unratito" onclick="cambiarColorYReproducir('UnRatito')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/un verano sin ti.avif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Un Ratito</h4>
+                        <a href=""><p class="artista">Ozuna</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="UnRatito" data-next="Party">
+                    <source src="../assets/imagenes/audios/ferrari-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-UnRatito">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:08</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+       
+
+       
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="party" onclick="cambiarColorYReproducir('Party')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/un verano sin ti.avif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Party</h4>
+                        <a href=""><p class="artista">Bad Bunny</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Party" data-next="">
+                    <source src="../assets/imagenes/audios/así-soy-yo-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Party">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:37</p>
+                </div>
+            </div>
+        </div>
+
+       
+
+    
+
+
+        
+    </main>
+
+
+    <section class="row container-fluid cont-albumes">
+        <h2>Mas de sus albumes</h2>
+    </section>
+
+    <section class="row container-fluid cont-foto-albumes">
+        <div class="col-lg-1">
+
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="cont-img-abumes">
+                <a href="oasis__album.html"><img src="../assets/imagenes/oasis.avif" alt=""></a>
+            </div>
+            <div class="cont-titulo-album">
+                <h3 style="font-size: 30px;">Oasis</h3>
+            </div>
+            <div class="cont-subtitulo-album">
+                <h4>8 canciones</h4>
+            </div>
+            
+        </div>
+
+        <div class="col-lg-2">
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="cont-img-abumes">
+                <a href="rhlm-album.html"><img src="../assets/imagenes/YHLQSMDLG.jpg" alt=""></a>
+            </div>
+
+
+
+            <div class="cont-titulo-album">
+                <h3 style="font-size: 30px;">YHLQSMDLG</h3>
+            </div>
+            <div class="cont-subtitulo-album">
+                <h4>20 canciones</h4>
+            </div>
+
+        </div>
+
+        
+    </section>
+
+
+
+    <section class="row container-fluid cont-foto-albumes">
+        <div class="col-lg-1">
+
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="cont-img-abumes">
+                <a href="los-dioses__album.html"><img src="../assets/imagenes/NADIE SABE LO QUE VA A PASAR MAÑANA.avif" alt=""></a>
+            </div>
+            
+            <div class="cont-titulo-album">
+                <h3 style="font-size: 30px;">Nadie Sabe Lo Que Va a Pasar Mañana </h3>
+            </div>
+            <div class="cont-subtitulo-album">
+                <h4>22 canciones</h4>
+            </div>
+
+        </div>
+
+        <div class="col-lg-2">
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="cont-img-abumes">
+                <a href="LLNM2.html"><img src="../assets/imagenes/X100PRE.jfif" alt=""></a>
+            </div>
+
+            <div class="cont-titulo-album">
+                <h3 style="font-size: 30px;">X100PRE</h3>
+            </div>
+            <div class="cont-subtitulo-album">
+                <h4 >15 canciones</h4>
+            </div>
+        </div>
+
+        
+    </section>
+
+    
+
+    <footer>
+        <div id="primerafila">
+            <div id="timemusic__contenedor">
+                <h1>
+                    Time Music
+                </h1>
+                <div id="redessociales">
+                    <div class="imagenesredes"><img src="../assets/imagenes/logofacebook.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logotwitter.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logoWhatsapp.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logoig.png" alt=""></div>
+                </div>
+            </div>
+            
+  
+  
+            <div id="imagenlogotime">
+                <img src="../assets/imagenes/0.3.gif" alt="">
+            </div>
+        </div>
+  
+        <div id="segundafila">
+            <p class="terminosycondiciones">
+                Politica de Privacidad 
+            </p>
+  
+            <p class="terminosycondiciones">
+                Politica de Rembolso
+            </p>
+  
+            <p class="terminosycondiciones">
+                Terminos y Condiciones
+            </p>
+  
+            <p class="terminosycondiciones">
+                Soporte
+            </p>
+        </div>
+  
+        <div id="tercerafila">
+            <p>℗Time Music Inc.</p>
+        </div>
+  
+    </footer>
+</body>
+</html>
