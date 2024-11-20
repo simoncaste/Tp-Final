@@ -675,6 +675,8 @@ body {
       body .botones .logo-descargar img {
         height: 70px;
         width: 70px; }
+  body .artista {
+    color: white !important; }
   body .cont-albumes {
     margin: 90px 0 0 3% !important;
     color: white;
