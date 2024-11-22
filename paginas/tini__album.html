@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../css/main.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>un verano sin ti Album Time Music</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <section class="row container-fluid banner">
+        <img src="../assets/imagenes/tini.jfif" alt="">
+    </section>
+
+
+
+    <section class="row container-fluid titulo">
+        <h1>TINI</h1>
+    </section>
+
+
+
+    <div class="row container-fluid">
+        <div class="col-lg-3">
+            <div id="cont-iconos">
+                <div class="col-lg-3">
+                    <div id="cont-icono-play" >
+                        
+                        <img  id="icono-play" src="../assets/imagenes/iconoPlay.png" alt="Reproducir Audio"   
+                             class="playable-image" 
+                             onclick="cambiarColorYReproducir('Pa')">
+                    </div>
+                </div>
+    
+                <div class="col-lg-3">
+                    <div id="cont-icono-descargar">
+                        <img id="icono-descargar" src="../assets/imagenes/logodescarga.png" alt="Descargar" 
+                             onclick="cambiarColorImagen('icono-descargar')">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        
+        <script>
+            function cambiarColorYReproducir(audioId) {
+        const audio = document.getElementById(audioId);
+        const playIcon = document.getElementById('icono-play'); 
+        const contLinea = document.getElementById(`linea-${audioId}`);
+    
+        if (!audio) return;
+    
+    
+        if (!audio.paused) {
+            audio.pause(); 
+            audio.currentTime = 0;
+            playIcon.classList.remove('img-active');
+            contLinea.classList.remove('linea-activa'); 
+            return; 
+        }
+    
+        const audios = document.querySelectorAll('audio');
+        audios.forEach((aud) => {
+            if (aud !== audio) {
+                aud.pause();
+                aud.currentTime = 0;
+    
+                const contLineaOtros = document.getElementById(`linea-${aud.id}`);
+                contLineaOtros?.classList.remove('linea-activa'); 
+            }
+        });
+    
+        audio.play();
+    
+        playIcon.classList.add('img-active');
+        contLinea.classList.add('linea-activa'); 
+    
+    
+        const nextAudioId = audio.dataset.next;
+        if (nextAudioId) {
+            audio.onended = () => {
+                cambiarColorYReproducir(nextAudioId); 
+            };
+        }
+    
+    
+        audio.onpause = () => {
+            contLinea.classList.remove('linea-activa');
+        };
+    }
+        </script>
+
+
+
+    
+
+    <main>
+
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="pa" onclick="cambiarColorYReproducir('Pa')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/tini.jfif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Si Tu Te Vas</h4>
+                        <a href=""><p class="artista">Tini</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Pa" data-next="Posta">
+                    <source src="../assets/imagenes/audios/hasta-que-dios-diga-audio.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Pa">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:10</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="posta" onclick="cambiarColorYReproducir('Posta')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/tini.jfif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Confia En Mi</h4>
+                        <a href=""><p class="artista">Tini</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Posta" data-next="Miedo">
+                    <source src="../assets/imagenes/audios/china-video-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Posta">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>2:01</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="miedo" onclick="cambiarColorYReproducir('Miedo')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/tini.jfif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Si Tu Te Vas</h4>
+                        <a href=""><p class="artista">Tini</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Miedo" data-next="Angel">
+                    <source src="../assets/imagenes/audios/jangueo-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Miedo">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:05</p>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="angel" onclick="cambiarColorYReproducir('Angel')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/tini.jfif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Siempre Brillaras</h4>
+                        <a href=""><p class="artista">Tini</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Angel" data-next="Ellas">
+                    <source src="../assets/imagenes/audios/ferrari-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Angel">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:46</p>
+                </div>
+            </div>
+        </div>
+
+        
+
+       
+
+       
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="ellas" onclick="cambiarColorYReproducir('Ellas')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/tini.jfif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Yo Me Escapare</h4>
+                        <a href=""><p class="artista">Tini</p></a>                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Ellas" data-next="">
+                    <source src="../assets/imagenes/audios/así-soy-yo-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Ellas">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>1:47</p>
+                </div>
+            </div>
+        </div>
+
+       
+
+    
+
+
+        
+    </main>
+
+
+    <section class="row container-fluid cont-albumes">
+        <h2>Mas de sus albumes</h2>
+    </section>
+
+    <section class="row container-fluid cont-foto-albumes">
+        <div class="col-lg-1">
+
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="cont-img-abumes">
+                <a href="cupido__album.html"><img src="../assets/imagenes/cupido.webp" alt=""></a>
+            </div>
+            <div class="cont-titulo-album">
+                <h3 style="font-size: 30px;">Cupido</h3>
+            </div>
+            <div class="cont-subtitulo-album">
+                <h4>14 canciones</h4>
+            </div>
+            
+        </div>
+
+        <div class="col-lg-2">
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="cont-img-abumes">
+                <a href="quiero-volver__album.html"><img src="../assets/imagenes/quiero vlver.jpg" alt=""></a>
+            </div>
+
+
+
+            <div class="cont-titulo-album">
+                <h3 style="font-size: 30px;">Quiero Volver</h3>
+            </div>
+            <div class="cont-subtitulo-album">
+                <h4>11 canciones</h4>
+            </div>
+
+        </div>
+
+        
+    </section>
+
+
+
+    <section class="row container-fluid cont-foto-albumes">
+        <div class="col-lg-1">
+
+        </div>
+        
+        <div class="col-lg-4">
+            <div class="cont-img-abumes">
+                <a href="tini(martina-stoessel)__album.html"><img src="../assets/imagenes/tini(martina stoessel).avif" alt=""></a>
+            </div>
+            
+            <div class="cont-titulo-album">
+                <h3 style="font-size: 30px;">TINI (Martina Stoessel)</h3>
+            </div>
+            <div class="cont-subtitulo-album">
+                <h4>14 canciones</h4>
+            </div>
+
+        </div>
+
+        <div class="col-lg-2">
+
+        </div>
+
+        <div class="col-lg-4">
+            <div class="cont-img-abumes">
+                <a href="un-mechon-de-pelo__album.html"><img src="../assets/imagenes/un mechon de pelo.jpg" alt=""></a>
+            </div>
+
+            <div class="cont-titulo-album">
+                <h3 style="font-size: 30px;">Un Mechon de Pelo</h3>
+            </div>
+            <div class="cont-subtitulo-album">
+                <h4 >14 canciones</h4>
+            </div>
+        </div>
+
+        
+    </section>
+
+    
+
+    <footer>
+        <div id="primerafila">
+            <div id="timemusic__contenedor">
+                <h1>
+                    Time Music
+                </h1>
+                <div id="redessociales">
+                    <div class="imagenesredes"><img src="../assets/imagenes/logofacebook.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logotwitter.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logoWhatsapp.png" alt=""></div>
+                    <div class="imagenesredes"><img src="../assets/imagenes/logoig.png" alt=""></div>
+                </div>
+            </div>
+            
+  
+  
+            <div id="imagenlogotime">
+                <img src="../assets/imagenes/0.3.gif" alt="">
+            </div>
+        </div>
+  
+        <div id="segundafila">
+            <p class="terminosycondiciones">
+                Politica de Privacidad 
+            </p>
+  
+            <p class="terminosycondiciones">
+                Politica de Rembolso
+            </p>
+  
+            <p class="terminosycondiciones">
+                Terminos y Condiciones
+            </p>
+  
+            <p class="terminosycondiciones">
+                Soporte
+            </p>
+        </div>
+  
+        <div id="tercerafila">
+            <p>℗Time Music Inc.</p>
+        </div>
+  
+    </footer>
+</body>
+</html>
