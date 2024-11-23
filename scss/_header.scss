@@ -1,114 +1,52 @@
-*{
-    margin: 0;
-    padding: 0;
-}
+header {
+    background-color: rgb(37, 37, 37) !important;
+    padding: 10px 20px !important;
 
-header{
-    height: 100px;
-    background-color: #1C1C1C;
-    display: flex;
-    width: 100%;
-    #cont__cont-imgCasa{
-        width: 10%;
-        #cont-imgCasa{
-            width: 65px;
-            height: 65px;
-            border-radius: 100%;
-            background-color: #414141;
-            margin: 10% 0 0 10%;
-            #imgCasa{
-                margin: 18% 0 0  18.5%;
-            }
+    .img-container {
+        height: 50px !important;
+        overflow: hidden !important;
+        transition: transform 0.3s ease !important;
+
+        img {
+            height: 100% !important;
+            width: auto !important;
+            transition: transform 0.3s ease !important;
         }
 
+        &:hover {
+            transform: scale(1.1) !important;
+        }
     }
-    #cont__cont-busqueda{
-        width: 80%;
-        display: flex;
-        align-items: center;
-        #cont-busqueda{
-            width: 30%;
-            background-color: #414141;
-            height: 50%;
-            display: flex;
-            #lupa{
-                margin-left: 4.2%;
-                width: 16%;
-                img{
-                    margin-top: 15%;
-                    width: 35px;
-                    height: 35px;
-                }
-            }
-            #cont-buscar{
-                width: 84%;
-                background-color: #414141   ;
-            }
+
+    #cont-buscador {
+        flex-grow: 1 !important;
+        margin: 0 20px !important;
+
+        #searchInput {
+            padding: 5px !important;
+            border-radius: 4px !important;
+            background-color: #5d5d5d !important;
             
         }
     }
-    #cont__cont-imgPersona {
-        width: 10%;
-    
-        #cont-logoPersona {
-            width: 60px;
-            height: 60%;
-            margin: 15% 0 0 10%;
-    
-            .menu-container {
-                position: relative;
-                display: inline-block;
-                
-                .menu-checkbox {
-                    display: none; // Ocultamos el checkbox
-                }
-              
-                .menu-trigger {
-                    cursor: pointer;
-                    display: inline-block;
-                }
-              
-                .dropdown-menu {
-                    display: none; 
-                    position: absolute;
-                    top: 100%;
-                    left: 0;
-                    background-color: #414141;
-                    border: 1px solid #ddd;
-                    border-radius: 8px;
-                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                    padding: 10px;
-                    margin-left: -50px;
-                    ul {
-                        list-style: none;
-                        margin: 0;
-                        padding: 0;
-                        
-                        li {
-                            margin: 0;
-                            padding: 0.5rem 0;
-                            
-                            a {
-                                color: white;
-                                text-decoration: none;
-                                font-size: 0.9rem;
-                                display: block;
-                                margin-left: 20%;
-                                width: 90px;
-                                &:hover {
-                                    background-color: black;
-                                    border-radius: 4px;
-                                    
-                                }
-                            }
-                        }
-                    }
-                }
-    
-                // Mostramos el menú cuando el checkbox está seleccionado
-                .menu-checkbox:checked + .menu-trigger + .dropdown-menu {
-                    display: block;
-                }
+
+    #cont-avatar {
+        position: relative !important;
+
+        #avatar {
+            height: 50px !important;
+            cursor: pointer !important;
+        }
+
+        .dropdown-menu {
+            background-color: #fff !important;
+        }
+
+        .dropdown-item {
+            color: #000 !important;
+
+            &:hover {
+                background-color: #f0f0f0 !important;
             }
         }
     }
