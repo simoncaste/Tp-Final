@@ -40,7 +40,7 @@ footer{
             }
         }
         #imagenlogotime{
-            padding-left: 75% !important;
+            padding-left: 70% !important;
             padding-top: 1%;
             @include medidasFotos( 140px, 140px);
             img{
@@ -52,7 +52,7 @@ footer{
     }
     
     #segundafila{
-        @include medidasFotos( 100%, 80px);
+        @include medidasFotos( 90%, 80px);
         padding-left: 10% !important;
         display: flex;
         justify-content: center;

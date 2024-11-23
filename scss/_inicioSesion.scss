@@ -59,7 +59,7 @@ main{
     .contenedor__inicio{
         border: solid white 1px;
         background-color: $colorfondoheaderymain !important;
-        height: 1500px !important;
+        height: 1300px !important;
         width:  853px !important;
         display: block;
         justify-content: center;
@@ -154,6 +154,7 @@ main{
             margin-left: 170px !important;
             color: white;
             font-size: 30px;
+            
             h1{
 
             }
@@ -162,12 +163,19 @@ main{
                 margin-top: 20px !important;
             }
 
-            img{
-                margin-top: -3 0px;
+            .fotolinea{
+                margin-top: -30px;
                 width: 550px !important;
+
             }
 
-            
+            .imagen{
+                width: 85% !important;
+                height: 85% !important;
+                padding-top: 5% !important;    
+                
+            }
+
         }
 
 
