@@ -16,6 +16,7 @@ $colorfondotitulo: #0B161C;
 $colorletras100: white;
 $colorletras50: rgb(124, 124, 124);
 
+
 #main{
     width: 97.5% !important;
     height: auto;
@@ -46,17 +47,28 @@ $colorletras50: rgb(124, 124, 124);
             height: 300px;
             background-color: $colorfondotitulo;
             display: flex;
-            .contenedor__imagen{
-                @include medidasFotos( 245px, 245px);
+            .contenedor__imagen {
+                width: 245px;
+                height: 245px;
                 align-self: center;
                 margin-left: 2% !important;
-                img{
-                    @include medidasFotos( 100%, 100%);
-                }
-
-                img:hover{
-                    opacity: 90%;
-                }
+                transition: transform 0.4s ease, background-color 0.3s ease;
+            }
+            .contenedor__imagen:hover {
+                transform: scale(1.9);
+            }
+            
+            .contenedor__imagen:hover {
+                transform: scale(1.1);
+            }
+            
+            .contenedor__imagen img {
+                width: 100%;
+                height: 100%;
+            }
+            
+            .contenedor__imagen img:hover {
+                opacity: 90%;
             }
             .contenedor__infoodisea{  
                 display: block;
@@ -124,9 +136,16 @@ $colorletras50: rgb(124, 124, 124);
                     display: block;
                     align-self: center;
                     margin-left: 10% !important;
-                    .contenedor__imagenartista{
-                        @include medidasFotos( 185px, 185px);
+                    .contenedor__imagenartista {
+                        @include medidasFotos(185px, 185px); 
                         justify-items: center;
+                        display: grid;
+                        transition: transform 0.3s ease;
+                    
+                        &:hover {
+                            transform: scale(1.2); 
+                        }
+                        
                         img{
                             @include medidasFotos( 100%, 100%);
                         }
@@ -139,6 +158,7 @@ $colorletras50: rgb(124, 124, 124);
                     .contenedor__tituloartistas{
                         color: $colorletras100;
                         justify-items: center;
+                        margin-top: 9% !important;
                     }
                 }
 
@@ -154,18 +174,22 @@ $colorletras50: rgb(124, 124, 124);
             }
             
             
-            .contenedor__imagenplay{
+            .contenedor__imagenplay {
                 display: flex;
-                @include medidasFotos( 60px, 60px);
+                @include medidasFotos(60px, 60px);
                 margin-top: 13% !important;
                 margin-left: 11.5% !important;
-                .imagenplayalbum{
-                    @include medidasFotos( 100%, 100%);
+            
+                .imagenplayalbum {
+                    @include medidasFotos(100%, 100%);
+                    transition: filter 0.3s ease; /* Suaviza el cambio de color */
                 }
-
-                
-
+            
+                .imagenplayalbum.clickeada {
+                    filter: brightness(0) saturate(100%) hue-rotate(90deg); /* Aplica verde */
+                }
             }
+            
 
         }
 

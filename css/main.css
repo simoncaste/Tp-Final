@@ -874,15 +874,20 @@ body {
       background-color: #0B161C;
       display: flex; }
       #main .contenedor__dealbumes .contenedor__album .contenedor__imagen {
-        height: 245px;
         width: 245px;
+        height: 245px;
         align-self: center;
-        margin-left: 2% !important; }
-        #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img {
-          height: 100%;
-          width: 100%; }
-        #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img:hover {
-          opacity: 90%; }
+        margin-left: 2% !important;
+        transition: transform 0.4s ease, background-color 0.3s ease; }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagen:hover {
+        transform: scale(1.9); }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagen:hover {
+        transform: scale(1.1); }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img {
+        width: 100%;
+        height: 100%; }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img:hover {
+        opacity: 90%; }
       #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea {
         display: block;
         width: 33%;
@@ -928,7 +933,11 @@ body {
           #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista {
             height: 185px;
             width: 185px;
-            justify-items: center; }
+            justify-items: center;
+            display: grid;
+            transition: transform 0.3s ease; }
+            #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista:hover {
+              transform: scale(1.2); }
             #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista img {
               height: 100%;
               width: 100%; }
@@ -936,7 +945,8 @@ body {
               opacity: 90%; }
           #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__tituloartistas {
             color: white;
-            justify-items: center; }
+            justify-items: center;
+            margin-top: 9% !important; }
         #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__infoartistadetalles {
           font-size: 20px;
           align-self: center;
@@ -951,7 +961,12 @@ body {
         margin-left: 11.5% !important; }
         #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay .imagenplayalbum {
           height: 100%;
-          width: 100%; }
+          width: 100%;
+          transition: filter 0.3s ease;
+          /* Suaviza el cambio de color */ }
+        #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay .imagenplayalbum.clickeada {
+          filter: brightness(0) saturate(100%) hue-rotate(90deg);
+          /* Aplica verde */ }
 
 * {
   margin: 0 !important;
