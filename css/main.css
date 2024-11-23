@@ -96,6 +96,18 @@
           border: white solid 1px;
           background-color: #081925;
           color: white; }
+        .main-simonregistrate .contenedor__inicio .form-container .form-group input[type="email"]:hover,
+        .main-simonregistrate .contenedor__inicio .form-container .form-group input[type="text"]:hover,
+        .main-simonregistrate .contenedor__inicio .form-container .form-group input:hover[type="password"] {
+          margin-top: 2% !important;
+          margin-left: 168px !important;
+          width: 500px;
+          height: 50px;
+          border-radius: 15px;
+          font-size: 20px;
+          border: white solid 1px;
+          background-color: #03070a;
+          color: white; }
     .main-simonregistrate .contenedor__inicio button {
       margin-top: 4% !important;
       width: 50%;
@@ -109,7 +121,7 @@
       font-size: 35px;
       border: 1px solid white; }
     .main-simonregistrate .contenedor__inicio button:hover {
-      background-color: #0056b3;
+      background-color: #03070a;
       height: 65px !important;
       width: 53% !important;
       align-self: center; }

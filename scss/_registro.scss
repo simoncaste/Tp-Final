@@ -122,6 +122,20 @@ $colorfondoheaderymain123: #0B161C;
                     background-color: #081925;
                     color: white;
                 }
+                input[type="email"]:hover,
+                input[type="text"]:hover,
+                input:hover[type="password"] {
+                    margin-top: 2% !important;
+                    margin-left: 168px !important;
+                    width: 500px;
+                    height: 50px;
+                    border-radius: 15px;
+                    font-size: 20px;
+                    border: white solid 1px;
+                    background-color: #03070a;
+                    color: white;
+                }
+                
                 
 
         
@@ -148,7 +162,7 @@ $colorfondoheaderymain123: #0B161C;
         }
         
         button:hover{
-            background-color: #0056b3;
+            background-color: #03070a;
             height: 65px !important;
             width: 53% !important;
             align-self: center;
