@@ -865,6 +865,12 @@ body {
   height: 100%;
   width: 100%; }
 
+.cont-linea {
+  height: 20px;
+  width: 1400px;
+  margin-top: 5% !important;
+  margin-left: -38% !important; }
+
 * {
   margin: 0;
   padding: 0; }

@@ -215,3 +215,9 @@
 
 
 
+.cont-linea{
+    @include medidas(1400px,20px );
+    margin-top: 5% !important;
+    margin-left: -38% !important;
+}
+
