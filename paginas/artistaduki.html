@@ -1,26 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/main.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel Album Time Music</title>
+    <link rel="stylesheet" href="../css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../assets/imagenes/logo-timeMusic.png" type="image/x-icon">
+    <title>Duki Time Music</title>
 </head>
 <body>
-    <section class="row container-fluid banner">
-        <img src="../assets/imagenes/emmanuel.jfif" alt="">
-    </section>
+    <main class="partesuperior row container-fluid">
+        <div class="col-lg-6">
+            <div id="imagen">
+                <img id="imagen1" src="../assets/imagenes/duki.jfif" alt="">
+            </div>
+        </div>
+            <div id="imagen">
+        <div class="col-lg-6">
+            <div id="titulo">
+                <h1 id="titulo1">This is Duki</h1>
+                <p id="info">8 albumes, 33 canciones, 2h 31min</p>
+            </div>
+        </div>
+    </main>
 
+    <script>
+        window.addEventListener('scroll', () => {
+            const imagen = document.querySelector('#imagen1'); // Selecciona la imagen por su ID
+            const scrollY = window.scrollY;
+    
+            // Cambia la opacidad al hacer scroll
+            if (scrollY > 100) { // Puedes ajustar el valor de 100 según necesites
+            imagen.style.opacity = '0';
+            imagen.style.transition = 'opacity 0.2s ease'; // Tiempo de transición reducido
+        }   else {
+            imagen.style.opacity = '1';
+            imagen.style.transition = 'opacity 0.2s ease'; // Tiempo de transición reducido
+        }
+        });
+    </script>
 
-
-    <section class="row container-fluid titulo">
-        <h1>Emmanuel</h1>
-    </section>
-
-
+    
 
     <div class="row container-fluid">
         <div class="col-lg-3">
@@ -30,7 +51,7 @@
                         
                         <img  id="icono-play" src="../assets/imagenes/iconoPlay.png" alt="Reproducir Audio"   
                              class="playable-image" 
-                             onclick="cambiarColorYReproducir('HastaQueDiosDiga')">
+                             onclick="cambiarColorYReproducir('Bebe')">
                     </div>
                 </div>
     
@@ -40,6 +61,8 @@
                              onclick="cambiarColorImagen('icono-descargar')">
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </div>
@@ -96,168 +119,169 @@
 
     
 
-    <main>
+    <section>
 
         <div class="row container-fluid" id="fila-1">
             <div class="col-lg-1"></div>
             <div class="col-lg-2">
-                <div class="cont-cancion" id="hastaquediosdiga" onclick="cambiarColorYReproducir('HastaQueDiosDiga')">
+                <div class="cont-cancion" id="ameri" onclick="cambiarColorYReproducir('Ameri')">
                     <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/emmanuel.jfif" alt="Reproducir Audio">
+                        <img id="img-quenospaso" src="../assets/imagenes/ameri.jfif" alt="Reproducir Audio">
                     </div>
                     <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">Hasta Que Dios Diga</h4>
-                        <a href="artistaanuel.html"><p class="artista">Anuel AA</p></a>
+                        <h4 class="titulo-cancion">Ameri</h4>
+                        <a href=""><p class="artista">Duki</p></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-1">
-                <audio id="HastaQueDiosDiga" data-next="China">
-                    <source src="../assets/imagenes/audios/hasta-que-dios-diga-audio.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </div>
-            <div class="col-lg-6">
-                <div class="cont-linea" id="linea-HastaQueDiosDiga">
-                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="cont-segundos">
-                    <p>4:06</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row container-fluid" id="fila-1">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-2">
-                <div class="cont-cancion" id="china" onclick="cambiarColorYReproducir('China')">
-                    <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/emmanuel.jfif" alt="Reproducir Audio">
-                    </div>
-                    <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">China</h4>
-                        <a href="artistaanuel.html"><p class="artista">Anuel AA</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1">
-                <audio id="China" data-next="Jangueo">
-                    <source src="../assets/imagenes/audios/china-video-oficial.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </div>
-            <div class="col-lg-6">
-                <div class="cont-linea" id="linea-China">
-                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="cont-segundos">
-                    <p>5:01</p>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="row container-fluid" id="fila-1">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-2">
-                <div class="cont-cancion" id="jangueo" onclick="cambiarColorYReproducir('Jangueo')">
-                    <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/emmanuel.jfif" alt="Reproducir Audio">
-                    </div>
-                    <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">Jangueo</h4>
-                        <a href="artistaanuel.html"><p class="artista">Anuel AA</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1">
-                <audio id="Jangueo" data-next="Ferrari">
-                    <source src="../assets/imagenes/audios/jangueo-audio-oficial.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </div>
-            <div class="col-lg-6">
-                <div class="cont-linea" id="linea-Jangueo">
-                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="cont-segundos">
-                    <p>3:51</p>
-                </div>
-            </div>
-        </div>
-        
-        
-
-
-        <div class="row container-fluid" id="fila-1">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-2">
-                <div class="cont-cancion" id="ferrari" onclick="cambiarColorYReproducir('Ferrari')">
-                    <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/emmanuel.jfif" alt="Reproducir Audio">
-                    </div>
-                    <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">Ferrari</h4>
-                        <a href="artistaanuel.html"><p class="artista">Anuel AA</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1">
-                <audio id="Ferrari" data-next="Asi Soy Yo">
-                    <source src="../assets/imagenes/audios/ferrari-audio-oficial.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </div>
-            <div class="col-lg-6">
-                <div class="cont-linea" id="linea-Ferrari">
-                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="cont-segundos">
-                    <p>3:08</p>
-                </div>
-            </div>
-        </div>
-
-        
-
-       
-
-       
-        <div class="row container-fluid" id="fila-1">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-2">
-                <div class="cont-cancion" id="asi soy yp" onclick="cambiarColorYReproducir('AsiSoyYo')">
-                    <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/emmanuel.jfif" alt="Reproducir Audio">
-                    </div>
-                    <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">Asi Soy Yo</h4>
-                        <a href="artistaanuel.html"><p class="artista">Anuel AA</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1">
-                <audio id="AsiSoyYo" data-next="">
+                <audio id="Ameri" data-next="">
                     <source src="../assets/imagenes/audios/así-soy-yo-audio-oficial.mp3" type="audio/mpeg">
                     Tu navegador no soporta el elemento de audio.
                 </audio>
             </div>
             <div class="col-lg-6">
-                <div class="cont-linea" id="linea-AsiSoyYo">
+                <div class="cont-linea" id="linea-Ameri">
                     <img class="linea" src="../assets/imagenes/linea.png" alt="">
                 </div>
             </div>
             <div class="col-lg-2">
                 <div class="cont-segundos">
-                    <p>3:48</p>
+                    <p>3:19</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="unodos" onclick="cambiarColorYReproducir('uNOdOS')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/antes de ameri.avif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">uNO dOS</h4>
+                        <a href=""><p class="artista">Duki</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="uNOdOS" data-next="RememberMe">
+                    <source src="../assets/imagenes/audios/jangueo-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-uNOdOS">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>2:45</p>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="goteo" onclick="cambiarColorYReproducir('Goteo')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/super sangre joven.avif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Goteo</h4>
+                        <a href=""><p class="artista">Duki</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Goteo" data-next="Perdon">
+                    <source src="../assets/imagenes/audios/china-video-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Goteo">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>2:44</p>
+                </div>
+            </div>
+        </div>
+        
+        
+
+
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="yinyan" onclick="cambiarColorYReproducir('YINYAN')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/temporada de reggaeton.jfif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">YIN YAN</h4>
+                        <a href=""><p class="artista">duki</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="YINYAN" data-next="Unfollow">
+                    <source src="../assets/imagenes/audios/ferrari-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-YINYAN">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:09</p>
+                </div>
+            </div>
+        </div>
+
+
+        
+
+       
+
+       
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="dejavu" onclick="cambiarColorYReproducir('DejaVu')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/24.avif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Deja Vu</h4>
+                        <a href=""><p class="artista">duki</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="DejaVu" data-next="24">
+                    <source src="../assets/imagenes/audios/ferrari-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-DejaVu">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>2:53</p>
                 </div>
             </div>
         </div>
@@ -268,11 +292,11 @@
 
 
         
-    </main>
+    </section>
 
 
     <section class="row container-fluid cont-albumes">
-        <h2>Mas de sus albumes</h2>
+        <h2>Sus albumes</h2>
     </section>
 
     <section class="row container-fluid cont-foto-albumes">
@@ -282,13 +306,14 @@
         
         <div class="col-lg-4">
             <div class="cont-img-abumes">
-                <a href="las-leyendas-nunca-mueren__album.html"><img src="../assets/imagenes/las-leyendas-nunca-mueren.jpg" alt=""></a>
+                <a href="aura__album.html"><img src="../assets/imagenes/aura.jfif" alt=""></a>
+
             </div>
             <div class="cont-titulo-album">
-                <h3 style="font-size: 30px;">Las Leyendas Nunca Mueren</h3>
+                <h3 style="font-size: 30px;">Aura</h3>
             </div>
             <div class="cont-subtitulo-album">
-                <h4>16 canciones</h4>
+                <h4>20 canciones</h4>
             </div>
             
         </div>
@@ -299,16 +324,16 @@
 
         <div class="col-lg-4">
             <div class="cont-img-abumes">
-                <a href="rhlm-album.html"><img src="../assets/imagenes/rhlm-banner.png" alt=""></a>
+                <a href="ozutochi__album.html"><img src="../assets/imagenes/ozutochi.jfif" alt=""></a>
             </div>
 
 
 
             <div class="cont-titulo-album">
-                <h3 style="font-size: 30px;">Real Hasta La Muerte</h3>
+                <h3 style="font-size: 30px;">OzuTochi</h3>
             </div>
             <div class="cont-subtitulo-album">
-                <h4>13 canciones</h4>
+                <h4>18 canciones</h4>
             </div>
 
         </div>
@@ -343,14 +368,14 @@
 
         <div class="col-lg-4">
             <div class="cont-img-abumes">
-                <a href="LLNM2.html"><img src="../assets/imagenes/LLNM2.jfif" alt=""></a>
+                <a href="enoc__album.html"><img src="../assets/imagenes/enoc.jpg" alt=""></a>
             </div>
 
             <div class="cont-titulo-album">
-                <h3 style="font-size: 30px;">LLNM2</h3>
+                <h3 style="font-size: 30px;">ENOC</h3>
             </div>
             <div class="cont-subtitulo-album">
-                <h4 >33 canciones</h4>
+                <h4 >20 canciones</h4>
             </div>
         </div>
 
