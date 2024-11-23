@@ -579,19 +579,19 @@ body {
       color: white;
       font-weight: bold !important; }
 
-main {
+.main-simon {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin-top: 2% !important;
   display: flex !important;
   justify-content: center !important; }
-  main .contenedor__inicio {
+  .main-simon .contenedor__inicio {
     border: solid white 1px;
     background-color: #0B161C !important;
     height: 1300px !important;
     width: 853px !important;
     display: block;
     justify-content: center; }
-    main .contenedor__inicio .titulodatos {
+    .main-simon .contenedor__inicio .titulodatos {
       color: white;
       font-size: 65px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -599,20 +599,20 @@ main {
       font-weight: 400;
       display: flex;
       justify-content: center; }
-    main .contenedor__inicio .contenedor__repuestascorreo {
+    .main-simon .contenedor__inicio .contenedor__repuestascorreo {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-      main .contenedor__inicio .contenedor__repuestascorreo .contenedor__titulocorreonombre {
+      .main-simon .contenedor__inicio .contenedor__repuestascorreo .contenedor__titulocorreonombre {
         margin-left: 170px !important;
         margin-top: 4% !important;
         color: white;
         font-size: 15px;
         font-weight: 100px; }
-        main .contenedor__inicio .contenedor__repuestascorreo .contenedor__titulocorreonombre h2 {
+        .main-simon .contenedor__inicio .contenedor__repuestascorreo .contenedor__titulocorreonombre h2 {
           font-weight: 10 !important; }
-      main .contenedor__inicio .contenedor__repuestascorreo .contenedor__123 {
+      .main-simon .contenedor__inicio .contenedor__repuestascorreo .contenedor__123 {
         margin-top: 2% !important;
         margin-left: 168px !important; }
-        main .contenedor__inicio .contenedor__repuestascorreo .contenedor__123 .contenedor__respuesta {
+        .main-simon .contenedor__inicio .contenedor__repuestascorreo .contenedor__123 .contenedor__respuesta {
           width: 500px;
           height: 45px;
           border-radius: 15px;
@@ -620,7 +620,7 @@ main {
           border: white solid 1px;
           background-color: #081925;
           color: white; }
-    main .contenedor__inicio .continuar__contenedor {
+    .main-simon .contenedor__inicio .continuar__contenedor {
       height: 80px;
       display: flex;
       justify-content: center;
@@ -630,35 +630,35 @@ main {
       border: solid white 1px !important;
       margin-top: 4% !important;
       background-color: #081925; }
-      main .contenedor__inicio .continuar__contenedor h2 {
+      .main-simon .contenedor__inicio .continuar__contenedor h2 {
         color: white;
         font-size: 40px !important;
         align-self: center;
         font-weight: 500; }
-    main .contenedor__inicio .recuperar__contenedor {
+    .main-simon .contenedor__inicio .recuperar__contenedor {
       margin-top: 3% !important;
       margin-left: 245px !important;
       color: #7a7a7a;
       font-size: 15px; }
-      main .contenedor__inicio .recuperar__contenedor .olvidaste {
+      .main-simon .contenedor__inicio .recuperar__contenedor .olvidaste {
         text-decoration: none;
         font-weight: 300 !important;
         margin-top: 2% !important; }
-        main .contenedor__inicio .recuperar__contenedor .olvidaste a {
+        .main-simon .contenedor__inicio .recuperar__contenedor .olvidaste a {
           text-decoration: none;
           color: white;
           opacity: 100%; }
-    main .contenedor__inicio .plataformas {
+    .main-simon .contenedor__inicio .plataformas {
       margin-top: 10% !important;
       margin-left: 170px !important;
       color: white;
       font-size: 30px; }
-      main .contenedor__inicio .plataformas p {
+      .main-simon .contenedor__inicio .plataformas p {
         margin-top: 20px !important; }
-      main .contenedor__inicio .plataformas .fotolinea {
+      .main-simon .contenedor__inicio .plataformas .fotolinea {
         margin-top: -30px;
         width: 550px !important; }
-      main .contenedor__inicio .plataformas .imagen {
+      .main-simon .contenedor__inicio .plataformas .imagen {
         width: 85% !important;
         height: 85% !important;
         padding-top: 5% !important; }
@@ -792,41 +792,41 @@ body {
       height: 100%;
       width: 100%; }
 
-#fila-1 {
+.fila-1 {
   margin-top: 2% !important; }
-  #fila-1 .cont-cancion {
+  .fila-1 .cont-cancion {
     display: flex;
     color: white;
     margin-left: -38% !important; }
-    #fila-1 .cont-cancion .cont-img-cancion {
+    .fila-1 .cont-cancion .cont-img-cancion {
       height: 80px;
       width: 80px;
       margin-left: 0% !important;
       transition: transform 0.5s ease; }
-      #fila-1 .cont-cancion .cont-img-cancion #img-quenospaso, #fila-1 .cont-cancion .cont-img-cancion #img-sola, #fila-1 .cont-cancion .cont-img-cancion #img-masricaqueayer, #fila-1 .cont-cancion .cont-img-cancion #img-shedont, #fila-1 .cont-cancion .cont-img-cancion #img-hipocrita, #fila-1 .cont-cancion .cont-img-cancion #img-bandolera, #fila-1 .cont-cancion .cont-img-cancion #img-tunoloamas, #fila-1 .cont-cancion .cont-img-cancion #img-moscowmule, #fila-1 .cont-cancion .cont-img-cancion #img-tarot, #fila-1 .cont-cancion .cont-img-cancion #img-titimepregunto, #fila-1 .cont-cancion .cont-img-cancion #img-efecto, #fila-1 .cont-cancion .cont-img-cancion #img-neverita {
+      .fila-1 .cont-cancion .cont-img-cancion #img-quenospaso, .fila-1 .cont-cancion .cont-img-cancion #img-sola, .fila-1 .cont-cancion .cont-img-cancion #img-masricaqueayer, .fila-1 .cont-cancion .cont-img-cancion #img-shedont, .fila-1 .cont-cancion .cont-img-cancion #img-hipocrita, .fila-1 .cont-cancion .cont-img-cancion #img-bandolera, .fila-1 .cont-cancion .cont-img-cancion #img-tunoloamas, .fila-1 .cont-cancion .cont-img-cancion #img-moscowmule, .fila-1 .cont-cancion .cont-img-cancion #img-tarot, .fila-1 .cont-cancion .cont-img-cancion #img-titimepregunto, .fila-1 .cont-cancion .cont-img-cancion #img-efecto, .fila-1 .cont-cancion .cont-img-cancion #img-neverita {
         height: 100%;
         width: 100%; }
-    #fila-1 .cont-cancion .cont-img-cancion:hover {
+    .fila-1 .cont-cancion .cont-img-cancion:hover {
       transform: scale(1.3); }
-    #fila-1 .cont-cancion .cont-titulo-cancion {
+    .fila-1 .cont-cancion .cont-titulo-cancion {
       margin-top: 3% !important;
       margin-left: 8% !important; }
-      #fila-1 .cont-cancion .cont-titulo-cancion .titulo-cancion {
+      .fila-1 .cont-cancion .cont-titulo-cancion .titulo-cancion {
         margin-top: -7% !important; }
-      #fila-1 .cont-cancion .cont-titulo-cancion .artista {
+      .fila-1 .cont-cancion .cont-titulo-cancion .artista {
         height: 30px;
         width: 100%;
         margin-top: 9% !important;
         margin-left: 5% !important; }
-  #fila-1 .cont-linea {
+  .fila-1 .cont-linea {
     height: 20px;
     width: 1400px;
     margin-top: 5% !important;
     margin-left: -38% !important; }
-    #fila-1 .cont-linea .linea {
+    .fila-1 .cont-linea .linea {
       height: 1px;
       width: 100%; }
-  #fila-1 .cont-segundos {
+  .fila-1 .cont-segundos {
     margin-top: 15% !important;
     margin-left: 55% !important;
     color: white; }
@@ -898,15 +898,18 @@ body {
       background-color: #0B161C;
       display: flex; }
       #main .contenedor__dealbumes .contenedor__album .contenedor__imagen {
-        height: 245px;
         width: 245px;
+        height: 245px;
         align-self: center;
-        margin-left: 2% !important; }
-        #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img {
-          height: 100%;
-          width: 100%; }
-        #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img:hover {
-          opacity: 90%; }
+        margin-left: 2% !important;
+        transition: transform 0.4s ease, background-color 0.3s ease; }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagen:hover {
+        transform: scale(1.1); }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img {
+        width: 100%;
+        height: 100%; }
+      #main .contenedor__dealbumes .contenedor__album .contenedor__imagen img:hover {
+        opacity: 90%; }
       #main .contenedor__dealbumes .contenedor__album .contenedor__infoodisea {
         display: block;
         width: 33%;
@@ -952,7 +955,11 @@ body {
           #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista {
             height: 185px;
             width: 185px;
-            justify-items: center; }
+            justify-items: center;
+            display: grid;
+            transition: transform 0.3s ease; }
+            #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista:hover {
+              transform: scale(1.1); }
             #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__imagenartista img {
               height: 100%;
               width: 100%; }
@@ -960,7 +967,8 @@ body {
               opacity: 90%; }
           #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__imagentituloartista .contenedor__tituloartistas {
             color: white;
-            justify-items: center; }
+            justify-items: center;
+            margin-top: 4% !important; }
         #main .contenedor__dealbumes .contenedor__album .contenedor__infoartista .contenedor__infoartistadetalles {
           font-size: 20px;
           align-self: center;
@@ -975,7 +983,12 @@ body {
         margin-left: 11.5% !important; }
         #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay .imagenplayalbum {
           height: 100%;
-          width: 100%; }
+          width: 100%;
+          transition: filter 0.3s ease;
+          /* Suaviza el cambio de color */ }
+        #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay .imagenplayalbum.clickeada {
+          filter: brightness(0) saturate(100%) hue-rotate(90deg);
+          /* Aplica verde */ }
 
 * {
   margin: 0 !important;
