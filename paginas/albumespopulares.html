@@ -139,7 +139,7 @@
 
                 <div class="contenedor__album col-lg-12">
                     <div class="contenedor__imagen">
-                        <img src="../assets/imagenes/portadaameri.png" alt="">
+                        <a href="../paginas/ameri__album.html"><img src="../assets/imagenes/ameri.jfif" alt=""></a>
                     </div>
     
                     <div class="contenedor__infoodisea">
@@ -310,7 +310,7 @@
 
                 <div class="contenedor__album col-lg-12">
                     <div class="contenedor__imagen">
-                        <img src="../assets/imagenes/albumbaddbunny.png" alt="">
+                        <a href="../paginas/un-verano-sin-ti__album.html"><img src="../assets/imagenes/un verano sin ti.avif" alt=""></a>
                     </div>
     
                     <div class="contenedor__infoodisea">
@@ -399,7 +399,7 @@
 
                 <div class="contenedor__album col-lg-12">
                     <div class="contenedor__imagen">
-                        <img src="../assets/imagenes/portadamp3emilia.png" alt="">
+                        <a href="../paginas/albu"><img src="../assets/imagenes/portadamp3emilia.png" alt=""></a>
                     </div>
     
                     <div class="contenedor__infoodisea">
@@ -472,10 +472,18 @@
                         <img class="imagenplayalbum" data-playlist='["../assets/imagenes/audios/Emilia - Jagger.mp3 (Official Video) - EmiliaMusicVEVO (youtube).mp3", "../assets/imagenes/audios/Emilia - GTA.mp3 (Official Video) - EmiliaMusicVEVO (youtube).mp3", "../assets/imagenes/audios/Emilia - Jagger.mp3 (Official Video) - EmiliaMusicVEVO (youtube).mp3"]' src="../assets/imagenes/imagenplayalbum.png" alt="Play 5">
                     </div>
                     
+                    
                     <!-- Elemento de audio -->
                     <audio id="audio-player"></audio>
 
                     <script>
+                        // Selecciona la imagen
+                        const imagen = document.querySelector('.imagenplayalbum');
+
+                        // Agrega el evento de clic
+                        imagen.addEventListener('click', () => {
+                            imagen.classList.toggle('clickeada'); // Agrega o quita la clase "clickeada"
+                        });
                         // Referencias al reproductor y las imágenes
                         const audioPlayer = document.getElementById('audio-player');
                         const playButtons = document.querySelectorAll('.imagenplayalbum');
