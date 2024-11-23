@@ -52,7 +52,7 @@ footer{
     }
     
     #segundafila{
-        @include medidasFotos( 100%, 80px);
+        @include medidasFotos( 90%, 80px);
         padding-left: 10% !important;
         display: flex;
         justify-content: center;
