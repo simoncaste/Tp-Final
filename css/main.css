@@ -38,7 +38,7 @@
   .main-simonregistrate .contenedor__inicio {
     border: solid white 1px;
     background-color: #0B161C !important;
-    height: 1600px !important;
+    height: 1400px !important;
     width: 853px !important;
     display: block;
     justify-content: center; }
@@ -164,37 +164,100 @@
   background-color: #0a2a3d;
   /* Efecto hover */ }
 
-header {
-  background-color: #252525 !important;
+body {
+  margin: 0 !important;
+  font-family: Arial, sans-serif !important; }
+
+.navbar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  background-color: #0b1c26 !important;
   padding: 10px 20px !important; }
-  header .img-container {
-    height: 50px !important;
-    overflow: hidden !important;
-    transition: transform 0.3s ease !important; }
-    header .img-container img {
-      height: 100% !important;
-      width: auto !important;
-      transition: transform 0.3s ease !important; }
-    header .img-container:hover {
-      transform: scale(1.1) !important; }
-  header #cont-buscador {
-    flex-grow: 1 !important;
-    margin: 0 20px !important; }
-    header #cont-buscador #searchInput {
-      padding: 5px !important;
-      border-radius: 4px !important;
-      background-color: #5d5d5d !important; }
-  header #cont-avatar {
-    position: relative !important; }
-    header #cont-avatar #avatar {
-      height: 50px !important;
-      cursor: pointer !important; }
-    header #cont-avatar .dropdown-menu {
-      background-color: #fff !important; }
-    header #cont-avatar .dropdown-item {
-      color: #000 !important; }
-      header #cont-avatar .dropdown-item:hover {
-        background-color: #f0f0f0 !important; }
+
+.navbar img {
+  width: 40px !important;
+  height: 40px !important; }
+
+.navbar .icon {
+  margin: 0 15px !important;
+  color: white !important;
+  font-size: 24px !important;
+  background-color: #3a3a3a !important;
+  border-radius: 50% !important;
+  padding: 10px !important;
+  transition: background-color 0.3s !important; }
+
+.navbar .icon:hover {
+  background-color: #5a5a5a !important; }
+
+.navbar .search-bar {
+  display: flex !important;
+  align-items: center !important;
+  background-color: #3a3a3a !important;
+  border-radius: 5px !important;
+  padding: 2px 10px !important;
+  width: 350px !important; }
+
+.navbar .search-bar .icon {
+  margin-right: 5px !important;
+  transition: none !important; }
+
+.navbar .search-bar input {
+  border: none !important;
+  background: none !important;
+  color: white !important;
+  padding: 5px !important;
+  width: 100% !important;
+  font-size: 18px !important; }
+
+.navbar .search-bar input:focus {
+  outline: none !important; }
+
+.navbar .profile-icon img {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  cursor: pointer !important;
+  transition: transform 0.3s !important; }
+
+.navbar .profile-icon img:hover {
+  transform: scale(1.1) !important; }
+
+.navbar .left-section,
+.navbar .center-section,
+.navbar .right-section {
+  display: flex !important;
+  align-items: center !important; }
+
+.navbar .center-section {
+  flex-grow: 1 !important;
+  justify-content: center !important; }
+
+.dropdown {
+  position: relative !important;
+  display: inline-block !important; }
+
+.dropdown-content {
+  display: none !important;
+  position: absolute !important;
+  right: 0 !important;
+  background-color: #f9f9f9 !important;
+  min-width: 160px !important;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2) !important;
+  z-index: 1 !important; }
+
+.dropdown-content a {
+  color: black !important;
+  padding: 12px 16px !important;
+  text-decoration: none !important;
+  display: block !important; }
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1 !important; }
+
+.dropdown.show .dropdown-content {
+  display: block !important; }
 
 /*MIXIN*/
 /*Variables*/
@@ -586,7 +649,7 @@ body {
   .main-simon .contenedor__inicio {
     border: solid white 1px;
     background-color: #0B161C !important;
-    height: 1300px !important;
+    height: 300px !important;
     width: 853px !important;
     display: block;
     justify-content: center; }
