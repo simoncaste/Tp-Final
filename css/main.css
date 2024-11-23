@@ -309,12 +309,15 @@ footer {
   footer #segundafila {
     height: 80px;
     width: 90%;
-    padding-left: 10% !important;
+    padding-left: 18% !important;
     display: flex;
     justify-content: center; }
     footer #segundafila .terminosycondiciones {
       height: 30px;
       width: 20%; }
+    footer #segundafila a {
+      text-decoration: none;
+      color: black; }
   footer #tercerafila {
     background-color: black;
     color: white;
