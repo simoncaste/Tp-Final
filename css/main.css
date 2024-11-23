@@ -110,88 +110,37 @@
   #cont-boton__continuar {
     margin-left: 39%; } }
 
-* {
-  margin: 0;
-  padding: 0; }
-
 header {
-  height: 100px;
-  background-color: #1C1C1C;
-  display: flex;
-  width: 100%; }
-  header #cont__cont-imgCasa {
-    width: 10%; }
-    header #cont__cont-imgCasa #cont-imgCasa {
-      width: 65px;
-      height: 65px;
-      border-radius: 100%;
-      background-color: #414141;
-      margin: 10% 0 0 10%; }
-      header #cont__cont-imgCasa #cont-imgCasa #imgCasa {
-        margin: 18% 0 0  18.5%; }
-  header #cont__cont-busqueda {
-    width: 80%;
-    display: flex;
-    align-items: center; }
-    header #cont__cont-busqueda #cont-busqueda {
-      width: 30%;
-      background-color: #414141;
-      height: 50%;
-      display: flex; }
-      header #cont__cont-busqueda #cont-busqueda #lupa {
-        margin-left: 4.2%;
-        width: 16%; }
-        header #cont__cont-busqueda #cont-busqueda #lupa img {
-          margin-top: 15%;
-          width: 35px;
-          height: 35px; }
-      header #cont__cont-busqueda #cont-busqueda #cont-buscar {
-        width: 84%;
-        background-color: #414141; }
-  header #cont__cont-imgPersona {
-    width: 10%; }
-    header #cont__cont-imgPersona #cont-logoPersona {
-      width: 60px;
-      height: 60%;
-      margin: 15% 0 0 10%; }
-      header #cont__cont-imgPersona #cont-logoPersona .menu-container {
-        position: relative;
-        display: inline-block; }
-        header #cont__cont-imgPersona #cont-logoPersona .menu-container .menu-checkbox {
-          display: none; }
-        header #cont__cont-imgPersona #cont-logoPersona .menu-container .menu-trigger {
-          cursor: pointer;
-          display: inline-block; }
-        header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          background-color: #414141;
-          border: 1px solid #ddd;
-          border-radius: 8px;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-          padding: 10px;
-          margin-left: -50px; }
-          header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu ul {
-            list-style: none;
-            margin: 0;
-            padding: 0; }
-            header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu ul li {
-              margin: 0;
-              padding: 0.5rem 0; }
-              header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu ul li a {
-                color: white;
-                text-decoration: none;
-                font-size: 0.9rem;
-                display: block;
-                margin-left: 20%;
-                width: 90px; }
-                header #cont__cont-imgPersona #cont-logoPersona .menu-container .dropdown-menu ul li a:hover {
-                  background-color: black;
-                  border-radius: 4px; }
-        header #cont__cont-imgPersona #cont-logoPersona .menu-container .menu-checkbox:checked + .menu-trigger + .dropdown-menu {
-          display: block; }
+  background-color: #252525 !important;
+  padding: 10px 20px !important; }
+  header .img-container {
+    height: 50px !important;
+    overflow: hidden !important;
+    transition: transform 0.3s ease !important; }
+    header .img-container img {
+      height: 100% !important;
+      width: auto !important;
+      transition: transform 0.3s ease !important; }
+    header .img-container:hover {
+      transform: scale(1.1) !important; }
+  header #cont-buscador {
+    flex-grow: 1 !important;
+    margin: 0 20px !important; }
+    header #cont-buscador #searchInput {
+      padding: 5px !important;
+      border-radius: 4px !important;
+      background-color: #5d5d5d !important; }
+  header #cont-avatar {
+    position: relative !important; }
+    header #cont-avatar #avatar {
+      height: 50px !important;
+      cursor: pointer !important; }
+    header #cont-avatar .dropdown-menu {
+      background-color: #fff !important; }
+    header #cont-avatar .dropdown-item {
+      color: #000 !important; }
+      header #cont-avatar .dropdown-item:hover {
+        background-color: #f0f0f0 !important; }
 
 /*MIXIN*/
 /*Variables*/
