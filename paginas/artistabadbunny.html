@@ -1,26 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="../css/main.css">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>X100PRE Album Time Music</title>
+    <link rel="stylesheet" href="../css/main.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Bunny Time Music</title>
 </head>
 <body>
-    <section class="row container-fluid banner">
-        <img src="../assets/imagenes/X100PRE.jfif" alt="">
-    </section>
+    <main class="partesuperior row container-fluid">
+        <div class="col-lg-6">
+            <div id="imagen">
+                <img id="imagen1" src="../assets/imagenes/bad-bunny.jfif" alt="">
+            </div>
+        </div>
+            <div id="imagen">
+        <div class="col-lg-6">
+            <div id="titulo">
+                <h1 id="titulo1">This is DBad Bunny</h1>
+                <p id="info">7 albumes, 39 canciones, 2h 37min</p>
+            </div>
+        </div>
+    </main>
 
+    <script>
+        
+        window.addEventListener('scroll', () => {
+            const imagen = document.querySelector('#imagen1'); // Selecciona la imagen por su ID
+            const scrollY = window.scrollY;
+    
+            // Cambia la opacidad al hacer scroll
+            if (scrollY > 100) { // Puedes ajustar el valor de 100 según necesites
+            imagen.style.opacity = '0';
+            imagen.style.transition = 'opacity 0.2s ease'; // Tiempo de transición reducido
+        }   else {
+            imagen.style.opacity = '1';
+            imagen.style.transition = 'opacity 0.2s ease'; // Tiempo de transición reducido
+        }
+        
+        });
+    </script>
 
-
-    <section class="row container-fluid titulo">
-        <h1>X100PRE</h1>
-    </section>
-
-
+    
 
     <div class="row container-fluid">
         <div class="col-lg-3">
@@ -28,9 +50,9 @@
                 <div class="col-lg-3">
                     <div id="cont-icono-play" >
                         
-                        <img  id="icono-play" src="../assets/imagenes/iconoPlay.png" alt="Reproducir Audio"   
-                             class="playable-image" 
-                             onclick="cambiarColorYReproducir('Caro')">
+                        <img id="icono-play" src="../assets/imagenes/iconoPlay.png" alt="Reproducir Audio"   
+                            class="playable-image" 
+                            onclick="cambiarColorYReproducir('Hibiki')">
                     </div>
                 </div>
     
@@ -40,6 +62,8 @@
                              onclick="cambiarColorImagen('icono-descargar')">
                     </div>
                 </div>
+
+                
             </div>
         </div>
     </div>
@@ -97,125 +121,27 @@
     
 
     <main>
-
         <div class="row container-fluid" id="fila-1">
             <div class="col-lg-1"></div>
             <div class="col-lg-2">
-                <div class="cont-cancion" id="caro" onclick="cambiarColorYReproducir('Caro')">
+                <div class="cont-cancion" id="hibiki" onclick="cambiarColorYReproducir('Hibiki')">
                     <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/X100PRE.jfif" alt="Reproducir Audio">
+                        <img id="img-quenospaso" src="../assets/imagenes/NADIE SABE LO QUE VA A PASAR MAÑANA.avif" alt="Reproducir Audio">
                     </div>
                     <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">Caro</h4>
+                        <h4 class="titulo-cancion">HIBIKI</h4>
                         <a href=""><p class="artista">Bad Bunny</p></a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-1">
-                <audio id="Caro" data-next="">
+                <audio id="Hibiki" data-next="Fina">
                     <source src="../assets/imagenes/audios/hasta-que-dios-diga-audio.mp3" type="audio/mpeg">
                     Tu navegador no soporta el elemento de audio.
                 </audio>
             </div>
             <div class="col-lg-6">
-                <div class="cont-linea" id="linea-Mia">
-                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="cont-segundos">
-                    <p>3:49</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row container-fluid" id="fila-1">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-2">
-                <div class="cont-cancion" id="mia" onclick="cambiarColorYReproducir('Mia')">
-                    <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/X100PRE.jfif" alt="Reproducir Audio">
-                    </div>
-                    <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">MIA</h4>
-                        <a href=""><p class="artista">Bad Bunny</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1">
-                <audio id="Mia" data-next="RLNDT">
-                    <source src="../assets/imagenes/audios/china-video-oficial.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </div>
-            <div class="col-lg-6">
-                <div class="cont-linea" id="linea-Mia">
-                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="cont-segundos">
-                    <p>3:30</p>
-                </div>
-            </div>
-        </div>
-
-        
-        <div class="row container-fluid" id="fila-1">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-2">
-                <div class="cont-cancion" id="rlndt" onclick="cambiarColorYReproducir('RLNDT')">
-                    <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/X100PRE.jfif" alt="Reproducir Audio">
-                    </div>
-                    <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">RLNDT</h4>
-                        <a href=""><p class="artista">Bad Bunny</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1">
-                <audio id="RLNDT" data-next="EstamosBien">
-                    <source src="../assets/imagenes/audios/jangueo-audio-oficial.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </div>
-            <div class="col-lg-6">
-                <div class="cont-linea" id="linea-RLNDT">
-                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
-                </div>
-            </div>
-            <div class="col-lg-2">
-                <div class="cont-segundos">
-                    <p>4:44</p>
-                </div>
-            </div>
-        </div>
-        
-        
-
-
-        <div class="row container-fluid" id="fila-1">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-2">
-                <div class="cont-cancion" id="estamosbien" onclick="cambiarColorYReproducir('EstamosBien')">
-                    <div class="cont-img-cancion">
-                        <img id="img-quenospaso" src="../assets/imagenes/X100PRE.jfif" alt="Reproducir Audio">
-                    </div>
-                    <div class="cont-titulo-cancion">
-                        <h4 class="titulo-cancion">Estamos Bien</h4>
-                        <a href=""><p class="artista">Bad Bunny</p></a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-1">
-                <audio id="EstamosBien" data-next="SiEstuviesemosJuntos">
-                    <source src="../assets/imagenes/audios/ferrari-audio-oficial.mp3" type="audio/mpeg">
-                    Tu navegador no soporta el elemento de audio.
-                </audio>
-            </div>
-            <div class="col-lg-6">
-                <div class="cont-linea" id="linea-EstamosBien">
+                <div class="cont-linea" id="linea-Hibiki">
                     <img class="linea" src="../assets/imagenes/linea.png" alt="">
                 </div>
             </div>
@@ -225,12 +151,69 @@
                 </div>
             </div>
         </div>
-
         
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="unavez" onclick="cambiarColorYReproducir('UnaVez')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/YHLQSMDLG.jpg" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Una Vez</h4>
+                        <a href=""><p class="artista">Bad Bunny</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="UnaVez" data-next="Ignotantes">
+                    <source src="../assets/imagenes/audios/jangueo-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-UnaVez">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:52</p>
+                </div>
+            </div>
+        </div>
+    
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="safaera" onclick="cambiarColorYReproducir('Safaera')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/YHLQSMDLG.jpg" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Safaera</h4>
+                        <a href=""><p class="artista">Bad Bunny</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="Safaera" data-next="">
+                    <source src="../assets/imagenes/audios/así-soy-yo-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-Safaera">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>4:55</p>
+                </div>
+            </div>
+        </div>
 
-       
-
-       
         <div class="row container-fluid" id="fila-1">
             <div class="col-lg-1"></div>
             <div class="col-lg-2">
@@ -261,19 +244,42 @@
                 </div>
             </div>
         </div>
-
-       
-
+        
+        <div class="row container-fluid" id="fila-1">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-2">
+                <div class="cont-cancion" id="estamosbien" onclick="cambiarColorYReproducir('EstamosBien')">
+                    <div class="cont-img-cancion">
+                        <img id="img-quenospaso" src="../assets/imagenes/X100PRE.jfif" alt="Reproducir Audio">
+                    </div>
+                    <div class="cont-titulo-cancion">
+                        <h4 class="titulo-cancion">Estamos Bien</h4>
+                        <a href=""><p class="artista">Bad Bunny</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-1">
+                <audio id="EstamosBien" data-next="SiEstuviesemosJuntos">
+                    <source src="../assets/imagenes/audios/ferrari-audio-oficial.mp3" type="audio/mpeg">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+            <div class="col-lg-6">
+                <div class="cont-linea" id="linea-EstamosBien">
+                    <img class="linea" src="../assets/imagenes/linea.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-2">
+                <div class="cont-segundos">
+                    <p>3:28</p>
+                </div>
+            </div>
+        </div>
     
-
-
+    
+    
         
     </main>
-
-
-    <section class="row container-fluid cont-albumes">
-        <h2>Mas de sus albumes</h2>
-    </section>
 
     <section class="row container-fluid cont-foto-albumes">
         <div class="col-lg-1">
@@ -325,14 +331,14 @@
         
         <div class="col-lg-4">
             <div class="cont-img-abumes">
-                <a href="nadie-sabe-lo-que-va-a-pasar-mañana__album.html"><img src="../assets/imagenes/NADIE SABE LO QUE VA A PASAR MAÑANA.avif" alt=""></a>
+                <a href="un-verano-sin-ti__album.html"><img src="../assets/imagenes/un verano sin ti.avif" alt=""></a>
             </div>
             
             <div class="cont-titulo-album">
-                <h3 style="font-size: 30px;">Nadie Sabe Lo Que Va a Pasar Mañana </h3>
+                <h3 style="font-size: 30px;">Un Verano Sin Ti</h3>
             </div>
             <div class="cont-subtitulo-album">
-                <h4>22 canciones</h4>
+                <h4>23 canciones</h4>
             </div>
 
         </div>
@@ -343,19 +349,21 @@
 
         <div class="col-lg-4">
             <div class="cont-img-abumes">
-                <a href="un-verano-sin-ti__album.html"><img src="../assets/imagenes/un verano sin ti.avif" alt=""></a>
+                <a href="x100pre__album.html"><img src="../assets/imagenes/X100PRE.jfif" alt=""></a>
             </div>
 
             <div class="cont-titulo-album">
-                <h3 style="font-size: 30px;">Un Verano Sin Ti</h3>
+                <h3 style="font-size: 30px;">X100PRE</h3>
             </div>
             <div class="cont-subtitulo-album">
-                <h4 >23 canciones</h4>
+                <h4 >15 canciones</h4>
             </div>
         </div>
 
         
     </section>
+
+        
 
     
 
