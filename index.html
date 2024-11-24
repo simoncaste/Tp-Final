@@ -20,39 +20,30 @@
             <h1 id="tituloGrande">Secciones</h1>
             <a href="paginas/megustas.html"><h2 class="tituloChico">Tus Me Gusta</h2></a>
             <ul class="lista">
-                <li>¿Que Nos Paso?</li>
-                <li>Sola</li>
-                <li>Mas Rica que Ayer</li>
-                <li>She Dont Give Fo</li>
-                <li>Hipocrita</li>
-                <li>...</li>
+                <li><a href="paginas/artistaanuel.html">¿Que Nos Paso?</a></li>
+                <li><a href="paginas/artistaanuel.html">Sola</a></li>
+                <li><a href="paginas/artistaanuel.html">Mas Rica que Ayer</a></li>
+                <li><a href="paginas/artistaduki.html">She Dont Give Fo</a></li>
+                <li><a href="paginas/artistaanuel.html">Hipocrita</a></li>
+                <li><a href="paginas/megustas.html">...</a></li>
             </ul>
-            <h2 class="tituloChico">Canciones Populares</h2>
-            <ul class="lista">
-                <li>Adicto</li>
-                <li>Tarot</li>
-                <li>Ella Quiere Bebe</li>
-                <li>La Cancion</li>
-                <li>Wanda</li>
-                <li>...</li>
-            </ul>
+            
             <h2 class="tituloChico">Artistas Mas Escuchados</h2>
             <ul class="lista">
-                <li>Bad Bunny</li>
-                <li>Anuel AA</li>
-                <li>Tini</li>
-                <li>Duki</li>
-                <li>Ozuna</li>
-                <li>...</li>
+                <li class="lista-color"><a href="paginas/artistabadbunny.html">Bad Bunny</a></li>
+                <li><a href="paginas/artistaanuel.html">Anuel AA</a></li>
+                <li><a href="paginas/artistatini.html">Tini</a></li>
+                <li><a href="paginas/artistaduki.html">Duki</a></li>
+                <li><a href="paginas/artistaozuna.html">Ozuna</a></li>
             </ul>
             <a href="paginas/albumespopulares.html"><h2 class="tituloChico">Populares</h2></a>
             <ul class="lista">
-                <li>Real Hasta la Muerte</li>
-                <li>Un Verano Sin Ti</li>
-                <li>Cupido</li>
-                <li>Ameri</li>
-                <li>Odisea</li>
-                <li>...</li>
+                <li><a href="paginas/rhlm-album.html">Real Hasta la Muerte</a></li>
+                <li><a href="paginas/un-verano-sin-ti__album.html">Un Verano Sin Ti</a></li>
+                <li><a href="paginas/cupido__album.html">Cupido</a></li>
+                <li><a href="paginas/ameri__album.html">Ameri</a></li>
+                <li><a href="paginas/odisea__album.html">Odisea</a></li>
+                <li><a href="paginas/albumespopulares.html"></a></li>
             </ul>
             <div class="card">
             <div class="top">
@@ -217,11 +208,11 @@
                 <li class="carousel-slide"><a href="paginas/los-dioses__album.html"><img src="assets/imagenes/los-dioses.jpg" alt="Imagen 1"></li></a>
                 <li class="carousel-slide"><a href="paginas/emmanuel__album.html"><img src="assets/imagenes/emmanuel.jfif" alt="Imagen 2"></li></a>
                 <li class="carousel-slide"><a href="paginas/odisea__album.html"><img src="assets/imagenes/odiesea.png" alt="Imagen 3"></li></a>
-                <li class="carousel-slide"><img src="assets/imagenes/albumbaddbunny.png" alt="Imagen 4"></li>
-                <li class="carousel-slide"><img src="assets/imagenes/albumTini.png" alt="Imagen 4"></li>
-                <li class="carousel-slide"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 4"></li>
-                <li class="carousel-slide"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 4"></li>
-                <li class="carousel-slide"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 4"></li>
+                <li class="carousel-slide"><a href="paginas/un-verano-sin-ti__album.html"><img src="assets/imagenes/albumbaddbunny.png" alt="Imagen 4"></a></li>
+                <li class="carousel-slide"><a href="paginas/cupido__album.html"><img src="assets/imagenes/albumTini.png" alt="Imagen 4"></a></li>
+                <li class="carousel-slide"><a href="paginas/rhlm-album.html"><img src="assets/imagenes/albumAnuel.png" alt="Imagen 4"></a></li>
+                <li class="carousel-slide"><a href="paginas/la-vida-es-una__album.html"><img src="assets/imagenes/la vida es una.avif" alt="Imagen 4"></a></li>
+                <li class="carousel-slide"><a href="paginas/temporada-de-reggaeton__album.html"><img src="assets/imagenes/temporada de reggaeton.jfif" alt="Imagen 4"></a></li>
                 <li class="carousel-slide"><a href="paginas/ozutochi__album.html"><img src="assets/imagenes/ozutochi.jfif" alt="Imagen 4"></li></a>
               </ul>
             </div>
@@ -229,14 +220,14 @@
           </div>
         
           <script>
-            // JavaScript del carrusel
+            
             const track = document.querySelector('.carousel-track');
             const slides = Array.from(track.children);
             const nextButton = document.querySelector('#nextBtn');
             const prevButton = document.querySelector('#prevBtn');
             const slideWidth = slides[0].getBoundingClientRect().width;
 
-            // Configuración inicial para alinear las diapositivas
+            
             const setSlidePosition = (slide, index) => {
             slide.style.left = slideWidth * index + 'px';
             };
@@ -250,7 +241,7 @@
 
             nextButton.addEventListener('click', () => {
             currentIndex++;
-            // Si se llega al final, regresar al inicio
+            
             if (currentIndex >= slides.length) {
                 currentIndex = 0;
             }
@@ -259,7 +250,7 @@
 
             prevButton.addEventListener('click', () => {
             currentIndex--;
-            // Si se llega al inicio, ir al final
+            
             if (currentIndex < 0) {
                 currentIndex = slides.length - 1;
             }
@@ -273,44 +264,44 @@
     <section class="Artistas row container-fluid">
         <h1 class="tituloAr">Artistas Mas Escuchados</h1>
         <div class="artistas col-lg-3">
-            <img class="fotosAr" src="assets/imagenes/Artista1.png" alt="">
-            <img class="fotosAr" src="assets/imagenes/Artista2.png" alt="">
-            <img class="fotosAr" src="assets/imagenes/Artista3.png" alt="">
+            <a href="paginas/artistamyketowers.html"><img class="fotosAr" src="assets/imagenes/Artista1.png" alt=""></a>
+            <a href="paginas/artistaduki.html"><img class="fotosAr" src="assets/imagenes/Artista2.png" alt=""></a>
+            <a href="paginas/artistaanuel.html"><img class="fotosAr" src="assets/imagenes/Artista3.png" alt=""></a>
 
         </div>
         <div class="artista col-lg-3">
             <div class="nombresAr">
-                <h1 class="tituloAr">Emilia</h1>
-                <p class="oyentes">22,360,597 oyentes mensuales</p>
+                <a href="paginas/artistamyketowers.html"><h1 class="tituloAr">Mike Towers</h1>
+                    <p class="oyentes">22,360,597 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
-                <h1 class="tituloAr">Duki</h1>
-                <p class="oyentes">82,270,251 oyentes mensuales</p>
+                <a href="paginas/artistaduki.html"><h1 class="tituloAr">Duki</h1>
+                    <p class="oyentes">82,270,251 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
-                <h1 class="tituloAr">Anuel AA</h1>
-                <p class="oyentes">18,360,597 oyentes mensuales</p>
+                <a href="paginas/artistaanuel.html"><h1 class="tituloAr">Anuel AA</h1>
+                    <p class="oyentes">18,360,597 oyentes mensuales</p></a>
             </div>
             
 
         </div>
         <div class="artistas col lg-3">
-            <img class="fotosAr" src="assets/imagenes/Artista4.png" alt="">
-            <a href="paginas/artistas.html"><img class="fotosAr" src="assets/imagenes/Artista5.png" alt=""></a>
-            <img class="fotosAr" src="assets/imagenes/Artista6.png" alt="">
+            <a href="paginas/artistabadbunny.html"><img class="fotosAr" src="assets/imagenes/Artista4.png" alt=""></a>
+            <a href="paginas/artistaozuna.html"><img class="fotosAr" src="assets/imagenes/Artista5.png" alt=""></a>
+            <a href="paginas/artistatini.html"><img class="fotosAr" src="assets/imagenes/Artista6.png" alt=""></a>
         </div>
         <div class="nombresAr col-lg-3">
             <div class="nombresAr">
-                <h1 class="tituloAr">Bad Bunny</h1>
-                <p class="oyentes">62,070,251 oyentes mensuales</p>
+                <a href="paginas/artistabadbunny.html"><h1 class="tituloAr">Bad Bunny</h1>
+                    <p class="oyentes">62,070,251 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
-                <a href="paginas/artistas.html"><h1 class="tituloAr">Ozuna</h1>
+                <a href="paginas/artistaozuna.html"><h1 class="tituloAr">Ozuna</h1>
                     <p class="oyentes">46,970,510 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
-                <h1 class="tituloAr">Tini</h1>
-                <p class="oyentes">22,070,251 oyentes mensuales</p>
+                <a href="paginas/artistatini.html"><h1 class="tituloAr">Tini</h1>
+                <p class="oyentes">22,070,251 oyentes mensuales</p></a>
             </div>
             
         </div>
@@ -333,10 +324,10 @@
                         <P class="tiemoAl">Anuel AA</P></a>
                 </div>
                 <div class="fotosAlb">
-                    <img src="assets/imagenes/albumTini.png" alt="">
-                    <h1 class="nbrAl">Cupido</h1>
-                    <P class="tiemoAl">14 canciones, 39 min</P>
-                    <P class="tiemoAl">Tini</P>
+                    <a href="paginas/cupido__album.html"><img src="assets/imagenes/albumTini.png" alt="">
+                        <h1 class="nbrAl">Cupido</h1>
+                        <P class="tiemoAl">14 canciones, 39 min</P>
+                        <P class="tiemoAl">Tini</P></a>
                 </div>
                 <div class="fotosAlb">
                     <a href="paginas/odisea__album.html"><img src="assets/imagenes/albumzuna.png" alt="">
@@ -348,17 +339,18 @@
             </div>
             <div class="segundaPar segundaParte col-lg-6">
                 <div class="fotosAlb">
-                    <img src="assets/imagenes/albumbaddbunny.png" alt="">
-                    <h1 class="nbrAl">Un Verano</h1>
-                    <P class="tiemoAl">23 canciones, 1h 21min</P>
-                    <P class="tiemoAl">Bad Bunny</P>
+                    <a href="paginas/un-verano-sin-ti__album.html"><img src="assets/imagenes/albumbaddbunny.png" alt="">
+                        <h1 class="nbrAl">Un Verano Sin Ti</h1>
+                        <P class="tiemoAl">23 canciones, 1h 21min</P>
+                        <P class="tiemoAl">Bad Bunny</P></a>
                 </div>
                 <div class="fotosAlb">
-                    <img src="assets/imagenes/albumDuki.png" alt="">
-                    <h1 class="nbrAl">Ameri</h1>
-                    <P class="tiemoAl">15 canciones, 45 min</P>
-                    <P class="tiemoAl">Duki</P>
+                    <a href="paginas/ameri__album.html"><img src="assets/imagenes/albumDuki.png" alt="">
+                        <h1 class="nbrAl">Ameri</h1>
+                        <P class="tiemoAl">15 canciones, 45 min</P>
+                        <P class="tiemoAl">Duki</P></a>
                 </div>
+                <a href="paginas/albumespopulares.html"><p id="ver-mas">ver mas</p></a>
                 
 
             </div>

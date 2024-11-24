@@ -1,5 +1,5 @@
 body{
-    background-color: #293752;
+    background-color: #081925;
     margin: 0; 
     padding: 0;
     padding-bottom: 150px;
@@ -8,7 +8,7 @@ body{
         width: 20%;
         height: calc(100vh ); 
         overflow-y: auto; 
-        background-color: #334664;
+        background-color: #0B161C;
         color: white;
         position: fixed;
         top: 0;
@@ -68,7 +68,7 @@ body{
         
         .elapsed {
             width: 42%;
-            background-color: #1db954;
+            background-color: #334664;
             height: 100%;
             border-radius: 3px;
         }
@@ -99,7 +99,7 @@ body{
         }
         
         .controls svg:hover {
-            color: #1db954;
+            color: #334664;
         }
         
         .volume {
@@ -118,7 +118,7 @@ body{
         }
         
         .volume .slider .green {
-            background-color: #1db954;
+            background-color: #334664;
             height: 100%;
             width: 80%;
             border-radius: 3px;
@@ -164,7 +164,7 @@ body{
         }
         
         .greenline {
-            background-color: #1db954;
+            background-color: #334664;
             height: 20px;
             width: 2px;
             position: relative;
@@ -222,10 +222,12 @@ body{
             font-weight: 200;
         }
         .lista{
+            color: gray;
             list-style-type: decimal;
             padding-left: 40px !important ;
             font-size: 15px;
-            color: gray;
+            text-decoration: none !important;
+            
             
         }
         
@@ -234,7 +236,7 @@ body{
     }
     .meGustas{
         width: 100% !important;
-        padding-left: 400px !important;
+        padding-left: 30% !important;
         #titulo1{
             color: white;
             padding-bottom: 20px !important;
@@ -242,8 +244,7 @@ body{
         .fotosMeGustas{
             position: relative;
             display:flex;
-            border: 1px solid  #334664; 
-            background-color: #334664;
+            border: 1px solid white; 
             margin-bottom: 70px !important;
             width: 80%;
             height: 230px;
@@ -277,7 +278,7 @@ body{
             
             .fotos{
                 justify-content: left;
-                padding: 10px !important;
+                padding: 15px !important;
                 width: 30%;
                 height: 100%;
             }
@@ -293,7 +294,7 @@ body{
         } 
     }
     .Artistas{
-        padding-left: 400px !important;
+        padding-left: 30% !important;
         width: 100%;
         height: 500px;
         display: flex;
@@ -340,7 +341,7 @@ $arrow-size: 40px;
   align-items: center;
   padding-bottom: 80px !important;
   position: relative;
-  padding-left: 400px !important;
+  padding-left: 30% !important;
   padding-top: 40px !important;
   width: 100%;
   margin: auto;
@@ -405,37 +406,46 @@ $arrow-size: 40px;
     
     .ContAP{
         padding-top: 150px !important ;
-        padding-left: 400px !important;
+        padding-left: 30% !important;
         color: white;
     }
 
     .segundaParte{
         padding-top: 80px !important;
-        padding-right: 100px !important;
+        padding-right: 15%!important;
         align-items: end;
     }
     .segundaPar{
+        
         padding-top: 80px !important;
         flex-direction: column;
         gap: 20px;
         display: flex;
         align-items:end;
+        #ver-mas{
+            color: white;
+            text-decoration: underline;
+            padding-top: 100% !important;
+            font-size: 20px;
+
+        }
         .fotosAlb{
             
-            border: 1px solid #334664 ;
-            background-color: #334664;
+            border: 1px solid #000000 ;
+            background-color: #000000;
             padding: 10px !important;
             
             .nbrAl{
                 color: white;
+                font-size: 25px !important;
             }
             .tiemoAl{
                 color: gray;
                 font-size: 15px;
             }
             img {
-                width: 250px; 
-                height: 250px; 
+                width: 220px; 
+                height: 220px; 
                
             }
         }
