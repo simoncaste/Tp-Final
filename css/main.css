@@ -609,6 +609,7 @@ body {
     padding-left: 30% !important;
     color: white; }
   body .segundaParte {
+    padding-bottom: 0;
     padding-top: 80px !important;
     padding-right: 15% !important;
     align-items: end; }
