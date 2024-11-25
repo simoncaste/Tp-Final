@@ -281,7 +281,8 @@ footer {
   footer #primerafila {
     height: 200px;
     width: 100%;
-    display: flex; }
+    display: flex;
+    height: 130px; }
     footer #primerafila #timemusic__contenedor {
       padding-top: 1.5% !important;
       margin-left: 2.5% !important; }
@@ -311,7 +312,8 @@ footer {
     width: 90%;
     padding-left: 18% !important;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    height: 50px; }
     footer #segundafila .terminosycondiciones {
       height: 30px;
       width: 20%; }

@@ -17,11 +17,12 @@ footer{
     margin-top: 5% !important;
     background-color: white;
     #primerafila{
-        @include medidasFotos( 100%, 200px);
+        @include medidasFotos( 100%o
         display: flex;
+        height: 130px;
         #timemusic__contenedor{
-            padding-top: 1.5% !important;
-            margin-left: 2.5% !important;
+            padding-top: 1.5% !impoo
+            margin-left: 2.5% !impoo
         }
 
         #redessociales{
@@ -56,6 +57,7 @@ footer{
         padding-left: 18% !important;
         display: flex;
         justify-content: center;
+        height: 50px;
         .terminosycondiciones{
             @include medidasFotos( 20%, 30px);
         }
