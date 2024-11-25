@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" href="../Tp-Final/assets/imagenes/logo-timeMusic.png" type="image/png">
+    <link rel="icon" href="assets/imagenes/logo-timeMusic.png" type="image/png">
     <title>Inicio</title>
     <style>
         body{
@@ -236,22 +236,23 @@
             </div>
         </div>
 
+        
         <script>
             function manejarReproduccion(idAudio) {
               const audioSeleccionado = document.querySelector(`#${idAudio}`);
               
               if (!audioSeleccionado) return;
           
-              // Detener otros audios
+              
               const todosLosAudios = document.querySelectorAll('audio');
               todosLosAudios.forEach((audio) => {
                 if (audio !== audioSeleccionado) {
                   audio.pause();
-                  audio.currentTime = 0; // Reinicia el audio
+                  audio.currentTime = 0; 
                 }
               });
           
-              // Control de reproducción
+              
               if (audioSeleccionado.paused) {
                 audioSeleccionado.play();
               } else {
@@ -275,7 +276,7 @@
                   <source src="assets/imagenes/audios/videoplayback (1).mp3" type="audio/mp3"> 
                 </audio>
                 <div class="titulos">
-                    <h1 class="principal">¿Qué Nos Paso?</h1>
+                    <h2 class="principal">¿Qué Nos Paso?</h2>
                     <P class="subtitulo">22,360,597 oyentes mensuales</P>
                 </div>
                 
@@ -290,7 +291,7 @@
                   <source src="assets/imagenes/audios/videoplayback.mp3" type="audio/mp3"> 
                 </audio>
                 <div class="titulos">
-                    <h1 class="principal">Sola</h1>
+                    <h2 class="principal">Sola</h2>
                     <P class="subtitulo">122,340,061 oyentes mensuales                    </P>
                 </div>
               </div>
@@ -303,7 +304,7 @@
                   <source src="assets/imagenes/audios/videoplayback (2).mp3" type="audio/mp3"> 
                 </audio>
                 <div class="titulos">
-                    <h1 class="principal">Más Rica Que Ayer</h1>
+                    <h2 class="principal">Más Rica Que Ayer</h2>
                     <P class="subtitulo">278,360,597 oyentes mensuales                    </P>
                 </div>
               </div>
@@ -316,7 +317,7 @@
                   <source src="assets/imagenes/audios/she-dont-give-a-fo-ft-khea-prod-by-omar-varela.mp3" type="audio/mp3"> 
                 </audio>
                 <div class="titulos">
-                    <h1 class="principal">She Don´t Give Fo</h1>
+                    <h2 class="principal">She Don´t Give Fo</h2>
                     <P class="subtitulo">538,963,834 oyentes mensuales                    </P>
                 </div>
               </div>
@@ -329,14 +330,14 @@
                   <source src="assets/imagenes/audios/videoplayback (4).mp3" type="audio/mp3"> 
                 </audio>
                 <div class="titulos">
-                    <h1 class="principal">Hipocrita</h1>
+                    <h2 class="principal">Hipocrita</h2>
                     <P class="subtitulo">402,252,049 oyentes mensuales                    </P>
                 </div>
               </div>
               <div id="Cont-ver">
                     <a href="paginas/megustas.html"><p id="ver-mas">ver mas</p></a>
               </div>
-              <!-- Repite la estructura para los demás audios -->
+              
               
         </div>
 
@@ -406,22 +407,22 @@
     <section class="Artistas row container-fluid">
         <h1 class="tituloAr">Artistas Mas Escuchados</h1>
         <div class="artistas col-lg-3">
-            <a href="paginas/artistamyketowers.html"><img class="fotosAr" src="assets/imagenes/Artista1.png" alt=""></a>
+            <a href="paginas/artistamyketowers.html"><img class="fotosAr" src="assets/imagenes/mykeTowers.jfif" alt=""></a>
             <a href="paginas/artistaduki.html"><img class="fotosAr" src="assets/imagenes/Artista2.png" alt=""></a>
             <a href="paginas/artistaanuel.html"><img class="fotosAr" src="assets/imagenes/Artista3.png" alt=""></a>
 
         </div>
         <div class="artista col-lg-3">
             <div class="nombresAr">
-                <a href="paginas/artistamyketowers.html"><h1 class="tituloAr">Mike Towers</h1>
+                <a href="paginas/artistamyketowers.html"><h2 class="artista">Myke Towers</h2>
                     <p class="oyentes">22,360,597 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
-                <a href="paginas/artistaduki.html"><h1 class="tituloAr">Duki</h1>
+                <a href="paginas/artistaduki.html"><h2 class="artista">Duki</h2>
                     <p class="oyentes">82,270,251 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
-                <a href="paginas/artistaanuel.html"><h1 class="tituloAr">Anuel AA</h1>
+                <a href="paginas/artistaanuel.html"><h2 class="artista">Anuel AA</h2>
                     <p class="oyentes">18,360,597 oyentes mensuales</p></a>
             </div>
             
@@ -434,15 +435,15 @@
         </div>
         <div class="nombresAr col-lg-3">
             <div class="nombresAr">
-                <a href="paginas/artistabadbunny.html"><h1 class="tituloAr">Bad Bunny</h1>
+                <a href="paginas/artistabadbunny.html"><h2 class="artista">Bad Bunny</h2>
                     <p class="oyentes">62,070,251 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
-                <a href="paginas/artistaozuna.html"><h1 class="tituloAr">Ozuna</h1>
+                <a href="paginas/artistaozuna.html"><h2 class="artista">Ozuna</h2>
                     <p class="oyentes">46,970,510 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
-                <a href="paginas/artistatini.html"><h1 class="tituloAr">Tini</h1>
+                <a href="paginas/artistatini.html"><h2 class="artista">Tini</h2>
                 <p class="oyentes">22,070,251 oyentes mensuales</p></a>
             </div>
             
@@ -461,19 +462,19 @@
                
                 <div class="fotosAlb">
                     <a href="paginas/rhlm-album.html" class="enlaces"><img src="assets/imagenes/albumAnuel.png" alt="">
-                        <h1 class="nbrAl">RHLM</h1>
+                        <h2 class="nbrAl">RHLM</h2>
                         <P class="tiemoAl">12 canciones, 43 min</P>
                         <P class="tiemoAl">Anuel AA</P></a>
                 </div>
                 <div class="fotosAlb">
                     <a href="paginas/cupido__album.html"><img src="assets/imagenes/albumTini.png" alt="">
-                        <h1 class="nbrAl">Cupido</h1>
+                        <h2 class="nbrAl">Cupido</h2>
                         <P class="tiemoAl">14 canciones, 39 min</P>
                         <P class="tiemoAl">Tini</P></a>
                 </div>
                 <div class="fotosAlb">
                     <a href="paginas/odisea__album.html"><img src="assets/imagenes/albumzuna.png" alt="">
-                        <h1 class="nbrAl">Odisea</h1>
+                        <h2 class="nbrAl">Odisea</h2>
                         <P class="tiemoAl">16 canciones, 57 min</P>
                         <P class="tiemoAl">Ozuna</P></a>
                 </div>
@@ -482,13 +483,13 @@
             <div class="segundaPar segundaParte col-lg-6">
                 <div class="fotosAlb">
                     <a href="paginas/un-verano-sin-ti__album.html"><img src="assets/imagenes/albumbaddbunny.png" alt="">
-                        <h1 class="nbrAl">Un Verano Sin Ti</h1>
+                        <h2 class="nbrAl">Un Verano Sin Ti</h2>
                         <P class="tiemoAl">23 canciones, 1h 21min</P>
                         <P class="tiemoAl">Bad Bunny</P></a>
                 </div>
                 <div class="fotosAlb">
                     <a href="paginas/ameri__album.html"><img src="assets/imagenes/albumDuki.png" alt="">
-                        <h1 class="nbrAl">Ameri</h1>
+                        <h2 class="nbrAl">Ameri</h2>   
                         <P class="tiemoAl">15 canciones, 45 min</P>
                         <P class="tiemoAl">Duki</P></a>
                 </div>
