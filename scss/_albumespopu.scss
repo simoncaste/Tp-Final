@@ -48,7 +48,7 @@ $colorletras50: rgb(124, 124, 124);
             background-color: $colorfondotitulo;
             display: flex;
             .contenedor__imagen {
-                width: 245px;
+                width: 300px;
                 height: 245px;
                 align-self: center;
                 margin-left: 2% !important;
@@ -77,18 +77,23 @@ $colorletras50: rgb(124, 124, 124);
                 margin-top: 1% !important;
                 .contenedor__tituloodisea{
                     h1{
-                        font-size: 60px;
+                        font-size: 50px !important;
                         color: $colorletras100;
                         font-weight: bold;
                     }
                 }
+
+                .lineaentrecancionoyentes{
+                    width: 200px !important;
+                }
+
 
                 .contenedor__cancionesinfo{
                     margin-top: 1% !important   ;
                     color: $colorletras50;
                     h1{
                         font-weight: 400;
-                        font-size: 30px !important;
+                        font-size: 20px !important;
                     }
                 }
 
@@ -97,7 +102,7 @@ $colorletras50: rgb(124, 124, 124);
                     color: $colorletras50;
                     h1{
                         font-weight: 400;
-                        font-size: 30px !important;
+                        font-size: 20px !important;
                 
                     }
                 }
@@ -106,15 +111,15 @@ $colorletras50: rgb(124, 124, 124);
                     display: flex;
                     margin-top: 1.5% !important   ;
                     .imagten__contenedor__oyentesnumero1{
-                        width: 55px;
-                        height: 55px;
+                        width: 40px;
+                        height: 40px;
                     }
 
                     h1{
                         margin-left: 2% !important;
                         align-self: center;
                         font-weight: bold;
-                        font-size: 35px !important;
+                        font-size: 25px !important;
                         color: $colorletras50;
                     }
                 }
@@ -169,6 +174,11 @@ $colorletras50: rgb(124, 124, 124);
                     margin-top: -10% !important;
                     color: $colorletras50;
                     margin-left: 8% !important;
+                    width: 400px;
+                    .imgcontenedor__infoartistadetalles{
+                        width: 270px !important;
+                        margin-left: -1% !important;
+                    }
                 }
 
             }
@@ -176,9 +186,9 @@ $colorletras50: rgb(124, 124, 124);
             
             .contenedor__imagenplay {
                 display: flex;
-                @include medidasFotos(60px, 60px);
-                margin-top: 13% !important;
-                margin-left: 11.5% !important;
+                @include medidasFotos(4%, 16%);
+                margin-top: 16% !important;
+                margin-right: 2% !important;
             
                 .imagenplayalbum {
                     @include medidasFotos(100%, 100%);
