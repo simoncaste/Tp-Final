@@ -243,6 +243,7 @@ body{
         #titulo1{
             color: white;
             padding-bottom: 20px !important;
+            font-size: 45px;
         }
         .fotosMeGustas{
             position: relative;
@@ -260,7 +261,7 @@ body{
                 bottom: 5px !important;
                 left: 700px !important;
                 
-                .fotoLogo{     
+                .fotoLogo{   
                     width: 100%;
                     height: 100%;
                     
@@ -273,6 +274,7 @@ body{
                 height: 60px !important;
                 .principal{
                     color: white;
+                    font-size: 35px;
                 }
                 .subtitulo{
                     color: gray;
@@ -282,7 +284,7 @@ body{
             .fotos{
                 justify-content: left;
                 padding: 15px !important;
-                width: 30%;
+                width: 27%;
                 height: 100%;
             }
         }
@@ -309,11 +311,15 @@ body{
             margin-bottom: 110px !important;
         }
         .tituloAr{
-            
             color: white;
+            font-size: 45px;
+        }
+        .artista{
+            font-size: 35px;
         }
         .oyentes{
             color: gray;
+            font-size: 18px;
         }
         .artistas{
             display: flex;

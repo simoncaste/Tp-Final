@@ -497,7 +497,8 @@ body {
     padding-left: 30% !important; }
     body .meGustas #titulo1 {
       color: white;
-      padding-bottom: 20px !important; }
+      padding-bottom: 20px !important;
+      font-size: 45px; }
     body .meGustas .fotosMeGustas {
       position: relative;
       display: flex;
@@ -518,13 +519,14 @@ body {
         display: grid;
         height: 60px !important; }
         body .meGustas .fotosMeGustas .titulos .principal {
-          color: white; }
+          color: white;
+          font-size: 35px; }
         body .meGustas .fotosMeGustas .titulos .subtitulo {
           color: gray; }
       body .meGustas .fotosMeGustas .fotos {
         justify-content: left;
         padding: 15px !important;
-        width: 30%;
+        width: 27%;
         height: 100%; }
     body .meGustas #Cont-ver #ver-mas {
       margin-top: 10px;
@@ -543,9 +545,13 @@ body {
     body .Artistas .nombresAr {
       margin-bottom: 110px !important; }
     body .Artistas .tituloAr {
-      color: white; }
+      color: white;
+      font-size: 45px; }
+    body .Artistas .artista {
+      font-size: 35px; }
     body .Artistas .oyentes {
-      color: gray; }
+      color: gray;
+      font-size: 18px; }
     body .Artistas .artistas {
       display: flex;
       flex-direction: column;
@@ -1101,7 +1107,8 @@ body {
         width: 100%; }
     body .partesuperior #titulo {
       width: 200%;
-      padding-top: 70px !important; }
+      padding-top: 70px !important;
+      color: white !important; }
       body .partesuperior #titulo #titulo1 {
         font-size: 90px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; }
