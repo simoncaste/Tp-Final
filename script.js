@@ -5,7 +5,7 @@ document.getElementById('form').addEventListener('submit', function (e) {
     const terms = document.getElementById('terms').checked;
 
     if (!email || !username || !password || !terms) {
-        e.preventDefault(); // Evita el envío del formulario
+        e.preventDefault(); 
         alert('Por favor, complete todos los campos y acepte los términos y condiciones.');
     }
 });
