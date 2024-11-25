@@ -1089,8 +1089,8 @@ body {
             margin-left: -1% !important; }
       #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay {
         display: flex;
-        height: 16%;
-        width: 4%;
+        height: 50px;
+        width: 50px;
         margin-top: 16% !important;
         margin-right: 2% !important; }
         #main .contenedor__dealbumes .contenedor__album .contenedor__imagenplay .imagenplayalbum {

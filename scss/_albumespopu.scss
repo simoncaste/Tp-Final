@@ -186,7 +186,7 @@ $colorletras50: rgb(124, 124, 124);
             
             .contenedor__imagenplay {
                 display: flex;
-                @include medidasFotos(4%, 16%);
+                @include medidasFotos(50px, 50px);
                 margin-top: 16% !important;
                 margin-right: 2% !important;
             
