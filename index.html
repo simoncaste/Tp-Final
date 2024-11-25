@@ -242,16 +242,16 @@
               
               if (!audioSeleccionado) return;
           
-              // Detener otros audios
+              
               const todosLosAudios = document.querySelectorAll('audio');
               todosLosAudios.forEach((audio) => {
                 if (audio !== audioSeleccionado) {
                   audio.pause();
-                  audio.currentTime = 0; // Reinicia el audio
+                  audio.currentTime = 0; 
                 }
               });
           
-              // Control de reproducción
+              
               if (audioSeleccionado.paused) {
                 audioSeleccionado.play();
               } else {
@@ -336,7 +336,7 @@
               <div id="Cont-ver">
                     <a href="paginas/megustas.html"><p id="ver-mas">ver mas</p></a>
               </div>
-              <!-- Repite la estructura para los demás audios -->
+              
               
         </div>
 
@@ -406,14 +406,14 @@
     <section class="Artistas row container-fluid">
         <h1 class="tituloAr">Artistas Mas Escuchados</h1>
         <div class="artistas col-lg-3">
-            <a href="paginas/artistamyketowers.html"><img class="fotosAr" src="assets/imagenes/Artista1.png" alt=""></a>
+            <a href="paginas/artistamyketowers.html"><img class="fotosAr" src="assets/imagenes/mykeTowers.jfif" alt=""></a>
             <a href="paginas/artistaduki.html"><img class="fotosAr" src="assets/imagenes/Artista2.png" alt=""></a>
             <a href="paginas/artistaanuel.html"><img class="fotosAr" src="assets/imagenes/Artista3.png" alt=""></a>
 
         </div>
         <div class="artista col-lg-3">
             <div class="nombresAr">
-                <a href="paginas/artistamyketowers.html"><h1 class="tituloAr">Mike Towers</h1>
+                <a href="paginas/artistamyketowers.html"><h1 class="tituloAr">Myke Towers</h1>
                     <p class="oyentes">22,360,597 oyentes mensuales</p></a>
             </div>
             <div class="nombresAr">
