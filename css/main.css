@@ -992,7 +992,8 @@ body {
       margin-top: 2.5% !important;
       height: 300px;
       background-color: #0B161C;
-      display: flex; }
+      display: flex;
+      /*prueba de comits*/ }
       #main .contenedor__dealbumes .contenedor__album .contenedor__imagen {
         width: 300px;
         height: 245px;
