@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0; }
+  padding: 0px;
+  margin: 0px; }
 
 .header {
   background-color: #0B161C;
@@ -910,9 +910,9 @@ body {
         margin-left: 5% !important; }
   #fila-1 .cont-linea {
     height: 20px;
-    width: 148%;
-    margin-top: 5% !important;
-    margin-left: -38% !important; }
+    width: 138%;
+    margin-top: 7% !important;
+    margin-left: -28% !important; }
     #fila-1 .cont-linea .linea {
       height: 1px;
       width: 100%; }
@@ -958,12 +958,6 @@ body {
 #icono-descargar {
   height: 100%;
   width: 100%; }
-
-.cont-linea {
-  height: 20px;
-  width: 1400px;
-  margin-top: 5% !important;
-  margin-left: -38% !important; }
 
 * {
   margin: 0;
