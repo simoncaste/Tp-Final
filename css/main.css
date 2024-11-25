@@ -621,6 +621,11 @@ body {
     padding-top: 80px !important;
     padding-right: 15% !important;
     align-items: end; }
+    body .segundaParte #ver-mas2 {
+      color: white;
+      text-decoration: underline;
+      margin-top: 300px !important;
+      font-size: 20px; }
   body .segundaPar {
     padding-top: 80px !important;
     flex-direction: column;
