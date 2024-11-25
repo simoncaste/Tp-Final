@@ -8,8 +8,152 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/imagenes/logo-timeMusic.png" type="image/x-icon">
     <title>Bad Bunny Time Music</title>
+    <meta name="description" content="Web para escuchar música y descubrir nuevos artistas. Encuentra tus canciones favoritas y explora nuevos géneros musicales.">
+    <meta name="keywords" content="música, escuchar música, nuevos artistas, canciones, música en línea, recomendaciones musicales">
+    <style>
+        body{
+                 margin: 0;
+                 font-family: Arial, sans-serif;
+             }
+             .navbar {
+                 display: flex;
+                 align-items: center;
+                 justify-content: space-between;
+                 background-color: #0b1c26;
+                 padding: 10px 20px;
+             }
+             .navbar img {
+                 width: 40px;
+                 height: 40px;
+             }
+             .navbar .icon {
+                 margin: 0 15px;
+                 color: white;
+                 font-size: 24px;
+                 background-color: #3a3a3a;
+                 border-radius: 50%;
+                 padding: 10px;
+                 transition: background-color 0.3s;
+             }
+             .navbar .icon:hover {
+                 background-color: #5a5a5a;
+             }
+             .navbar .search-bar {
+                 display: flex;
+                 align-items: center;
+                 background-color: #3a3a3a;
+                 border-radius: 5px;
+                 padding: 2px 10px;
+                 width: 350px;
+             }
+             .navbar .search-bar .icon {
+                 margin-right: 0px;
+                 transition: none;
+             }
+             .navbar .search-bar input {
+                 border: none;
+                 background: none;
+                 color: white;
+                 padding: 5px;
+                 width: 100%;
+                 font-size: 18px;
+             }
+             .navbar .search-bar input:focus {
+                 outline: none;
+             }
+             .navbar .profile-icon img {
+                 width: 40px;
+                 height: 40px;
+                 border-radius: 50%;
+                 cursor: pointer;
+                 transition: transform 0.3s;
+             }
+             .navbar .profile-icon img:hover {
+                 transform: scale(1.1);
+             }
+             .navbar .left-section,
+             .navbar .center-section,
+             .navbar .right-section {
+                 display: flex;
+                 align-items: center;
+             }
+             .navbar .center-section {
+                 flex-grow: 1;
+                 justify-content: center;
+             }
+             .dropdown {
+                 position: relative;
+                 display: inline-block;
+             }
+             .dropdown-content {
+                 display: none;
+                 position: absolute;
+                 right: 0;
+                 background-color: #f9f9f9;
+                 min-width: 160px;
+                 box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                 z-index: 1;
+             }
+             .dropdown-content a {
+                 color: black;
+                 padding: 12px 16px;
+                 text-decoration: none;
+                 display: block;
+             }
+             .dropdown-content a:hover {
+                 background-color: #f1f1f1;
+             }
+             .dropdown.show .dropdown-content {
+                 display: block;
+             }
+       </style>
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+       <script>
+        function toggleDropdown() {
+                 document.getElementById("dropdown").classList.toggle("show");
+             }
+             window.onclick = function(event) {
+                 if (!event.target.matches('.profile-icon img')) {
+                     var dropdowns = document.getElementsByClassName("dropdown-content");
+                     for (var i = 0; i < dropdowns.length; i++) {
+                         var openDropdown = dropdowns[i];
+                         if (openDropdown.classList.contains('show')) {
+                             openDropdown.classList.remove('show');
+                         }
+                     }
+                 }
+             }
+       </script>
 </head>
 <body>
+    <header>
+        <div class="navbar">
+            <div class="left-section">
+             <img alt="Logo" height="40" src="../assets/imagenes/logo-timeMusic-white.png" width="40"/>
+            </div>
+            <div class="center-section">
+             <a href="../index.html">
+                <i class="fas fa-home icon"></i>
+             </a>
+             <div class="search-bar">
+              <i class="fas fa-search icon">
+              </i>
+              <input placeholder="Search" type="text"/>
+             </div>
+            </div>
+            <div class="right-section">
+             <div class="dropdown" id="dropdown">
+              <div class="profile-icon" onclick="toggleDropdown()">
+               <img alt="User Avatar" height="40" src="../assets/imagenes/logoPersona.png" width="40"/>
+              </div>
+              <div class="dropdown-content">
+               <a href="inicioSesion.html">Iniciar sesión</a>
+               <a href="registro.html">Registrarse</a>
+              </div>
+             </div>
+            </div>
+           </div>
+    </header>
     <main class="partesuperior row container-fluid">
         <div class="col-lg-6">
             <div id="imagen">
